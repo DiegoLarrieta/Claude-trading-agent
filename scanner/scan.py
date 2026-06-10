@@ -98,7 +98,8 @@ def triggers_fired(q):
     return fired, pct, round(vol_mult, 1)
 
 
-def main():
+def run_scan() -> list[str]:
+    """Run one scan pass; returns list of created candidate folder paths."""
     movers = fetch_movers()
     existing_today = len(list(day_dir.glob("*-*")))
     budget = CFG["max_candidates_per_day"] - existing_today
@@ -130,12 +131,12 @@ def main():
             "scanner_notes": f"52w range {q.get('fiftyTwoWeekLow')}–{q.get('fiftyTwoWeekHigh')}",
         }
         (folder / "candidate.json").write_text(json.dumps(cand, indent=2))
-        created.append(f"{sym} {pct:+.1f}% vol×{vol_mult} [{'+'.join(fired)}]")
+        created.append(str(folder))
+        print(f"  {sym} {pct:+.1f}% vol×{vol_mult} [{'+'.join(fired)}]")
         budget -= 1
-    print(f"{len(created)} candidate(s) created:")
-    for line in created:
-        print(" ", line)
+    print(f"{len(created)} candidate(s) created")
+    return created
 
 
 if __name__ == "__main__":
-    main()
+    run_scan()
