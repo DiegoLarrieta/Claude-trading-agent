@@ -3,3 +3,6 @@ __pycache__/
 .env
 .DS_Store
 .venv/
+journal/.watcher-heartbeat
+journal/.monitor-heartbeat
+journal/logs/
