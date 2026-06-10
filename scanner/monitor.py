@@ -99,6 +99,11 @@ def notify(title: str, body: str) -> None:
         )
     except FileNotFoundError:
         pass  # not macOS
+    try:  # best-effort Telegram mirror; no-op until token + chat id configured
+        from telegram_bot import send_alert
+        send_alert(f"{title}\n{body}")
+    except Exception:
+        pass
 
 
 def check_once() -> int:

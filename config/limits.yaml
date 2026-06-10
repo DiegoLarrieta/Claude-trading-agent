@@ -26,4 +26,4 @@ order_ttl_minutes: 60     # placed-order lifetime; unfilled orders cancel
 max_price_drift_pct: 1.0  # abort if price moved more than this since proposal
 
 # Authorization (Stage 1+)
-telegram_chat_id: null    # ONLY this chat may confirm trades; null = unset
+telegram_chat_id: 8881191474    # Diego — the ONLY chat the bot obeys or alerts
