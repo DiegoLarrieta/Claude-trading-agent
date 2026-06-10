@@ -11,7 +11,7 @@ kill_switch: false        # true = no orders of any kind, even simulated
 trade_size_usd: 200
 max_trades_per_day: 3
 max_open_positions: 5
-max_total_exposure_usd: 1000
+max_total_exposure_usd: 1400   # ~82% of the $1,700 account — always keep dry powder
 
 # Universe restrictions
 ticker_blacklist: []      # tickers the firm may never touch

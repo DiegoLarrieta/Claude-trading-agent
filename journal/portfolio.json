@@ -1,5 +1,5 @@
 {
-  "cash_usd": 692.2,
+  "cash_usd": 1392.2,
   "positions": [
     {
       "ticker": "SMCI",
@@ -29,5 +29,6 @@
     }
   ],
   "closed_trades": [],
-  "simulated": true
+  "simulated": true,
+  "starting_capital_usd": 1700
 }
