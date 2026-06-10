@@ -1,31 +1,20 @@
 {
-  "cash_usd": 1192.18,
+  "cash_usd": 1349.68,
   "positions": [
-    {
-      "ticker": "SMCI",
-      "side": "buy",
-      "shares": 5,
-      "fill_price": 33.48,
-      "stop": 31.5,
-      "opened_at": "2026-06-10T16:12:35.705899+00:00",
-      "thesis": "Dilution selloff overdone; betting against the bear's accounting-history concern",
-      "owner": "diego-discretionary",
-      "firm_verdict_was": "PASS",
-      "candidate_folder": "candidates/2026-06-10/SMCI-1139",
-      "simulated": true
-    },
     {
       "ticker": "DNTH",
       "side": "buy",
       "shares": 2,
       "fill_price": 70.2,
-      "stop": 64.0,
+      "stop": 70.2,
       "opened_at": "2026-06-10T16:12:35.892658+00:00",
       "thesis": "Competitor trial failure is sympathy overreaction; Stifel reiterated Buy",
       "owner": "diego-discretionary",
       "firm_verdict_was": "PASS",
       "candidate_folder": "candidates/2026-06-10/DNTH-1139",
-      "simulated": true
+      "simulated": true,
+      "high_water": 76.41999816894531,
+      "prior_stop": 64.0
     },
     {
       "ticker": "CASY",
@@ -38,10 +27,30 @@
       "owner": "diego-discretionary",
       "firm_verdict_was": "PASS",
       "candidate_folder": "candidates/2026-06-10/CASY-1139",
-      "simulated": true
+      "simulated": true,
+      "high_water": 915.5999755859375
     }
   ],
-  "closed_trades": [],
+  "closed_trades": [
+    {
+      "ticker": "SMCI",
+      "side": "buy",
+      "shares": 5,
+      "fill_price": 33.48,
+      "stop": 31.5,
+      "opened_at": "2026-06-10T16:12:35.705899+00:00",
+      "thesis": "Dilution selloff overdone; betting against the bear's accounting-history concern",
+      "owner": "diego-discretionary",
+      "firm_verdict_was": "PASS",
+      "candidate_folder": "candidates/2026-06-10/SMCI-1139",
+      "simulated": true,
+      "closed_at": "2026-06-10T18:59:02.910724+00:00",
+      "exit_price": 31.5,
+      "exit_reason": "stop",
+      "pnl_usd": -9.9,
+      "pnl_pct": -5.91
+    }
+  ],
   "simulated": true,
   "starting_capital_usd": 1700
 }
