@@ -39,10 +39,28 @@ cat > "$AGENTS_DIR/com.trade-agent.heartbeat.plist" <<EOF
 </dict></plist>
 EOF
 
+cat > "$AGENTS_DIR/com.trade-agent.telegram.plist" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.trade-agent.telegram</string>
+  <key>ProgramArguments</key><array>
+    <string>$PY</string><string>$ROOT/scanner/telegram_bot.py</string><string>daemon</string>
+  </array>
+  <key>WorkingDirectory</key><string>$ROOT</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>$ROOT/journal/logs/telegram.log</string>
+  <key>StandardErrorPath</key><string>$ROOT/journal/logs/telegram.err</string>
+</dict></plist>
+EOF
+
+launchctl unload "$AGENTS_DIR/com.trade-agent.telegram.plist" 2>/dev/null || true
 launchctl unload "$AGENTS_DIR/com.trade-agent.watcher.plist" 2>/dev/null || true
 launchctl unload "$AGENTS_DIR/com.trade-agent.heartbeat.plist" 2>/dev/null || true
 launchctl load "$AGENTS_DIR/com.trade-agent.watcher.plist"
 launchctl load "$AGENTS_DIR/com.trade-agent.heartbeat.plist"
+launchctl load "$AGENTS_DIR/com.trade-agent.telegram.plist"
 
 echo "installed + started:"
 launchctl list | grep com.trade-agent || true
