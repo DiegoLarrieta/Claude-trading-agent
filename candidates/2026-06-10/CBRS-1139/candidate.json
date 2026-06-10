@@ -1,0 +1,13 @@
+{
+  "ticker": "CBRS",
+  "name": "Cerebras Systems Inc.",
+  "trigger": "pct_move",
+  "pct_move": 6.17,
+  "volume_multiple": 1.1,
+  "price": 240.8,
+  "prev_close": 226.815,
+  "market_cap": 52882173952,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.472158+00:00",
+  "scanner_notes": "52w range 196.73\u2013386.34"
+}

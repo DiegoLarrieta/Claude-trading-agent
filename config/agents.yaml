@@ -4,7 +4,7 @@
 
 triage: haiku
 news_analyst: haiku
-technical_analyst: haiku
+technical_analyst: sonnet  # promoted 2026-06-10: haiku botched stop/direction arithmetic in 2 of 3 day-one memos
 sentiment_analyst: haiku
 bear: sonnet
 head_trader: sonnet

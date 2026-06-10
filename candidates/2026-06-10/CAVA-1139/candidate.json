@@ -1,0 +1,13 @@
+{
+  "ticker": "CAVA",
+  "name": "CAVA Group, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 7.52,
+  "volume_multiple": 1.8,
+  "price": 82.02,
+  "prev_close": 76.28,
+  "market_cap": 9553184768,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.470743+00:00",
+  "scanner_notes": "52w range 43.41\u201398.79"
+}

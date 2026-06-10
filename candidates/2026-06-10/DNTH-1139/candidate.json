@@ -1,0 +1,13 @@
+{
+  "ticker": "DNTH",
+  "name": "Dianthus Therapeutics, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -16.42,
+  "volume_multiple": 7.4,
+  "price": 70.68,
+  "prev_close": 84.57,
+  "market_cap": 3863809280,
+  "exchange": "NasdaqCM",
+  "detected_at": "2026-06-10T15:39:58.474700+00:00",
+  "scanner_notes": "52w range 16.64\u201396.5"
+}

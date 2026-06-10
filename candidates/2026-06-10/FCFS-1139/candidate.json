@@ -1,0 +1,13 @@
+{
+  "ticker": "FCFS",
+  "name": "FirstCash Holdings, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -8.18,
+  "volume_multiple": 2.7,
+  "price": 210.58,
+  "prev_close": 229.35,
+  "market_cap": 9231129600,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.477425+00:00",
+  "scanner_notes": "52w range 119.21\u2013235.97"
+}

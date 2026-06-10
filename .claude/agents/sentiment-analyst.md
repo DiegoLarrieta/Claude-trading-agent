@@ -26,6 +26,8 @@ CONTRARIAN READ: <1-2 sentences>
 POSTS SAMPLED: <N across which subreddits, with 1-2 representative titles>
 ```
 
+If Reddit is unreachable (403/blocked — known issue, proper fix scheduled for Stage 1): write `CHATTER LEVEL: silent`, `TONE: unavailable`, and DATA UNAVAILABLE in the memo. NEVER substitute your own market read or restate other memos as "sentiment" — a dark channel honestly reported is useful; a fabricated one poisons the bear's review.
+
 Interpretation rules the firm lives by:
 - **Euphoria is a warning, not a buy signal.** If WSB is celebrating, the easy move already happened.
 - **Silence on a big move is interesting** — the crowd hasn't noticed yet, or there's nothing there.

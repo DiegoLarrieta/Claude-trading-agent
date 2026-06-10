@@ -1,0 +1,13 @@
+{
+  "ticker": "FUN",
+  "name": "Six Flags Entertainment Corpora",
+  "trigger": "pct_move",
+  "pct_move": 7.94,
+  "volume_multiple": 2.4,
+  "price": 24.21,
+  "prev_close": 22.43,
+  "market_cap": 2474357504,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.470390+00:00",
+  "scanner_notes": "52w range 12.51\u201333.5"
+}

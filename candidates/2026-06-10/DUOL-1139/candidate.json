@@ -1,0 +1,13 @@
+{
+  "ticker": "DUOL",
+  "name": "Duolingo, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 6.74,
+  "volume_multiple": 1.5,
+  "price": 125.805,
+  "prev_close": 117.86,
+  "market_cap": 5861646848,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.471434+00:00",
+  "scanner_notes": "52w range 87.89\u2013489.0"
+}

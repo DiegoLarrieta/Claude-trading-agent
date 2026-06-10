@@ -1,0 +1,13 @@
+{
+  "ticker": "SMMT",
+  "name": "Summit Therapeutics Inc.",
+  "trigger": "pct_move",
+  "pct_move": -9.83,
+  "volume_multiple": 1.5,
+  "price": 12.885,
+  "prev_close": 14.29,
+  "market_cap": 10000856064,
+  "exchange": "NasdaqGM",
+  "detected_at": "2026-06-10T15:39:58.476781+00:00",
+  "scanner_notes": "52w range 12.8101\u201330.98"
+}

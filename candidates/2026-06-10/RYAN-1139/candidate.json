@@ -1,0 +1,13 @@
+{
+  "ticker": "RYAN",
+  "name": "Ryan Specialty Holdings, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.8,
+  "volume_multiple": 1.6,
+  "price": 35.275,
+  "prev_close": 33.34,
+  "market_cap": 9311790080,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.473143+00:00",
+  "scanner_notes": "52w range 29.28\u201369.49"
+}

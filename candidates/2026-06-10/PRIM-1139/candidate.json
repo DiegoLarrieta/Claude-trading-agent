@@ -1,0 +1,13 @@
+{
+  "ticker": "PRIM",
+  "name": "Primoris Services Corporation",
+  "trigger": "pct_move",
+  "pct_move": -9.23,
+  "volume_multiple": 2.6,
+  "price": 94.305,
+  "prev_close": 103.9,
+  "market_cap": 5116511744,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.477111+00:00",
+  "scanner_notes": "52w range 71.84\u2013205.5"
+}

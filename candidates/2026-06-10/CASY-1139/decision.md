@@ -1,0 +1,12 @@
+DECISION: PASS
+OBJECTION RESPONSES:
+1. Cannot be rebutted. The technicals memo computes "1.4:1 R:R if short from here" for a stock that just delivered a 32% earnings beat and a 14% dividend hike — a directionally incoherent read. Worse, it reports 1.4x volume while candidate.json's trigger reports 3.8x volume, an unreconciled discrepancy on the single most important confirmation signal for a 14.5%+ gap. Without a corrected, long-side entry geometry and a reconciled volume figure, there is no valid stop, support level, or R:R to size this trade against. This objection alone is sufficient to kill the trade per house discipline.
+2. Agreed — this is chasing, not buying a dip. Support at 739 was set three sessions ago; today's 14.5% candle on 3.24 ATRs IS the move, with price wicking to 889, just 12 points off the 901 52-week high. Entering at 877.5 buys into the top of today's range with no margin of safety.
+3. The 1.4x vs 3.8x volume conflict is unresolved and material — if the lower figure is correct, the move lacks the institutional confirmation needed to hold, raising real mean-reversion risk on a 50.6x P/E name once the initial earnings reaction fades.
+4. Sentiment is uniformly bullish with zero dissent (5 posts, all constructive) and itself flags the June 24 strategic plan reveal as a two-week overhang the crowd may be front-running. At 50x earnings with no valuation cushion, that's asymmetric downside risk we'd be holding into.
+5. Trend context is genuinely mixed — above the 20d MA but below the 50d MA, with a 6-week downtrend from 901 to 739 immediately preceding today's pop. One session does not repair five weeks of distribution, and entry sits directly below the 878 (May 11) and 901 resistance levels.
+6. At $200 on a $1,000 book, this is 20% of total exposure on a stock with no defined, coherent risk level — far too much budget for a name offering zero margin of safety.
+
+THESIS: No trade. The fundamental catalyst (32% EPS beat, 14% dividend hike) is real, but the technicals memo is internally contradictory (short-side math on a long setup, 1.4x vs 3.8x volume conflict) and cannot support a defensible entry, stop, or size, while price sits 3+ ATRs into the move at the top of its range near 52-week highs with two weeks of event risk ahead.
+
+CONVICTION: low — interesting catalyst, but unconvincing technical setup and unresolved data contradictions; classic "wait for the corrected memo or a pullback to 807-820" pass.

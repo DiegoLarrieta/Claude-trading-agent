@@ -1,0 +1,13 @@
+{
+  "ticker": "DVN",
+  "name": "Devon Energy Corporation",
+  "trigger": "pct_move",
+  "pct_move": 6.19,
+  "volume_multiple": 1.2,
+  "price": 46.8,
+  "prev_close": 44.07,
+  "market_cap": 53979267072,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.471784+00:00",
+  "scanner_notes": "52w range 31.45\u201352.71"
+}

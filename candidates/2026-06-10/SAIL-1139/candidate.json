@@ -1,0 +1,13 @@
+{
+  "ticker": "SAIL",
+  "name": "SailPoint, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -7.92,
+  "volume_multiple": 2.0,
+  "price": 14.42,
+  "prev_close": 15.66,
+  "market_cap": 8179144704,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.478413+00:00",
+  "scanner_notes": "52w range 10.3\u201324.95"
+}

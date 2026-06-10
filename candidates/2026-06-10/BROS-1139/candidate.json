@@ -1,0 +1,13 @@
+{
+  "ticker": "BROS",
+  "name": "Dutch Bros Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.2,
+  "volume_multiple": 1.8,
+  "price": 60.795,
+  "prev_close": 57.79,
+  "market_cap": 10619877376,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.473784+00:00",
+  "scanner_notes": "52w range 44.58\u201374.65"
+}

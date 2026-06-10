@@ -1,0 +1,13 @@
+{
+  "ticker": "ELF",
+  "name": "e.l.f. Beauty, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 8.39,
+  "volume_multiple": 2.2,
+  "price": 60.34,
+  "prev_close": 55.67,
+  "market_cap": 3586641408,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.469593+00:00",
+  "scanner_notes": "52w range 48.82\u2013150.99"
+}

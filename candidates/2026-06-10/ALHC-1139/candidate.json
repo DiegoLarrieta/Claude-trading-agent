@@ -1,0 +1,13 @@
+{
+  "ticker": "ALHC",
+  "name": "Alignment Healthcare, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.14,
+  "volume_multiple": 3.1,
+  "price": 20.57,
+  "prev_close": 19.2,
+  "market_cap": 4252514816,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.471095+00:00",
+  "scanner_notes": "52w range 11.625\u201323.87"
+}

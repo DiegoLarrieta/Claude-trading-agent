@@ -1,0 +1,13 @@
+{
+  "ticker": "BE",
+  "name": "Bloom Energy Corporation",
+  "trigger": "pct_move",
+  "pct_move": -10.14,
+  "volume_multiple": 1.8,
+  "price": 233.285,
+  "prev_close": 259.61,
+  "market_cap": 66356490240,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.475937+00:00",
+  "scanner_notes": "52w range 20.93\u2013322.83"
+}

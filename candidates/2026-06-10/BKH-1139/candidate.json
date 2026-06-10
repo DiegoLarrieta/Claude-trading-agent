@@ -1,0 +1,13 @@
+{
+  "ticker": "BKH",
+  "name": "Black Hills Corporation",
+  "trigger": "pct_move",
+  "pct_move": 5.99,
+  "volume_multiple": 1.6,
+  "price": 71.84,
+  "prev_close": 67.78,
+  "market_cap": 5469043712,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.472509+00:00",
+  "scanner_notes": "52w range 55.49\u201378.69"
+}

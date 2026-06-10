@@ -1,0 +1,13 @@
+{
+  "ticker": "SA",
+  "name": "Seabridge Gold, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -10.68,
+  "volume_multiple": 2.0,
+  "price": 24.83,
+  "prev_close": 27.8,
+  "market_cap": 2672277504,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.475019+00:00",
+  "scanner_notes": "52w range 13.93\u201340.06"
+}

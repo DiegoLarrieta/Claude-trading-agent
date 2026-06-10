@@ -1,0 +1,13 @@
+{
+  "ticker": "HIMX",
+  "name": "Himax Technologies, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -10.13,
+  "volume_multiple": 3.0,
+  "price": 16.42,
+  "prev_close": 18.27,
+  "market_cap": 2864073728,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.476423+00:00",
+  "scanner_notes": "52w range 6.85\u201325.09"
+}

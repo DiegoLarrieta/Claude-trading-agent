@@ -1,0 +1,13 @@
+{
+  "ticker": "DKNG",
+  "name": "DraftKings Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.53,
+  "volume_multiple": 3.6,
+  "price": 29.115,
+  "prev_close": 27.59,
+  "market_cap": 14444790784,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.473480+00:00",
+  "scanner_notes": "52w range 20.46\u201348.78"
+}

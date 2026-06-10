@@ -1,0 +1,13 @@
+{
+  "ticker": "TGTX",
+  "name": "TG Therapeutics, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 10.04,
+  "volume_multiple": 4.3,
+  "price": 47.725,
+  "prev_close": 43.37,
+  "market_cap": 7305913856,
+  "exchange": "NasdaqCM",
+  "detected_at": "2026-06-10T15:39:58.468632+00:00",
+  "scanner_notes": "52w range 25.28\u201349.305"
+}

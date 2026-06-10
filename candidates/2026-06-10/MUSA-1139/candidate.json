@@ -1,0 +1,13 @@
+{
+  "ticker": "MUSA",
+  "name": "Murphy USA Inc.",
+  "trigger": "pct_move",
+  "pct_move": 7.99,
+  "volume_multiple": 1.6,
+  "price": 600.765,
+  "prev_close": 556.33,
+  "market_cap": 11096541184,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.470012+00:00",
+  "scanner_notes": "52w range 345.23\u2013609.82"
+}

@@ -1,0 +1,13 @@
+{
+  "ticker": "CASY",
+  "name": "Caseys General Stores, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 15.28,
+  "volume_multiple": 3.8,
+  "price": 877.5,
+  "prev_close": 761.18,
+  "market_cap": 32526233600,
+  "exchange": "NasdaqGS",
+  "detected_at": "2026-06-10T15:39:58.467168+00:00",
+  "scanner_notes": "52w range 488.91\u2013901.0"
+}

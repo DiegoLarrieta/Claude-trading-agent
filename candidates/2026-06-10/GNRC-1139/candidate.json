@@ -1,0 +1,13 @@
+{
+  "ticker": "GNRC",
+  "name": "Generac Holdlings Inc.",
+  "trigger": "pct_move",
+  "pct_move": -8.01,
+  "volume_multiple": 2.5,
+  "price": 240.075,
+  "prev_close": 260.99,
+  "market_cap": 14132897792,
+  "exchange": "NYSE",
+  "detected_at": "2026-06-10T15:39:58.478098+00:00",
+  "scanner_notes": "52w range 123.66\u2013294.18"
+}
