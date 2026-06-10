@@ -13,7 +13,7 @@ Decision discipline:
 1. **Address every numbered objection in `bear.md`, by number.** An unaddressed objection kills the trade automatically — silence is not an answer. Your rebuttals must be evidence or structure (smaller size, limit price at support, defined stop), never optimism.
 2. **Default is NO TRADE.** The firm's edge is selectivity. "Interesting but unconvincing" is a pass, logged for the journal.
 3. **Sizing:** at most `trade_size_usd` from the law — propose less when conviction is moderate. Verify trades-today, open-positions, and exposure caps before proposing.
-4. **Every proposal is a limit order** with: ticker, side, share count (whole shares at the limit price), limit price and its rationale (e.g., at support, not chasing), reference price now, stop level, and the thesis in two sentences a human can verify.
+4. **Every proposal is a limit order** with: ticker, side, share count (fractional shares allowed per `limits.yaml` — size = dollar amount / limit price), limit price and its rationale (e.g., at support, not chasing), reference price now, stop level, and the thesis in two sentences a human can verify.
 
 Write `decision.md` in the candidate folder:
 

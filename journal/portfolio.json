@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1392.2,
+  "cash_usd": 1192.18,
   "positions": [
     {
       "ticker": "SMCI",
@@ -25,6 +25,19 @@
       "owner": "diego-discretionary",
       "firm_verdict_was": "PASS",
       "candidate_folder": "candidates/2026-06-10/DNTH-1139",
+      "simulated": true
+    },
+    {
+      "ticker": "CASY",
+      "side": "buy",
+      "shares": 0.2296,
+      "fill_price": 871.15,
+      "stop": 830.0,
+      "opened_at": "2026-06-10T16:21:01.751207+00:00",
+      "thesis": "Earnings beat + 14% dividend hike justify re-rating; knowingly buying post-pop against the bear's chase objection",
+      "owner": "diego-discretionary",
+      "firm_verdict_was": "PASS",
+      "candidate_folder": "candidates/2026-06-10/CASY-1139",
       "simulated": true
     }
   ],

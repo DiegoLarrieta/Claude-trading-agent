@@ -9,6 +9,7 @@ kill_switch: false        # true = no orders of any kind, even simulated
 
 # Position sizing — the head trader may propose LESS, never more
 trade_size_usd: 200
+allow_fractional_shares: true   # IBKR supports fractional US stocks; sizing = trade_size_usd / price
 max_trades_per_day: 3
 max_open_positions: 5
 max_total_exposure_usd: 1400   # ~82% of the $1,700 account — always keep dry powder
