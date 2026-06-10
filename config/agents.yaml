@@ -1,0 +1,11 @@
+# Role → model assignments (Pro-plan tier).
+# Judgment seats (bear, head trader) get the strongest affordable model.
+# Upgrading bear/head_trader to opus is a Max-plan change.
+
+triage: haiku
+news_analyst: haiku
+technical_analyst: haiku
+sentiment_analyst: haiku
+bear: sonnet
+head_trader: sonnet
+reporter: sonnet

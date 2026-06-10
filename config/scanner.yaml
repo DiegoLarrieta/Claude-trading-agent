@@ -1,0 +1,19 @@
+# Scanner trigger thresholds — tuned with /backtest evidence over time.
+# The scanner is deterministic Python: no LLM reads this file at runtime
+# except to explain itself.
+
+poll_interval_seconds: 120
+cooldown_minutes: 60            # per-ticker; re-triggers append to existing candidate folder
+max_candidates_per_day: 30
+
+triggers:
+  pct_move_intraday: 4.0        # abs % move from previous close
+  volume_multiple: 3.0          # vs 20-day average volume
+  week52_extreme: true          # new 52-week high/low
+  gap_open_pct: 3.0             # gap at the open vs previous close
+
+universe:
+  min_market_cap_usd: 2000000000     # $2B — no microcaps
+  min_avg_dollar_volume: 10000000    # $10M/day — must be liquid
+  exchanges: [NYSE, NASDAQ]
+  exclude_leveraged_etfs: true
