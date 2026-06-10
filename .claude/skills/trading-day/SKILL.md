@@ -59,6 +59,14 @@ For each candidate with `bear-final.md: VERDICT: CLEARED`:
 3. On **Reject**: journal it with the user's reason; apply ticker cooldown.
 4. VETOED or PASS candidates need no user interaction — they're journal material.
 
+## 4.5 Position review (the exit manager's pass)
+
+Once per session — at session start if positions are open, or after material news breaks on a held name — launch the **exit-manager** subagent. It writes `journal/YYYY-MM-DD/position-review.md` with HOLD / TIGHTEN / CLOSE recommendations per position.
+
+- TIGHTEN: apply by raising the stop in `journal/portfolio.json` (validate: new stop > old stop — the law forbids widening), and tell the user.
+- CLOSE: present to the user via AskUserQuestion (recommendation + reason + current P&L). On Confirm, record the simulated exit at the current price with `exit_reason: "discretionary_close"`; on Reject, journal the disagreement — it's scoreboard material.
+- HOLD: no action; the review memo is journal material.
+
 ## 5. Positions check & evening report
 
 - During the session, also check open positions against their stops (current price via yfinance). A breached stop = simulated exit at the stop price; record the close in `portfolio.json` and inform the user.

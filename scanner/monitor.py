@@ -69,6 +69,35 @@ def execute_stop_exit(portfolio: dict, position: dict, now_iso: str) -> dict:
     return closed
 
 
+def adjust_stops(positions: list[dict], prices: dict[str, float], rules: dict) -> list[dict]:
+    """Mechanical stop management. Returns positions whose stop was RAISED.
+
+    - breakeven: at +breakeven_trigger_pct, stop rises to entry price
+    - trailing:  at +trail_trigger_pct, stop trails trail_distance_pct
+                 below the highest price seen (tracked as 'high_water')
+    Stops only ever move UP. No rule ever widens a stop. Missing price = no change.
+    """
+    changed = []
+    for pos in positions:
+        price = prices.get(pos["ticker"])
+        if price is None or pos["side"] != "buy":
+            continue
+        entry = pos["fill_price"]
+        pos["high_water"] = max(pos.get("high_water", entry), price)
+        gain_pct = (price - entry) / entry * 100
+        candidates = [pos["stop"]]
+        if gain_pct >= rules["breakeven_trigger_pct"]:
+            candidates.append(entry)
+        if gain_pct >= rules["trail_trigger_pct"]:
+            candidates.append(pos["high_water"] * (1 - rules["trail_distance_pct"] / 100))
+        new_stop = round(max(candidates), 2)
+        if new_stop > pos["stop"]:
+            pos["prior_stop"] = pos["stop"]
+            pos["stop"] = new_stop
+            changed.append(pos)
+    return changed
+
+
 def market_is_open(now_et: datetime) -> bool:
     if now_et.weekday() >= 5:
         return False
@@ -107,11 +136,24 @@ def notify(title: str, body: str) -> None:
 
 
 def check_once() -> int:
+    import yaml
+
     portfolio = json.loads(PORTFOLIO.read_text())
     if not portfolio["positions"]:
         print("no open positions")
         return 0
     prices = fetch_prices([p["ticker"] for p in portfolio["positions"]])
+
+    # 1) mechanical stop management (raise-only) BEFORE breach detection
+    exit_rules = yaml.safe_load((ROOT / "config" / "limits.yaml").read_text()).get("exits")
+    raised = adjust_stops(portfolio["positions"], prices, exit_rules) if exit_rules else []
+    for pos in raised:
+        msg = (f"STOP RAISED: {pos['ticker']} {pos['prior_stop']} → {pos['stop']} "
+               f"(price ${prices[pos['ticker']]:.2f}) [{'breakeven' if pos['stop'] <= pos['fill_price'] else 'trailing'}]")
+        print(msg)
+        notify("Trade Agent — stop raised", msg)
+
+    # 2) breach detection at (possibly raised) stops
     breaches = find_breaches(portfolio["positions"], prices)
     now_iso = datetime.now(timezone.utc).isoformat()
     for pos in breaches:
@@ -120,9 +162,9 @@ def check_once() -> int:
                f"({closed['pnl_usd']:+.2f} USD, {closed['pnl_pct']:+.1f}%) [SIMULATED]")
         print(msg)
         notify("Trade Agent — stop executed", msg)
-    if breaches:
+    if breaches or raised:
         PORTFOLIO.write_text(json.dumps(portfolio, indent=2))
-    else:
+    if not breaches:
         marks = ", ".join(
             f"{p['ticker']} ${prices.get(p['ticker'], 0):.2f} (stop {p['stop']})"
             for p in portfolio["positions"])

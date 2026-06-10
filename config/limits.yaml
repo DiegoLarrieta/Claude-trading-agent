@@ -19,6 +19,13 @@ ticker_blacklist: []      # tickers the firm may never touch
 allow_short_selling: false
 allow_options: false
 
+# Mechanical exit rules — enforced by the monitor, backtestable, no judgment
+exits:
+  breakeven_trigger_pct: 8.0    # when a position is up 8%, stop rises to entry (trade can no longer lose)
+  trail_trigger_pct: 12.0       # when up 12%, the stop starts trailing the price
+  trail_distance_pct: 6.0       # ...staying 6% below the highest price seen
+  # stops only ever move UP — never widened, never lowered. The law.
+
 # Execution guards (Stage 4; also respected by the simulator)
 order_type: limit         # never market
 proposal_ttl_minutes: 10  # confirm window; expired proposals re-trigger analysis
