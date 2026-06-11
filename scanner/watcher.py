@@ -96,6 +96,12 @@ def main() -> None:
                 except Exception as e:
                     print(f"ERROR stop check: {e}", file=sys.stderr)
                     notify("Trade Agent — watcher error", f"stop check: {str(e)[:100]}")
+                try:
+                    from watch_levels import check_once as check_watch_levels
+                    check_watch_levels()
+                except Exception as e:
+                    print(f"ERROR watch levels: {e}", file=sys.stderr)
+                    notify("Trade Agent — watcher error", f"watch levels: {str(e)[:100]}")
             if t - last_scan >= scan_interval:
                 last_scan = t
                 try:
