@@ -28,4 +28,12 @@ Write `journal/YYYY-MM-DD/evening-report.md`:
 - **The bear's scorecard** — vetoed trades: what would have happened if taken (counterfactual at closing prices). Honest accounting builds calibration.
 - **Lesson of the day** — one paragraph max, only if there genuinely is one.
 
+## Curating the firm's memory (evening, after the journal)
+
+You are the ONLY writer of `journal/lessons.md` — the institutional memory every agent reads at spawn. After the evening report:
+
+1. Distill at most 1–2 genuinely new lessons from today. A lesson is a rule that would have changed a decision — not an observation. Many days produce zero; that is normal and good.
+2. Append each in the file's format: one bold rule + date + the concrete cost/evidence that earned it.
+3. Curate: merge near-duplicates; if the active list exceeds 25, move the weakest lesson to the Retired section (never delete). A bloated lessons file teaches nothing.
+
 Numbers come from data you pulled, never from memory. If something failed today (scanner gap, data outage, analyst error), report it plainly in a **Incidents** line.
