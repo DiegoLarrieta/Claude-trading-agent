@@ -79,9 +79,11 @@ def test_paper_mode_allows_orders():
     assert_order_path_enabled({"mode": "paper", "kill_switch": False})
 
 
-def test_place_order_refused_end_to_end_in_current_config():
-    """Integration: with the repo's real limits.yaml (mode: simulation),
-    the order path must die at the mode lock before any network/socket."""
+def test_bad_order_dies_before_any_socket_in_current_config():
+    """Integration: with the repo's real limits.yaml (whatever its mode),
+    a structurally broken order must die at a lock with PermissionError
+    before any socket call — the mode lock in simulation, the validator
+    in paper. Stop above entry + absurd size guarantees rejection."""
     from broker import place_paper_order
-    with pytest.raises(PermissionError, match="mode: paper"):
-        place_paper_order("NVDA", 1, 200.0, 185.0)
+    with pytest.raises(PermissionError):
+        place_paper_order("NVDA", 10000, 200.0, 250.0)

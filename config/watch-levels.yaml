@@ -1,0 +1,22 @@
+# Machine-readable watch levels — the watcher alerts when one prints.
+# Human-readable context lives in journal/watch-levels.md; keep both in sync.
+# A triggered alert = "re-run the review NOW", never an automatic order.
+# Alerts fire at most once per level per day (state in journal/.watch-alerts.json).
+
+levels:
+  - ticker: NVDA
+    when: at_or_below
+    level: 196.00
+    note: "core entry zone 194.50-196 reached — fast re-review, planned stop 187.50"
+  - ticker: GOOGL
+    when: at_or_below
+    level: 341.00
+    note: "core entry zone 335-341 reached — fast re-review, planned stop ~330"
+  - ticker: UNIT
+    when: at_or_above
+    level: 12.45
+    note: "52-week-high breakout — convene first committee review"
+  - ticker: IDCC
+    when: at_or_below
+    level: 273.00
+    note: "failed-gap tripwire — IDCC setup is DEAD, no re-entry"
