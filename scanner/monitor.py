@@ -118,6 +118,14 @@ def adjust_stops(positions: list[dict], prices: dict[str, float], exits: dict) -
         if new_stop > pos["stop"]:
             pos["prior_stop"] = pos["stop"]
             pos["stop"] = new_stop
+            # notify only on MEANINGFUL raises (>=0.5% above the last one we
+            # announced) — a trending stock raises its trail every tick, and
+            # ten pings for ten cents teaches the human to ignore alerts.
+            last_announced = pos.get("last_announced_stop")
+            pos["notify"] = (last_announced is None
+                             or new_stop >= last_announced * 1.005)
+            if pos["notify"]:
+                pos["last_announced_stop"] = new_stop
             changed.append(pos)
     return changed
 
@@ -189,7 +197,8 @@ def check_once() -> int:
         msg = (f"STOP RAISED: {pos['ticker']} {pos['prior_stop']} → {pos['stop']} "
                f"(price ${prices[pos['ticker']]:.2f}) [{'breakeven' if pos['stop'] <= pos['fill_price'] else 'trailing'}]")
         print(msg)
-        notify("Trade Agent — stop raised", msg)
+        if pos.pop("notify", True):
+            notify("Trade Agent — stop raised", msg)
 
     # 2) breach detection at (possibly raised) stops
     breaches = find_breaches(portfolio["positions"], prices)

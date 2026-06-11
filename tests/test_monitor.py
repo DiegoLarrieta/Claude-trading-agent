@@ -214,3 +214,35 @@ def test_daemons_exit_overnight():
 
 def test_daemons_exit_weekend():
     assert not session_should_run(datetime(2026, 6, 13, 13, 0, tzinfo=ET))
+
+
+# ── stop-raise notification throttling ──────────────────────────────
+
+def test_tiny_trail_raise_is_silent():
+    """A dime-size trail bump updates the stop but doesn't notify."""
+    pos = make_position(fill=70.20, stop=74.79)
+    pos["horizon"] = "swing"
+    pos["high_water"] = 79.56
+    pos["last_announced_stop"] = 74.79
+    raised = adjust_stops([pos], {"SMCI": 79.68}, EXITS)
+    assert raised == [pos]
+    assert pos["stop"] == round(79.68 * 0.94, 2)  # ratchet still precise
+    assert pos["notify"] is False                  # but quiet
+
+
+def test_meaningful_raise_notifies_and_rearms():
+    pos = make_position(fill=70.20, stop=74.20)
+    pos["horizon"] = "swing"
+    pos["high_water"] = 79.0
+    pos["last_announced_stop"] = 74.20
+    raised = adjust_stops([pos], {"SMCI": 80.0}, EXITS)
+    assert raised == [pos]
+    assert pos["notify"] is True
+    assert pos["last_announced_stop"] == pos["stop"]
+
+
+def test_first_raise_always_notifies():
+    """No last_announced_stop yet (fresh position) — breakeven raise must ping."""
+    pos = make_position(fill=100.0, stop=92.0)
+    raised = adjust_stops([pos], {"SMCI": 108.0}, EXITS)
+    assert raised == [pos] and pos["notify"] is True
