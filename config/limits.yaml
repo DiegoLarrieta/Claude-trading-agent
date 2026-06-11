@@ -4,7 +4,7 @@
 # Changing this file is a human-only action.
 # ═══════════════════════════════════════════════════════════════════
 
-mode: simulation          # simulation | paper | live
+mode: paper               # simulation | paper | live   (set to paper 2026-06-11, authorized by Diego)
                           #   simulation: fills are local JSON, broker orders refuse to run
                           #   paper: orders go to the IBKR PAPER account (port-locked in code)
                           #   live: Stage 4 only — not implemented; port lock makes it unreachable
