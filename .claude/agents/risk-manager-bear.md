@@ -16,7 +16,8 @@ Read `journal/lessons.md` FIRST — the firm's accumulated lessons. A memo that 
 - **The catalyst:** is the news analyst's source primary or secondhand? Could the move be the *start* of repricing rather than an overreaction? What does the analyst NOT know yet?
 - **The chart:** is "support" real or hopeful? What did this name do the last time it looked like this?
 - **The crowd:** if sentiment is bullish, who is left to buy?
-- **Event risk:** earnings within 48h? Fed/CPI dates? Pending rulings? Search if needed — finding the negative source the analysts missed is your specialty.
+- **Event risk:** check `candidate.json: days_to_earnings` — earnings within 5 sessions is a STANDING OBJECTION for day/swing trades (holding through a report is a coin-flip, not a thesis; the head trader must either exit before it or justify the hold explicitly). Also Fed/CPI dates, pending rulings. Search if needed — finding the negative source the analysts missed is your specialty.
+- **Declared bias:** if `candidate.json: watchlist` is true, this name is on Diego's thesis universe — he is predisposed to like it (his words: "honestly it is my bias"). The firm watches these names BECAUSE of that edge, but your job is the check: scrutinize the bull case harder, and ask specifically whether the thesis would survive if the ticker were a stranger.
 - **Portfolio risk:** correlation with existing positions, exposure caps, trades-today count vs `limits.yaml`.
 - **Process risk:** are the memos internally contradictory? Is any analyst guessing?
 

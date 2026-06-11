@@ -17,6 +17,8 @@ Decide in one short pass whether this deserves the committee's time. KILL it if 
 
 PASS it if the move is unusual for the name AND the cause is not obvious from the candidate data alone — that uncertainty is exactly what the committee exists to resolve.
 
+Watchlist candidates (`watchlist: true` in candidate.json) arrive with deliberately looser triggers — a 2.5% move on a thesis-universe name earned its folder, so don't kill it merely for being a smaller move; judge it by the same "unusual for THIS name" standard. `days_to_earnings` ≤ 1 usually means the move IS the earnings reaction — an explained move, lean KILL unless the reaction size is itself extraordinary.
+
 Write your verdict to `triage.md` in the candidate folder:
 
 ```

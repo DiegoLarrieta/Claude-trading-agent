@@ -25,8 +25,11 @@ For each ticker that fires a trigger and is not in cooldown (no folder for it to
 ```json
 {"ticker": "X", "trigger": "pct_move|volume|52w|gap", "pct_move": -6.2,
  "volume_multiple": 4.1, "price": 123.45, "prev_close": 131.6,
+ "watchlist": false, "theme": null, "days_to_earnings": 19,
  "detected_at": "ISO timestamp", "scanner_notes": "..."}
 ```
+
+The scanner (`scanner/scan.py`) also sweeps the thesis universe in `config/universe.yaml` with its more sensitive watchlist triggers; those candidates carry `watchlist: true` + their theme, and every candidate gets `days_to_earnings` stamped from the yfinance calendar.
 
 Tell the user how many candidates fired. If zero, say so and skip to step 5 at day's end — a quiet day is a valid day.
 
