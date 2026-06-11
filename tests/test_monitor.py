@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scanner"))
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from monitor import find_breaches, execute_stop_exit, market_is_open
+from monitor import adjust_stops, find_breaches, execute_stop_exit, market_is_open, rules_for
 
 
 def make_position(ticker="SMCI", shares=5, fill=33.48, stop=31.50):
@@ -106,6 +106,69 @@ def test_fractional_shares_exit_math():
     closed = execute_stop_exit(pf, pos, "now")
     assert pf["cash_usd"] == round(0.2296 * 830.00, 2)
     assert closed["pnl_usd"] == round(0.2296 * 830.00 - 0.2296 * 871.15, 2)
+
+
+# ── per-horizon stop escalation ─────────────────────────────────────
+
+EXITS = {
+    "day":   {"breakeven_trigger_pct": 4.0,  "trail_trigger_pct": 6.0,  "trail_distance_pct": 3.0},
+    "swing": {"breakeven_trigger_pct": 8.0,  "trail_trigger_pct": 12.0, "trail_distance_pct": 6.0},
+    "core":  {"breakeven_trigger_pct": 20.0, "trail_trigger_pct": 30.0, "trail_distance_pct": 15.0},
+}
+
+
+def test_untagged_position_defaults_to_swing():
+    assert rules_for(make_position(), EXITS) == EXITS["swing"]
+
+
+def test_legacy_flat_exits_apply_to_everything():
+    flat = {"breakeven_trigger_pct": 8.0, "trail_trigger_pct": 12.0, "trail_distance_pct": 6.0}
+    pos = make_position()
+    pos["horizon"] = "core"
+    assert rules_for(pos, flat) == flat
+
+
+def test_unknown_horizon_gets_no_rules():
+    pos = make_position()
+    pos["horizon"] = "forever"
+    assert rules_for(pos, EXITS) is None
+    assert adjust_stops([pos], {"SMCI": 99.0}, EXITS) == []
+
+
+def test_swing_breakeven_at_8pct():
+    pos = make_position(fill=100.0, stop=92.0)  # untagged → swing
+    raised = adjust_stops([pos], {"SMCI": 108.0}, EXITS)
+    assert raised == [pos] and pos["stop"] == 100.0
+
+
+def test_core_position_unmoved_where_swing_would_go_breakeven():
+    """The whole point: +12% must NOT touch a core hold's stop (trigger is +20%)."""
+    pos = make_position(fill=100.0, stop=92.0)
+    pos["horizon"] = "core"
+    assert adjust_stops([pos], {"SMCI": 112.0}, EXITS) == []
+    assert pos["stop"] == 92.0
+
+
+def test_core_trails_15pct_after_30pct_gain():
+    pos = make_position(fill=100.0, stop=92.0)
+    pos["horizon"] = "core"
+    raised = adjust_stops([pos], {"SMCI": 140.0}, EXITS)
+    assert raised == [pos]
+    assert pos["stop"] == round(140.0 * 0.85, 2)  # 119.0
+
+
+def test_day_position_goes_breakeven_at_4pct():
+    pos = make_position(fill=100.0, stop=96.0)
+    pos["horizon"] = "day"
+    raised = adjust_stops([pos], {"SMCI": 104.0}, EXITS)
+    assert raised == [pos] and pos["stop"] == 100.0
+
+
+def test_stops_never_lowered_by_any_horizon():
+    pos = make_position(fill=100.0, stop=130.0)  # stop already above all rules
+    pos["horizon"] = "core"
+    assert adjust_stops([pos], {"SMCI": 140.0}, EXITS) == []
+    assert pos["stop"] == 130.0
 
 
 # ── market_is_open ──────────────────────────────────────────────────

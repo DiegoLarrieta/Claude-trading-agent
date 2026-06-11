@@ -76,9 +76,23 @@ def execute_stop_exit(portfolio: dict, position: dict, now_iso: str,
     return closed
 
 
-def adjust_stops(positions: list[dict], prices: dict[str, float], rules: dict) -> list[dict]:
+def rules_for(position: dict, exits: dict) -> dict | None:
+    """Pick the exit profile matching the position's horizon.
+
+    exits may be per-horizon ({day: {...}, swing: {...}, core: {...}}) or
+    the legacy flat form ({breakeven_trigger_pct: ...}), which applies to
+    everything. Untagged positions are 'swing'. Unknown horizon = no rules
+    (never guess which escalation policy to apply to someone's position).
+    """
+    if "breakeven_trigger_pct" in exits:
+        return exits
+    return exits.get(position.get("horizon", "swing"))
+
+
+def adjust_stops(positions: list[dict], prices: dict[str, float], exits: dict) -> list[dict]:
     """Mechanical stop management. Returns positions whose stop was RAISED.
 
+    Each position is escalated by its own horizon's profile (see rules_for):
     - breakeven: at +breakeven_trigger_pct, stop rises to entry price
     - trailing:  at +trail_trigger_pct, stop trails trail_distance_pct
                  below the highest price seen (tracked as 'high_water')
@@ -88,6 +102,9 @@ def adjust_stops(positions: list[dict], prices: dict[str, float], rules: dict) -
     for pos in positions:
         price = prices.get(pos["ticker"])
         if price is None or pos["side"] != "buy":
+            continue
+        rules = rules_for(pos, exits)
+        if rules is None:
             continue
         entry = pos["fill_price"]
         pos["high_water"] = max(pos.get("high_water", entry), price)

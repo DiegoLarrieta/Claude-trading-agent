@@ -54,12 +54,12 @@ If any analyst fails or times out, retry once; if it still fails, write `<role>.
 
 For each candidate with `bear-final.md: VERDICT: CLEARED`:
 
-1. **Present the proposal to the user via AskUserQuestion** — ticker, side, shares, limit, stop, two-line thesis, AND the bear's strongest surviving concern. Options: Confirm / Reject.
+1. **Present the proposal to the user via AskUserQuestion** — ticker, side, shares, limit, stop, horizon (with its one-line reason), two-line thesis, AND the bear's strongest surviving concern. Options: Confirm / Reject.
 2. On **Confirm**: re-run `scanner/validate_proposal.py` (same command as step 3.4 — prices may have drifted since the proposal was written; it recomputes every limit from `journal/portfolio.json`, never trusting memos). Only if VALID, append the simulated fill to `journal/portfolio.json`:
 
 ```json
 {"ticker": "X", "side": "buy", "shares": N, "fill_price": <limit>,
- "stop": S, "opened_at": "ISO", "thesis": "...",
+ "stop": S, "horizon": "day|swing|core", "opened_at": "ISO", "thesis": "...",
  "candidate_folder": "candidates/.../", "simulated": true}
 ```
 
