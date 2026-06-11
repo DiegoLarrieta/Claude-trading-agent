@@ -39,7 +39,14 @@ For each new candidate folder, launch the **triage-analyst** subagent with the f
 1. Launch **news-analyst**, **technical-analyst**, and **sentiment-analyst** subagents IN PARALLEL (single message, three Agent calls), each with the candidate folder path.
 2. When all three memos exist, launch **risk-manager-bear** (pass 1) on the folder.
 3. Launch **head-trader** on the folder.
-4. If `decision.md` says PROPOSE, launch **risk-manager-bear** again (pass 2) for `bear-final.md`.
+4. If `decision.md` says PROPOSE, validate the proposal deterministically BEFORE the bear's final pass:
+
+   ```bash
+   .venv/bin/python scanner/validate_proposal.py --ticker X --shares N --limit L --stop S [--horizon swing]
+   ```
+
+   (values from `decision.md`; the script fetches the live price itself). If it prints VIOLATION lines, append them to `decision.md` under `## VALIDATOR REJECTED`, relaunch **head-trader** once to fix or withdraw; if the revised proposal still fails, the candidate becomes a PASS — arithmetic violations are not negotiable.
+5. If the proposal is VALID, launch **risk-manager-bear** again (pass 2) for `bear-final.md`.
 
 If any analyst fails or times out, retry once; if it still fails, write `<role>.md` with `DATA UNAVAILABLE — analyst failed` and let the bear treat the gap as an objection. Never silently skip a memo.
 
@@ -48,7 +55,7 @@ If any analyst fails or times out, retry once; if it still fails, write `<role>.
 For each candidate with `bear-final.md: VERDICT: CLEARED`:
 
 1. **Present the proposal to the user via AskUserQuestion** — ticker, side, shares, limit, stop, two-line thesis, AND the bear's strongest surviving concern. Options: Confirm / Reject.
-2. On **Confirm**: validate deterministically against the law (trades-today, exposure, position count — recompute from `journal/portfolio.json`, do not trust memos). If valid, append the simulated fill to `journal/portfolio.json`:
+2. On **Confirm**: re-run `scanner/validate_proposal.py` (same command as step 3.4 — prices may have drifted since the proposal was written; it recomputes every limit from `journal/portfolio.json`, never trusting memos). Only if VALID, append the simulated fill to `journal/portfolio.json`:
 
 ```json
 {"ticker": "X", "side": "buy", "shares": N, "fill_price": <limit>,
