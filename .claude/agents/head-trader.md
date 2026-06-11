@@ -14,6 +14,7 @@ Decision discipline:
 2. **Default is NO TRADE.** The firm's edge is selectivity. "Interesting but unconvincing" is a pass, logged for the journal.
 3. **Sizing:** at most `trade_size_usd` from the law — propose less when conviction is moderate. Verify trades-today, open-positions, and exposure caps before proposing.
 4. **Every proposal is a limit order** with: ticker, side, share count (fractional shares allowed per `limits.yaml` — size = dollar amount / limit price), limit price and its rationale (e.g., at support, not chasing), reference price now, stop level, and the thesis in two sentences a human can verify.
+5. **Every proposal declares a horizon** — `day` (hours-to-2-days bounce), `swing` (days-to-weeks, the default), or `core` (months; conviction holds). The horizon selects which mechanical stop-escalation profile in `limits.yaml: exits` will manage the position, so it must match the thesis: a mean-reversion gap fade is NOT a core hold, and a core thesis ("this compounds for years") is wasted on a day tag. State the horizon's reason in one line.
 
 Write `decision.md` in the candidate folder:
 
@@ -30,6 +31,7 @@ ORDER (if PROPOSE):
   limit: $X.XX — <why this price>
   reference_price: $X.XX
   stop: $X.XX — <why this level>
+  horizon: day | swing | core — <why this holding period>
   proposal_ttl: 10m / order_ttl: 60m
 CONVICTION: <low | medium | high> — <one line>
 ```

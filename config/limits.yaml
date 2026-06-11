@@ -19,12 +19,25 @@ ticker_blacklist: []      # tickers the firm may never touch
 allow_short_selling: false
 allow_options: false
 
-# Mechanical exit rules — enforced by the monitor, backtestable, no judgment
+# Mechanical exit rules — enforced by the monitor, backtestable, no judgment.
+# Per-horizon: every position declares its intended holding period at buy
+# time and is escalated by that profile. The INITIAL stop is always chosen
+# per-stock by the committee; these rules only RAISE it as the trade wins.
+# Stops only ever move UP — never widened, never lowered. The law.
+# (Approved by Diego 2026-06-10; numbers are starting points for /backtest tuning.)
 exits:
-  breakeven_trigger_pct: 8.0    # when a position is up 8%, stop rises to entry (trade can no longer lose)
-  trail_trigger_pct: 12.0       # when up 12%, the stop starts trailing the price
-  trail_distance_pct: 6.0       # ...staying 6% below the highest price seen
-  # stops only ever move UP — never widened, never lowered. The law.
+  day:        # hours-to-2-days bounce trades: protect gains fast, exit fast
+    breakeven_trigger_pct: 4.0
+    trail_trigger_pct: 6.0
+    trail_distance_pct: 3.0
+  swing:      # days-to-weeks (the default; identical to the original single profile)
+    breakeven_trigger_pct: 8.0    # up 8% → stop rises to entry (trade can no longer lose)
+    trail_trigger_pct: 12.0       # up 12% → stop starts trailing the price
+    trail_distance_pct: 6.0       # ...staying 6% below the highest price seen
+  core:       # months — conviction holds; normal 10-15% pullbacks must not eject us
+    breakeven_trigger_pct: 20.0
+    trail_trigger_pct: 30.0
+    trail_distance_pct: 15.0
 
 # Execution guards (Stage 4; also respected by the simulator)
 order_type: limit         # never market
