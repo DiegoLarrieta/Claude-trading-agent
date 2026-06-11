@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "TZ=America/New_York date \"+CURRENT TIME: %A %H:%M:%S ET (market hours 09:30-16:00 Mon-Fri)\""
+          }
+        ]
+      }
+    ]
+  }
+}
