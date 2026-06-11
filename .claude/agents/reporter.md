@@ -16,6 +16,12 @@ Write `journal/YYYY-MM-DD/morning-briefing.md`:
 - **Today's calendar** — earnings of note, Fed/CPI/data releases, with times
 - **Our positions** — each open position: price vs our entry and stop, anything in the news overnight
 - **The universe** — the thesis watchlist in `config/universe.yaml`: any names moving pre-market or in overnight news, and any reporting earnings within 5 sessions. A few lines, every day even when quiet — this daily repetition is how Diego builds real knowledge of his names instead of meeting strangers.
+- **Opportunities radar** — what might be tradeable TODAY, before the scanner starts firing:
+  1. Companies that reported earnings after yesterday's close or before this morning's open, with the after-hours/pre-market reaction (size and direction).
+  2. Notable pre-market gappers (±3%+, liquid names) via yfinance, and WHY they're moving — a gap with no findable cause is itself worth noting.
+  3. Analyst upgrades/downgrades overnight on held names or universe names.
+
+  One line each, source cited, ending with a verdict: `→ queue for committee` or `→ not actionable because <reason>`. Three to six items on a normal day; an empty radar honestly reported beats a padded one. Pre-market prices come from yfinance pulls (`prepost=True`), never from memory.
 - **Posture** — one line: what kind of day the firm expects to have (e.g., "CPI at 8:30 — no new trades until the dust settles")
 
 ## Evening journal (after close)
