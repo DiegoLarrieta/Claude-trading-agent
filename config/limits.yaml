@@ -4,7 +4,10 @@
 # Changing this file is a human-only action.
 # ═══════════════════════════════════════════════════════════════════
 
-mode: simulation          # simulation | live  (live requires Stage 4: IBKR connected)
+mode: simulation          # simulation | paper | live
+                          #   simulation: fills are local JSON, broker orders refuse to run
+                          #   paper: orders go to the IBKR PAPER account (port-locked in code)
+                          #   live: Stage 4 only — not implemented; port lock makes it unreachable
 kill_switch: false        # true = no orders of any kind, even simulated
 
 # Position sizing — the head trader may propose LESS, never more

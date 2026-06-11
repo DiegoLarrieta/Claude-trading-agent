@@ -58,7 +58,11 @@ If any analyst fails or times out, retry once; if it still fails, write `<role>.
 For each candidate with `bear-final.md: VERDICT: CLEARED`:
 
 1. **Present the proposal to the user via AskUserQuestion** — ticker, side, shares, limit, stop, horizon (with its one-line reason), two-line thesis, AND the bear's strongest surviving concern. Options: Confirm / Reject.
-2. On **Confirm**: re-run `scanner/validate_proposal.py` (same command as step 3.4 — prices may have drifted since the proposal was written; it recomputes every limit from `journal/portfolio.json`, never trusting memos). Only if VALID, append the simulated fill to `journal/portfolio.json`:
+2. On **Confirm**: re-run `scanner/validate_proposal.py` (same command as step 3.4 — prices may have drifted since the proposal was written; it recomputes every limit from `journal/portfolio.json`, never trusting memos). Only if VALID, execute per `limits.yaml: mode`:
+   - **mode: simulation** — record the simulated fill directly (below).
+   - **mode: paper** — place the real paper order first: `.venv/bin/python scanner/broker.py order --ticker X --shares N --limit L --stop S --horizon H`. If it reports `Filled`, record the fill below using the actual `avg_fill_price` and add `"broker": "ibkr-paper"` to the record. If unfilled after the wait, tell the user (order works at IBKR until the close; check later with `broker.py orders`); record the position only once filled. If the broker errors, report it verbatim — never fall back to a silent simulated fill.
+
+   Then append the fill to `journal/portfolio.json`:
 
 ```json
 {"ticker": "X", "side": "buy", "shares": N, "fill_price": <limit>,

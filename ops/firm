@@ -19,6 +19,19 @@ case "${1:-status}" in
     launchctl start com.trade-agent.telegram
     echo "firm is up (daemons still self-exit after the close)"
     ;;
+  gateway)
+    APP=$(ls -d "/Applications/IB Gateway"*.app "$HOME/Applications/IB Gateway"*/"IB Gateway"*.app 2>/dev/null | grep -v Uninstaller | head -1 || true)
+    if [ -z "$APP" ]; then
+      echo "IB Gateway app not found in /Applications or ~/Applications" >&2
+      exit 1
+    fi
+    if "$ROOT/.venv/bin/python" "$ROOT/scanner/broker.py" check >/dev/null 2>&1; then
+      echo "gateway already up and listening"
+      exit 0
+    fi
+    open "$APP"
+    echo "IB Gateway launched — log in (paper mode), then verify with: ops/firm status"
+    ;;
   down)
     for svc in "${SERVICES[@]}"; do
       launchctl unload "$AGENTS_DIR/com.trade-agent.$svc.plist" 2>/dev/null || true
