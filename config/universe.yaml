@@ -1,0 +1,38 @@
+# Thesis universe — names the firm chooses to KNOW, not strangers it meets.
+# This is Diego's circle of competence (software engineer; AI stack), watched
+# daily with more sensitive scanner triggers. It is also a DECLARED BIAS:
+# candidates from this list are tagged watchlist:true and the bear is
+# instructed to scrutinize the bull case on them extra hard.
+#
+# This file is config, not law — Diego edits it freely. Trigger sensitivity
+# is a starting point for /backtest tuning.
+
+watchlist_triggers:           # vs the market-wide 4.0 / 3.0 in scanner.yaml
+  pct_move_intraday: 2.5      # smaller dislocations are actionable on known names
+  volume_multiple: 2.0
+
+themes:
+  # Jensen Huang's five layers of the AI buildout
+  ai-energy:                  # power producers feeding data centers
+    - VST
+    - CEG
+    - GEV
+  ai-chips:
+    - NVDA
+    - AMD
+    - AVGO
+    - TSM
+    - ASML
+  ai-infrastructure:          # servers, cooling, networking
+    - SMCI    # CAUTION: documented accounting history (EY resignation, delayed 10-K); day-1 loss; wider danger margin per lessons.md #3
+    - DELL
+    - VRT
+    - ANET
+  ai-models:                  # the labs you can actually buy
+    - MSFT
+    - GOOGL
+    - META
+  ai-applications:
+    - NOW
+    - PLTR
+    - DUOL

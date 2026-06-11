@@ -15,6 +15,7 @@ Write `journal/YYYY-MM-DD/morning-briefing.md`:
 - **Overnight in 3 bullets** — what happened while we slept, only what could matter today
 - **Today's calendar** — earnings of note, Fed/CPI/data releases, with times
 - **Our positions** — each open position: price vs our entry and stop, anything in the news overnight
+- **The universe** — the thesis watchlist in `config/universe.yaml`: any names moving pre-market or in overnight news, and any reporting earnings within 5 sessions. A few lines, every day even when quiet — this daily repetition is how Diego builds real knowledge of his names instead of meeting strangers.
 - **Posture** — one line: what kind of day the firm expects to have (e.g., "CPI at 8:30 — no new trades until the dust settles")
 
 ## Evening journal (after close)
