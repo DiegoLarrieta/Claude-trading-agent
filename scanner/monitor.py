@@ -129,6 +129,20 @@ def market_is_open(now_et: datetime) -> bool:
     return (9 * 60 + 30) <= minutes < (16 * 60)
 
 
+def session_should_run(now_et: datetime, pre_open_min: int = 20, post_close_min: int = 5) -> bool:
+    """Whether the firm's daemons should be alive right now.
+
+    Market hours plus a pre-open grace (so a daemon launched at 9:25 waits
+    for the bell instead of exiting) and a short post-close grace (so the
+    final stop check sees closing prices). Outside this window daemons
+    self-terminate — nothing runs overnight or on weekends, by policy.
+    """
+    if now_et.weekday() >= 5:
+        return False
+    minutes = now_et.hour * 60 + now_et.minute
+    return (9 * 60 + 30 - pre_open_min) <= minutes < (16 * 60 + post_close_min)
+
+
 # ── I/O shell ───────────────────────────────────────────────────────
 
 

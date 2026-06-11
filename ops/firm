@@ -1,0 +1,52 @@
+#!/bin/bash
+# Manual control over the firm's daemons — the human override that always wins.
+#   ops/firm up      start watcher + telegram NOW (they still self-exit after close)
+#   ops/firm down    stop everything immediately and disable scheduled starts
+#   ops/firm on      re-enable the market-hours schedule (undo 'down')
+#   ops/firm status  what's running, heartbeat freshness, gateway state
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+AGENTS_DIR="$HOME/Library/LaunchAgents"
+SERVICES=(watcher telegram heartbeat)
+
+case "${1:-status}" in
+  up)
+    for svc in "${SERVICES[@]}"; do
+      launchctl load "$AGENTS_DIR/com.trade-agent.$svc.plist" 2>/dev/null || true
+    done
+    launchctl start com.trade-agent.watcher
+    launchctl start com.trade-agent.telegram
+    echo "firm is up (daemons still self-exit after the close)"
+    ;;
+  down)
+    for svc in "${SERVICES[@]}"; do
+      launchctl unload "$AGENTS_DIR/com.trade-agent.$svc.plist" 2>/dev/null || true
+    done
+    echo "firm is down — nothing runs, scheduled starts disabled until 'ops/firm on'"
+    ;;
+  on)
+    for svc in "${SERVICES[@]}"; do
+      launchctl load "$AGENTS_DIR/com.trade-agent.$svc.plist" 2>/dev/null || true
+    done
+    echo "market-hours schedule re-enabled"
+    ;;
+  status)
+    echo "── launchd services ──"
+    launchctl list | grep com.trade-agent || echo "(none loaded — firm is down)"
+    echo "── processes ──"
+    pgrep -fl "scanner/(watcher|telegram_bot|monitor)" || echo "(no daemon processes running)"
+    echo "── heartbeat ──"
+    if [ -f "$ROOT/journal/.watcher-heartbeat" ]; then
+      echo "last beat: $(cat "$ROOT/journal/.watcher-heartbeat")"
+    else
+      echo "no heartbeat file"
+    fi
+    echo "── gateway ──"
+    "$ROOT/.venv/bin/python" "$ROOT/scanner/broker.py" check || true
+    ;;
+  *)
+    echo "usage: ops/firm up|down|on|status" >&2
+    exit 2
+    ;;
+esac

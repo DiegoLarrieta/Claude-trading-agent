@@ -187,3 +187,30 @@ def test_market_closed_premarket_and_after():
 
 def test_market_closed_weekend():
     assert not market_is_open(datetime(2026, 6, 13, 13, 0, tzinfo=ET))  # Saturday
+
+
+# ── session_should_run (market-hours daemon policy) ─────────────────
+
+from monitor import session_should_run
+
+
+def test_daemons_run_during_market_hours():
+    assert session_should_run(datetime(2026, 6, 11, 13, 0, tzinfo=ET))
+
+
+def test_daemons_run_in_preopen_grace():
+    assert session_should_run(datetime(2026, 6, 11, 9, 12, tzinfo=ET))
+
+
+def test_daemons_run_in_postclose_grace():
+    assert session_should_run(datetime(2026, 6, 11, 16, 4, tzinfo=ET))
+
+
+def test_daemons_exit_overnight():
+    assert not session_should_run(datetime(2026, 6, 11, 3, 0, tzinfo=ET))
+    assert not session_should_run(datetime(2026, 6, 11, 16, 6, tzinfo=ET))
+    assert not session_should_run(datetime(2026, 6, 11, 8, 0, tzinfo=ET))
+
+
+def test_daemons_exit_weekend():
+    assert not session_should_run(datetime(2026, 6, 13, 13, 0, tzinfo=ET))

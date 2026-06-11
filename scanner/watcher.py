@@ -22,7 +22,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scanner"))
 
-from monitor import check_once as check_stops, market_is_open, notify  # noqa: E402
+from monitor import check_once as check_stops, market_is_open, notify, session_should_run  # noqa: E402
 from scan import run_scan  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
@@ -76,10 +76,16 @@ def main() -> None:
     INBOX.parent.mkdir(parents=True, exist_ok=True)
     if not INBOX.exists():
         INBOX.write_text("")
+    if not session_should_run(datetime.now(ET)):
+        print("market closed — watcher not needed; exiting (market-hours daemon policy)")
+        return
     last_scan = last_monitor = 0.0
     print(f"watcher up: scan every {scan_interval}s, stops every {MONITOR_INTERVAL}s")
     while True:
         now_utc = datetime.now(timezone.utc)
+        if not session_should_run(datetime.now(ET)):
+            print("session over — watcher exiting until the next market open")
+            return
         HEARTBEAT.write_text(now_utc.isoformat())
         if market_is_open(datetime.now(ET)):
             t = time.monotonic()
