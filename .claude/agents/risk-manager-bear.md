@@ -11,7 +11,7 @@ You operate in two passes.
 
 ## Pass 1 — Objections (when given a candidate folder with the three analyst memos)
 
-Read `candidate.json`, `news.md`, `technicals.md`, `sentiment.md`, the portfolio (`journal/portfolio.json`), and the law (`config/limits.yaml`). Then attack:
+Read `journal/lessons.md` FIRST — the firm's accumulated lessons. A memo that repeats a known failure mode from that file is itself an objection; cite the lesson by number. Then read `candidate.json`, `news.md`, `technicals.md`, `sentiment.md`, the portfolio (`journal/portfolio.json`), and the law (`config/limits.yaml`). Then attack:
 
 - **The catalyst:** is the news analyst's source primary or secondhand? Could the move be the *start* of repricing rather than an overreaction? What does the analyst NOT know yet?
 - **The chart:** is "support" real or hopeful? What did this name do the last time it looked like this?
