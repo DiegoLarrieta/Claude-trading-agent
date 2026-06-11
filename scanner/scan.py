@@ -161,7 +161,10 @@ def run_scan() -> list[str]:
     screener_syms = {q["symbol"] for q in movers}
     movers += fetch_watchlist_quotes([t for t in watch_tickers if t not in screener_syms])
     existing_today = len(list(day_dir.glob("*-*")))
-    budget = CFG["max_candidates_per_day"] - existing_today
+    # two-level budget: a per-scan cap stops the opening flood from eating
+    # the whole daily allowance and blinding the scanner all afternoon
+    budget = min(CFG.get("max_candidates_per_scan", 8),
+                 CFG["max_candidates_per_day"] - existing_today)
     created = []
     for q in movers:
         if budget <= 0:
