@@ -11,6 +11,7 @@ A multi-agent trading firm running on Claude Code (Pro subscription, interactive
 - Market data comes from actual yfinance pulls — never from model memory. No invented numbers, ever.
 - All Python runs through the project venv: `.venv/bin/python` (yfinance and pyyaml are installed there; bare `python3` lacks them).
 - LLM judgment is forward-tested only. Never backtest the committee on past dates (lookahead bias — the model knows the endings). Mechanical rules may be backtested with deterministic scripts.
+- IBKR access goes only through `scanner/broker.py`, which is READ-ONLY and hard-refuses live-account ports (4001/7496) in code. Removing that lock is a human-only Stage 4 action. `/paper-trade` runs a local-sim day that never touches the broker at all.
 
 ## Architecture in one breath
 

@@ -63,12 +63,33 @@ def test_exit_math_and_cash_credit():
     assert pf["closed_trades"] == [closed]
 
 
-def test_exit_fills_at_stop_not_at_worse_live_price():
-    """Conservative rule: even if live price gapped below, exit at stop."""
+def test_exit_fills_at_stop_when_price_at_or_above_stop():
+    """Normal breach: live price at the stop level fills at the stop."""
+    pos = make_position(stop=31.50)
+    pf = make_portfolio([pos])
+    closed = execute_stop_exit(pf, pos, "now", live_price=31.50)
+    assert closed["exit_price"] == 31.50
+    assert closed["exit_reason"] == "stop"
+
+
+def test_gap_below_stop_fills_at_live_price():
+    """Honest fill: a gap below the stop fills at the gapped price, not the stop."""
+    pos = make_position(stop=31.50)  # 5 sh @ 33.48
+    pf = make_portfolio([pos], cash=0.0)
+    closed = execute_stop_exit(pf, pos, "now", live_price=29.245)
+    assert closed["exit_price"] == 29.245
+    assert closed["exit_reason"] == "stop_gap"
+    assert pf["cash_usd"] == round(5 * 29.245, 2)
+    # pnl is computed from cent-rounded proceeds and cost, so compare the same way
+    assert closed["pnl_usd"] == round(round(5 * 29.245, 2) - round(5 * 33.48, 2), 2)
+
+
+def test_no_live_price_falls_back_to_stop():
     pos = make_position(stop=31.50)
     pf = make_portfolio([pos])
     closed = execute_stop_exit(pf, pos, "now")
     assert closed["exit_price"] == 31.50
+    assert closed["exit_reason"] == "stop"
 
 
 def test_exit_only_removes_matching_position():

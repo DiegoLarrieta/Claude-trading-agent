@@ -43,20 +43,27 @@ def find_breaches(positions: list[dict], prices: dict[str, float]) -> list[dict]
     return breaches
 
 
-def execute_stop_exit(portfolio: dict, position: dict, now_iso: str) -> dict:
-    """Close a position at its stop price. Returns the closed-trade record.
+def execute_stop_exit(portfolio: dict, position: dict, now_iso: str,
+                      live_price: float | None = None) -> dict:
+    """Close a breached position. Returns the closed-trade record.
 
-    Conservative fill assumption: exit AT the stop, even if the live
-    price is lower — real stops rarely fill better than their level.
+    Honest fill assumption: a stop order becomes a market order at the
+    stop level, so the fill is the WORSE of stop and live price. If the
+    price gapped below the stop, you get the gapped price — pretending
+    otherwise flatters the simulation.
     """
     exit_price = position["stop"]
+    exit_reason = "stop"
+    if live_price is not None and live_price < exit_price:
+        exit_price = live_price
+        exit_reason = "stop_gap"
     proceeds = round(position["shares"] * exit_price, 2)
     cost = round(position["shares"] * position["fill_price"], 2)
     closed = {
         **position,
         "closed_at": now_iso,
-        "exit_price": exit_price,
-        "exit_reason": "stop",
+        "exit_price": round(exit_price, 4),
+        "exit_reason": exit_reason,
         "pnl_usd": round(proceeds - cost, 2),
         "pnl_pct": round((proceeds - cost) / cost * 100, 2),
     }
@@ -157,7 +164,7 @@ def check_once() -> int:
     breaches = find_breaches(portfolio["positions"], prices)
     now_iso = datetime.now(timezone.utc).isoformat()
     for pos in breaches:
-        closed = execute_stop_exit(portfolio, pos, now_iso)
+        closed = execute_stop_exit(portfolio, pos, now_iso, live_price=prices.get(pos["ticker"]))
         msg = (f"STOP HIT: {closed['ticker']} closed at ${closed['exit_price']} "
                f"({closed['pnl_usd']:+.2f} USD, {closed['pnl_pct']:+.1f}%) [SIMULATED]")
         print(msg)
