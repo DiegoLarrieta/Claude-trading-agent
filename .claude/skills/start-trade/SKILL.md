@@ -46,7 +46,10 @@ Confirm the account id starts with "D" (paper) and report net liquidation.
 ## 4. Morning context
 
 If no morning briefing exists for today, launch the **reporter** subagent
-to write it (it covers positions, the thesis universe, and the calendar).
+to write it (it covers positions, the thesis universe, the calendar, and
+the opportunities radar). If the radar queued anything for committee,
+include those items — one line each — in the verdict so Diego sees them
+at boot, not only when /trading-day runs.
 
 ## 5. Verdict
 
