@@ -163,10 +163,21 @@ def _set_kill_switch(value: bool) -> None:
 
 
 def daemon() -> None:
+    sys.path.insert(0, str(ROOT / "scanner"))
+    from monitor import session_should_run
+    from zoneinfo import ZoneInfo
+
+    et = ZoneInfo("America/New_York")
+    if not session_should_run(datetime.now(et)):
+        print("market closed — telegram daemon not needed; exiting (market-hours policy)")
+        return
     print("telegram daemon up — long-polling for commands")
     offset = 0
     cid = _chat_id()
     while True:
+        if not session_should_run(datetime.now(et)):
+            print("session over — telegram daemon exiting until the next market open")
+            return
         try:
             updates = _api("getUpdates", timeout=30, offset=offset).get("result", [])
             for u in updates:
