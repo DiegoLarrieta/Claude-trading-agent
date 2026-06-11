@@ -53,3 +53,35 @@ def test_summarize_account():
     assert s["cash_usd"] == 999000.5
     assert s["positions"] == pos
     assert s["account_type"] == "paper"
+
+
+# ── the mode lock (lock 2) ──────────────────────────────────────────
+
+from broker import assert_order_path_enabled
+
+
+def test_simulation_mode_blocks_orders():
+    with pytest.raises(PermissionError, match="mode: paper"):
+        assert_order_path_enabled({"mode": "simulation", "kill_switch": False})
+
+
+def test_live_mode_blocks_orders_too():
+    with pytest.raises(PermissionError, match="mode: paper"):
+        assert_order_path_enabled({"mode": "live", "kill_switch": False})
+
+
+def test_kill_switch_blocks_orders():
+    with pytest.raises(PermissionError, match="kill_switch"):
+        assert_order_path_enabled({"mode": "paper", "kill_switch": True})
+
+
+def test_paper_mode_allows_orders():
+    assert_order_path_enabled({"mode": "paper", "kill_switch": False})
+
+
+def test_place_order_refused_end_to_end_in_current_config():
+    """Integration: with the repo's real limits.yaml (mode: simulation),
+    the order path must die at the mode lock before any network/socket."""
+    from broker import place_paper_order
+    with pytest.raises(PermissionError, match="mode: paper"):
+        place_paper_order("NVDA", 1, 200.0, 185.0)
