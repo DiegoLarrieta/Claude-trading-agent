@@ -23,31 +23,32 @@ You are orchestrating the trading firm defined in `.claude/agents/`. Today's dat
           'theme': theme_of(t, UNIVERSE), 'watchlist': bool(theme_of(t, UNIVERSE))})"
    ```
 
-## 1. Scan (deterministic, no LLM judgment)
+## 1. Drain the inbox (the watcher is the SOLE scanner)
 
-Run a market scan with Python/yfinance via Bash against the thresholds in `config/scanner.yaml`:
-- Day's top % gainers and losers (use yfinance screeners or a liquid-universe list)
-- Volume vs 20-day average for the movers
-- Filter by universe rules (market cap, dollar volume, exchanges)
+You never scan the market yourself — the watcher daemon (`scanner/watcher.py`) is the firm's only scanner. It appends candidates to `candidates/inbox/pending.jsonl`; you consume them through the queue protocol (`scanner/inbox_queue.py`), whose status ledger (`processed.jsonl`) is YOUR file — append-only, and the only inbox file you ever write:
 
-For each ticker that fires a trigger and is not in cooldown (no folder for it today within `cooldown_minutes`), create `candidates/YYYY-MM-DD/TICKER-HHMM/candidate.json`:
-
-```json
-{"ticker": "X", "trigger": "pct_move|volume|52w|gap", "pct_move": -6.2,
- "volume_multiple": 4.1, "price": 123.45, "prev_close": 131.6,
- "watchlist": false, "theme": null, "days_to_earnings": 19,
- "detected_at": "ISO timestamp", "scanner_notes": "..."}
+```bash
+.venv/bin/python scanner/inbox_queue.py pending
 ```
 
-The scanner (`scanner/scan.py`) also sweeps the thesis universe in `config/universe.yaml` with its more sensitive watchlist triggers; those candidates carry `watchlist: true` + their theme, and every candidate gets `days_to_earnings` stamped from the yfinance calendar.
+This marks expired candidates `stale` (a momentum setup from 45+ minutes ago is dead — journal them, never analyze them) and prints the fresh ones ranked for the committee, the top-K flagged. Before working a candidate, claim it; when its pipeline ends, record the outcome:
 
-Tell the user how many candidates fired. If zero, say so and skip to step 5 at day's end — a quiet day is a valid day.
+```bash
+.venv/bin/python scanner/inbox_queue.py claim <folder>
+.venv/bin/python scanner/inbox_queue.py finish <folder> done|killed|rejected --note "<one line>"
+```
 
-## 2. Triage
+(`killed` = triage kill or bear veto/PASS; `done` = reached a human decision; `rejected` = Diego said no.)
 
-For each new candidate folder, launch the **triage-analyst** subagent with the folder path. Collect verdicts. Report to the user: "N candidates → M passed triage."
+Tell the user how many candidates are fresh, stale, and waiting. If zero, say so — a quiet day is a valid day. First check the watcher is alive (`journal/.watcher-heartbeat` fresher than 5 min); if it's down, tell the user, then as a degraded-mode fallback you may run one scan by hand — `.venv/bin/python scanner/scan.py` — and send the folders it prints straight to triage, recording their statuses in the ledger as usual (the ledger dedupes them if the watcher later re-enqueues). Never run scan.py while the watcher is alive — one scanner, one writer.
 
-## 3. Committee (per surviving candidate)
+## 2. Triage (ONE batch call)
+
+Launch a SINGLE **triage-analyst** subagent with ALL fresh candidate folder paths in one prompt — never one spawn per candidate. Collect verdicts; `finish ... killed` each KILL. Report to the user: "N candidates → M passed triage."
+
+## 3. Committee (per surviving candidate, top-K at a time)
+
+Convene committees for at most `committee_top_k` (config/scanner.yaml, currently 3) triage survivors at a time, in the rank order step 1 printed. The rest wait — they stay claimable on the next drain and may go stale honestly; tell the user who's waiting. For each candidate:
 
 1. Launch **news-analyst**, **technical-analyst**, and **sentiment-analyst** subagents IN PARALLEL (single message, three Agent calls), each with the candidate folder path.
 2. When all three memos exist, launch **risk-manager-bear** (pass 1) on the folder.
@@ -95,6 +96,7 @@ Once per session — at session start if positions are open, or after material n
 
 - During the session, also check open positions against their stops (current price via yfinance). A breached stop = simulated exit at the stop price; record the close in `portfolio.json` and inform the user.
 - At day's end (or when the user says "wrap up"), launch the **reporter** subagent for the evening report, then show the user the P&L line and the considered-and-passed list inline.
+- After the evening report, archive the day's inbox (the watcher has self-terminated by then): `.venv/bin/python scanner/inbox_queue.py rotate`.
 
 ## Rules
 

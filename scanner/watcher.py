@@ -22,15 +22,19 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scanner"))
 
+from inbox_queue import latest_statuses, oldest_unprocessed_age_minutes, parse_jsonl  # noqa: E402
 from monitor import check_once as check_stops, market_is_open, notify, session_should_run  # noqa: E402
-from scan import run_scan  # noqa: E402
+from scan import budget_alerts, run_scan  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
 INBOX = ROOT / "candidates" / "inbox" / "pending.jsonl"
+PROCESSED = ROOT / "candidates" / "inbox" / "processed.jsonl"
 HEARTBEAT = ROOT / "journal" / ".watcher-heartbeat"
+BUDGET_STATE = ROOT / "journal" / ".scanner-budget-alerts.json"
 
 TICK_SECONDS = 60
 MONITOR_INTERVAL = 180
+BACKLOG_ALERT_COOLDOWN = 3600  # repeat the rotting-queue alarm at most hourly
 
 
 # ── pure logic (unit-tested) ────────────────────────────────────────
@@ -70,6 +74,42 @@ def heartbeat_is_stale(heartbeat_iso: str | None, now: datetime, max_age_s: int 
 # ── daemon shell ────────────────────────────────────────────────────
 
 
+def check_budget(cfg: dict, today: str) -> None:
+    """Alert at 80% and 100% of the daily candidate budget, once each per day."""
+    state = {"date": today, "announced": []}
+    if BUDGET_STATE.exists():
+        try:
+            loaded = json.loads(BUDGET_STATE.read_text())
+            if loaded.get("date") == today:
+                state = loaded
+        except json.JSONDecodeError:
+            pass
+    existing = len(list((ROOT / "candidates" / today).glob("*-*")))
+    max_per_day = cfg["max_candidates_per_day"]
+    for pct in budget_alerts(existing, max_per_day, state["announced"]):
+        if pct >= 100:
+            notify("Trade Agent — SCANNER BLIND",
+                   f"daily candidate budget exhausted ({existing}/{max_per_day}) — "
+                   "no new candidates until tomorrow unless the cap is raised")
+        else:
+            notify("Trade Agent — scanner budget warning",
+                   f"{pct}% of daily candidate budget used ({existing}/{max_per_day})")
+        state["announced"].append(pct)
+    BUDGET_STATE.write_text(json.dumps(state))
+
+
+def check_backlog(now_utc: datetime, queue_cfg: dict) -> str | None:
+    """Message if the oldest untouched candidate exceeds the backlog limit."""
+    entries = parse_jsonl(INBOX.read_text() if INBOX.exists() else "")
+    statuses = latest_statuses(parse_jsonl(PROCESSED.read_text() if PROCESSED.exists() else ""))
+    age = oldest_unprocessed_age_minutes(entries, statuses, now_utc)
+    limit = queue_cfg.get("backlog_alert_minutes", 45)
+    if age is not None and age > limit:
+        return (f"oldest queued candidate untouched for {age:.0f} min "
+                f"(limit {limit}) — is the committee session running?")
+    return None
+
+
 def main() -> None:
     cfg = yaml.safe_load((ROOT / "config" / "scanner.yaml").read_text())
     scan_interval = cfg["poll_interval_seconds"]
@@ -80,6 +120,7 @@ def main() -> None:
         print("market closed — watcher not needed; exiting (market-hours daemon policy)")
         return
     last_scan = last_monitor = 0.0
+    last_backlog_alert = -BACKLOG_ALERT_COOLDOWN  # eligible immediately
     print(f"watcher up: scan every {scan_interval}s, stops every {MONITOR_INTERVAL}s")
     while True:
         now_utc = datetime.now(timezone.utc)
@@ -102,6 +143,14 @@ def main() -> None:
                 except Exception as e:
                     print(f"ERROR watch levels: {e}", file=sys.stderr)
                     notify("Trade Agent — watcher error", f"watch levels: {str(e)[:100]}")
+                try:
+                    msg = check_backlog(now_utc, cfg.get("queue") or {})
+                    if msg and t - last_backlog_alert >= BACKLOG_ALERT_COOLDOWN:
+                        last_backlog_alert = t
+                        print(f"BACKLOG: {msg}")
+                        notify("Trade Agent — queue backlog", msg)
+                except Exception as e:
+                    print(f"ERROR backlog check: {e}", file=sys.stderr)
             if t - last_scan >= scan_interval:
                 last_scan = t
                 try:
@@ -111,6 +160,7 @@ def main() -> None:
                             enqueue_candidates(INBOX.read_text(), created, now_utc.isoformat()))
                         notify("Trade Agent — new candidates",
                                f"{len(created)} new candidate(s) queued for the committee")
+                    check_budget(cfg, datetime.now(ET).strftime("%Y-%m-%d"))
                 except Exception as e:
                     print(f"ERROR scan: {e}", file=sys.stderr)
                     notify("Trade Agent — watcher error", f"scan: {str(e)[:100]}")

@@ -16,6 +16,16 @@ triggers:
   week52_extreme: true          # new 52-week high/low
   gap_open_pct: 3.0             # gap at the open vs previous close
 
+pre_triage:                     # deterministic kills in scan.py — no folder, no budget, no LLM
+  earnings_window_days: 1       # days_to_earnings <= this -> the move IS the earnings reaction
+  extraordinary_pct_multiple: 2.0  # ...unless |move| >= this x pct_move_intraday (or watchlist)
+
+queue:                          # candidate inbox protocol (scanner/inbox_queue.py)
+  stale_after_minutes: 45       # unprocessed candidate older than this -> stale, journaled, never analyzed
+  processing_timeout_minutes: 30  # a 'processing' claim older than this is presumed crashed -> re-offered
+  backlog_alert_minutes: 45     # oldest untouched candidate older than this -> watcher alerts
+  committee_top_k: 3            # max committees per inbox drain; the rest wait (and may go stale honestly)
+
 universe:
   min_market_cap_usd: 2000000000     # $2B — no microcaps
   min_avg_dollar_volume: 10000000    # $10M/day — must be liquid
