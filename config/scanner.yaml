@@ -4,11 +4,15 @@
 
 poll_interval_seconds: 120
 cooldown_minutes: 60            # per-ticker; re-triggers append to existing candidate folder
-max_candidates_per_day: 60
+max_candidates_per_day: 75
 max_candidates_per_scan: 8      # the open ALWAYS floods; without a per-scan cap it eats the
                                 # whole daily budget in 10 minutes and the scanner goes blind
                                 # for the rest of the session (2026-06-11: missed MU +9%,
                                 # SNDK +13% mid-afternoon — budget exhausted since 9:50am)
+budget_reserve:                 # slots held back so the morning flood can't blind the afternoon
+                                # (2026-06-12: 60/60 spent by mid-morning; SNDK +5.7% invisible)
+  afternoon_candidates: 25      # morning may use at most max_per_day - this
+  release_at_hour_et: 12        # full allowance unlocks at this ET hour
 
 triggers:
   pct_move_intraday: 4.0        # abs % move from previous close

@@ -22,7 +22,18 @@ UNIVERSE_FILE = ROOT / "config" / "universe.yaml"
 UNIVERSE = yaml.safe_load(UNIVERSE_FILE.read_text()) if UNIVERSE_FILE.exists() else {}
 
 ET = ZoneInfo("America/New_York")
-now_et = datetime.now(ET)
+
+
+def _now_et() -> datetime:
+    """Wall clock per call. The watcher imports this module once before the
+    open and calls run_scan() all session — a module-level timestamp froze
+    the clock (2026-06-12: every folder carried the import-time HHMM stamp
+    and volume proration divided by minute 1 all morning, inflating
+    multiples ~390x)."""
+    return datetime.now(ET)
+
+
+now_et = _now_et()  # import-time snapshot: only for one-shot CLI helpers
 today = now_et.strftime("%Y-%m-%d")
 day_dir = ROOT / "candidates" / today
 day_dir.mkdir(parents=True, exist_ok=True)
@@ -51,11 +62,12 @@ def days_to_earnings(earnings_dates: list, today) -> int | None:
 
 def in_cooldown(ticker: str) -> bool:
     cooldown_min = CFG["cooldown_minutes"]
+    now = _now_et()
     for folder in day_dir.glob(f"{ticker}-*"):
         try:
             hhmm = folder.name.rsplit("-", 1)[1]
-            created = now_et.replace(hour=int(hhmm[:2]), minute=int(hhmm[2:]), second=0)
-            if (now_et - created).total_seconds() < cooldown_min * 60:
+            created = now.replace(hour=int(hhmm[:2]), minute=int(hhmm[2:]), second=0)
+            if (now - created).total_seconds() < cooldown_min * 60:
                 return True
         except (ValueError, IndexError):
             return True  # unparseable folder for this ticker today -> be safe
@@ -108,7 +120,8 @@ def triggers_fired(q, trig=None):
     vol = q.get("regularMarketVolume") or 0
     avg_vol = q.get("averageDailyVolume3Month") or 0
     # prorate: compare today's running volume to the same fraction of an avg day
-    mins_open = max(1, min(390, (now_et.hour * 60 + now_et.minute) - (9 * 60 + 30)))
+    now = _now_et()
+    mins_open = max(1, min(390, (now.hour * 60 + now.minute) - (9 * 60 + 30)))
     expected_by_now = avg_vol * (mins_open / 390)
     vol_mult = vol / expected_by_now if expected_by_now else 0
     if vol_mult >= trig["volume_multiple"]:
@@ -139,6 +152,23 @@ def pre_triage_kill(pct: float, days_to_earn: int | None, watchlist: bool,
         return (f"earnings reaction (T-{days_to_earn}): explained move, "
                 f"{pct:+.1f}% under the {trig_pct * mult:.0f}% extraordinary bar")
     return None
+
+
+def effective_daily_cap(hour_et: float, max_per_day: int, cfg: dict | None) -> int:
+    """Time-bucketed daily budget: hold back a slice of the daily candidate
+    allowance for the afternoon so the opening flood can't blind the scanner
+    for the rest of the session (2026-06-12: all 60 daily slots spent by
+    mid-morning; SNDK +5.7% and ANET +5.2% ran invisible until the user
+    nominated them by hand). Before release_at_hour_et the cap is
+    max_per_day minus the reserve; after it, the full allowance applies.
+    """
+    if not cfg:
+        return max_per_day
+    reserve = int(cfg.get("afternoon_candidates", 0))
+    release = float(cfg.get("release_at_hour_et", 12.0))
+    if hour_et < release:
+        return max(0, max_per_day - reserve)
+    return max_per_day
 
 
 def budget_alerts(existing_today: int, max_per_day: int, announced: list[int]) -> list[int]:
@@ -184,7 +214,7 @@ def fetch_watchlist_quotes(tickers: list[str]) -> list[dict]:
 def fetch_days_to_earnings(ticker: str) -> int | None:
     try:
         dates = (yf.Ticker(ticker).calendar or {}).get("Earnings Date") or []
-        return days_to_earnings(dates, now_et.date())
+        return days_to_earnings(dates, _now_et().date())
     except Exception as e:
         print(f"WARN earnings calendar failed for {ticker}: {e}", file=sys.stderr)
         return None
@@ -197,10 +227,14 @@ def run_scan() -> list[str]:
     screener_syms = {q["symbol"] for q in movers}
     movers += fetch_watchlist_quotes([t for t in watch_tickers if t not in screener_syms])
     existing_today = len(list(day_dir.glob("*-*")))
-    # two-level budget: a per-scan cap stops the opening flood from eating
-    # the whole daily allowance and blinding the scanner all afternoon
-    budget = min(CFG.get("max_candidates_per_scan", 8),
-                 CFG["max_candidates_per_day"] - existing_today)
+    # three-level budget: a per-scan cap stops the opening flood from eating
+    # the whole daily allowance, and an afternoon reserve keeps slots back
+    # so the scanner stays sighted into the close
+    now = _now_et()
+    cap = effective_daily_cap(now.hour + now.minute / 60,
+                              CFG["max_candidates_per_day"],
+                              CFG.get("budget_reserve"))
+    budget = min(CFG.get("max_candidates_per_scan", 8), cap - existing_today)
     created = []
     for q in movers:
         if budget <= 0:
@@ -221,7 +255,7 @@ def run_scan() -> list[str]:
         if kill:
             print(f"  pre-triage KILL {sym}: {kill}")
             continue
-        folder = day_dir / f"{sym}-{now_et.strftime('%H%M')}"
+        folder = day_dir / f"{sym}-{_now_et().strftime('%H%M')}"
         folder.mkdir(exist_ok=True)
         cand = {
             "ticker": sym,
