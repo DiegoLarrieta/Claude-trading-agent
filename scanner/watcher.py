@@ -11,8 +11,11 @@ Run under launchd (ops/install-watcher.sh) or manually:
   .venv/bin/python scanner/watcher.py
 """
 import json
+import os
+import subprocess
 import sys
 import time
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -74,6 +77,44 @@ def heartbeat_is_stale(heartbeat_iso: str | None, now: datetime, max_age_s: int 
 # ── daemon shell ────────────────────────────────────────────────────
 
 
+def deadman_ping(url: str | None, opener=urllib.request.urlopen) -> bool:
+    """Ping the external dead-man switch (healthchecks.io). Fire-and-forget:
+    NOTHING that happens here may crash the tick — a monitoring outage must
+    never take down the thing it monitors. Returns whether the ping landed."""
+    if not url:
+        return False
+    try:
+        with opener(url, timeout=5):
+            return True
+    except Exception:
+        return False
+
+
+def deadman_url() -> str | None:
+    """DEADMAN_PING_URL from .env (gitignored, same home as the Telegram token)."""
+    try:
+        from telegram_bot import ENV_FILE, parse_env
+        env = parse_env(ENV_FILE.read_text()) if ENV_FILE.exists() else {}
+        return env.get("DEADMAN_PING_URL") or None
+    except Exception:
+        return None
+
+
+def stay_awake() -> None:
+    """Keep the Mac from idle-sleeping while the watcher lives (macOS only).
+
+    caffeinate -w dies with us, so the assertion never outlives the daemon.
+    A closed lid still sleeps the machine — that gap belongs to the external
+    dead-man switch, not to caffeinate.
+    """
+    try:
+        subprocess.Popen(["caffeinate", "-i", "-w", str(os.getpid())],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("caffeinate engaged: no idle sleep while the watcher runs")
+    except (FileNotFoundError, OSError):
+        pass  # not macOS — nothing to do
+
+
 def check_budget(cfg: dict, today: str) -> None:
     """Alert at 80% and 100% of the daily candidate budget, once each per day."""
     state = {"date": today, "announced": []}
@@ -119,6 +160,9 @@ def main() -> None:
     if not session_should_run(datetime.now(ET)):
         print("market closed — watcher not needed; exiting (market-hours daemon policy)")
         return
+    stay_awake()
+    ping_url = deadman_url()
+    print(f"dead-man switch: {'configured' if ping_url else 'NOT configured (DEADMAN_PING_URL in .env)'}")
     last_scan = last_monitor = 0.0
     last_backlog_alert = -BACKLOG_ALERT_COOLDOWN  # eligible immediately
     print(f"watcher up: scan every {scan_interval}s, stops every {MONITOR_INTERVAL}s")
@@ -128,6 +172,7 @@ def main() -> None:
             print("session over — watcher exiting until the next market open")
             return
         HEARTBEAT.write_text(now_utc.isoformat())
+        deadman_ping(ping_url)
         if market_is_open(datetime.now(ET)):
             t = time.monotonic()
             if t - last_monitor >= MONITOR_INTERVAL:

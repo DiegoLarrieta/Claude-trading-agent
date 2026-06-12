@@ -55,6 +55,16 @@ case "${1:-status}" in
     else
       echo "no heartbeat file"
     fi
+    echo "── session ──"
+    "$ROOT/.venv/bin/python" "$ROOT/scanner/session_state.py" get
+    if [ -f "$ROOT/journal/.session-heartbeat" ]; then
+      echo "last session beat: $(cat "$ROOT/journal/.session-heartbeat")"
+    fi
+    if grep -q '^DEADMAN_PING_URL=' "$ROOT/.env" 2>/dev/null; then
+      echo "dead-man switch: configured"
+    else
+      echo "dead-man switch: NOT configured (add DEADMAN_PING_URL to .env)"
+    fi
     echo "── gateway ──"
     "$ROOT/.venv/bin/python" "$ROOT/scanner/broker.py" check || true
     ;;

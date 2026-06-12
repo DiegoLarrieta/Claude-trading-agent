@@ -18,6 +18,7 @@ sys.path.insert(0, str(ROOT / "scanner"))
 
 from broker import find_gateway_port  # noqa: E402
 from monitor import market_is_open, notify  # noqa: E402
+from session_state import SESSION_HEARTBEAT, read_state, session_alert  # noqa: E402
 from watcher import heartbeat_is_stale, HEARTBEAT  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
@@ -63,6 +64,13 @@ if __name__ == "__main__":
         failures += 1
     if not check_gateway(datetime.now(timezone.utc)):
         failures += 1
+    # the committee session promised presence? hold it to that promise
+    session_hb = SESSION_HEARTBEAT.read_text().strip() if SESSION_HEARTBEAT.exists() else None
+    msg = session_alert(read_state(), session_hb, datetime.now(timezone.utc))
+    if msg:
+        print(msg, file=sys.stderr)
+        notify("Trade Agent — SESSION DARK", msg)
+        failures += 1
     if failures == 0:
-        print("heartbeat ok, gateway ok")
+        print("heartbeat ok, gateway ok, session accounted for")
     sys.exit(1 if failures else 0)
