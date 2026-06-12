@@ -78,7 +78,8 @@ For each candidate with `bear-final.md: VERDICT: CLEARED`:
 ```json
 {"ticker": "X", "side": "buy", "shares": N, "fill_price": <limit>,
  "stop": S, "setup": "dip-to-support|momentum-pop|breakout|other",
- "horizon": "day|swing|core", "opened_at": "ISO", "thesis": "...",
+ "tier": "conviction|exploratory", "horizon": "day|swing|core",
+ "opened_at": "ISO", "thesis": "...",
  "reference_price": <decision.md reference_price>,
  "candidate_folder": "candidates/.../", "simulated": true}
 ```
