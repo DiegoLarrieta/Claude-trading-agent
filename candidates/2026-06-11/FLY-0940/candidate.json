@@ -1,0 +1,16 @@
+{
+  "ticker": "FLY",
+  "name": "Firefly Aerospace Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 6.07,
+  "volume_multiple": 4.1,
+  "price": 35.45,
+  "prev_close": 33.42,
+  "market_cap": 5822138368,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-11T13:40:34.752989+00:00",
+  "scanner_notes": "52w range 16.0\u201373.8"
+}

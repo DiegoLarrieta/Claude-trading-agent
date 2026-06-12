@@ -34,6 +34,21 @@ was earned. Retired lessons move to the bottom, never deleted.
    PASSes. Whether the overrides or the committee are better calibrated is
    the firm's central open question — every memo should be written knowing
    the counterfactual will be scored.
+7. **(2026-06-11) A silent scanner is indistinguishable from a quiet
+   market — budget exhaustion must be loud.** `max_candidates_per_day=30`
+   was fully consumed at the open; the scanner went blind from 9:50am while
+   MU (+11.66%), SNDK (+14.50%), and ANET (+3.06%) ran unflagged, caught
+   only because Diego happened to look. Fixed same-day (PR #16: 8/scan,
+   60/day), but the firm needs an explicit "scanner is out of budget" alert,
+   not silence.
+8. **(2026-06-11) Momentum continuation has a measured positive edge; dip-
+   buying measures negative — doctrine should follow the data, not
+   instinct.** A mechanical backtest (buy +4% pop on 2.5x volume, stop 6/
+   target 12/hold 20, 130 trades/2yr) returned +$4.47 expectancy per $200
+   with every pop-cell positive; the mirror-image dip-buying rule returned
+   -$0.51 at a 41% win rate. This extends lesson #4 (selectivity is the
+   edge) with a directional finding: the firm's mean-reversion instinct has
+   the sign backwards, and a momentum-book proposal is now on the table.
 
 ## Retired lessons
 

@@ -1,0 +1,16 @@
+{
+  "ticker": "XPEV",
+  "name": "XPeng Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -5.54,
+  "volume_multiple": 17.4,
+  "price": 14.055,
+  "prev_close": 14.88,
+  "market_cap": 13433076736,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 68,
+  "detected_at": "2026-06-11T13:40:36.425848+00:00",
+  "scanner_notes": "52w range 13.98\u201328.235"
+}

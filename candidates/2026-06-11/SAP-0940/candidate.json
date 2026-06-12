@@ -1,0 +1,16 @@
+{
+  "ticker": "SAP",
+  "name": "SAP  SE",
+  "trigger": "volume",
+  "pct_move": -3.75,
+  "volume_multiple": 4.7,
+  "price": 163.96,
+  "prev_close": 170.345,
+  "market_cap": 193297760256,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 42,
+  "detected_at": "2026-06-11T13:40:37.035441+00:00",
+  "scanner_notes": "52w range 158.58\u2013313.28"
+}

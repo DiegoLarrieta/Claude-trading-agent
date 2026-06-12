@@ -1,0 +1,14 @@
+{
+  "ticker": "ANET",
+  "trigger": "manual-scanner-gap",
+  "pct_move": 3.95,
+  "volume_multiple": 0.3,
+  "price": 155.41,
+  "prev_close": 149.5,
+  "market_cap": 195687526970.7962,
+  "watchlist": true,
+  "theme": "ai-infrastructure",
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-11T18:38:43.933310+00:00",
+  "scanner_notes": "caught by DIEGO, not the scanner \u2014 daily candidate budget exhausted at the open (bug, fix in flight); 52w 85.58-179.8"
+}

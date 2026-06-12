@@ -1,0 +1,16 @@
+{
+  "ticker": "LRCX",
+  "name": "Lam Research Corporation",
+  "trigger": "pct_move",
+  "pct_move": 10.98,
+  "volume_multiple": 1.1,
+  "price": 357.12,
+  "prev_close": 321.8,
+  "market_cap": 446603919360,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-11T18:49:04.227060+00:00",
+  "scanner_notes": "52w range 87.75\u2013359.58"
+}

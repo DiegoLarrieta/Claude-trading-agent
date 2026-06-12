@@ -1,0 +1,16 @@
+{
+  "ticker": "ZETA",
+  "name": "Zeta Global Holdings Corp.",
+  "trigger": "volume",
+  "pct_move": -3.26,
+  "volume_multiple": 3.6,
+  "price": 19.29,
+  "prev_close": 19.94,
+  "market_cap": 4808179712,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-11T13:40:37.383537+00:00",
+  "scanner_notes": "52w range 12.1\u201325.95"
+}

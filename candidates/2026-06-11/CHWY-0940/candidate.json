@@ -1,0 +1,16 @@
+{
+  "ticker": "CHWY",
+  "name": "Chewy, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -5.25,
+  "volume_multiple": 7.5,
+  "price": 18.94,
+  "prev_close": 19.99,
+  "market_cap": 7754494464,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 83,
+  "detected_at": "2026-06-11T13:40:36.572163+00:00",
+  "scanner_notes": "52w range 18.375\u201343.84"
+}

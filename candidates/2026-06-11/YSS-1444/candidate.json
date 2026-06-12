@@ -1,0 +1,16 @@
+{
+  "ticker": "YSS",
+  "name": "York Space Systems Inc.",
+  "trigger": "pct_move",
+  "pct_move": 18.86,
+  "volume_multiple": 0.8,
+  "price": 32.82,
+  "prev_close": 27.62,
+  "market_cap": 4256571904,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 62,
+  "detected_at": "2026-06-11T18:44:47.261504+00:00",
+  "scanner_notes": "52w range 16.93\u201344.54"
+}

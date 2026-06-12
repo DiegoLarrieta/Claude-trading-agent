@@ -1,0 +1,16 @@
+{
+  "ticker": "UMC",
+  "name": "United Microelectronics Corpora",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.83,
+  "volume_multiple": 3.6,
+  "price": 19.98,
+  "prev_close": 18.88,
+  "market_cap": 50135547904,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-11T13:40:35.005529+00:00",
+  "scanner_notes": "52w range 6.56\u201323.69"
+}

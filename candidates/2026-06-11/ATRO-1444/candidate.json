@@ -1,0 +1,16 @@
+{
+  "ticker": "ATRO",
+  "name": "Astronics Corporation",
+  "trigger": "pct_move+52w",
+  "pct_move": 12.5,
+  "volume_multiple": 1.5,
+  "price": 92.63,
+  "prev_close": 82.34,
+  "market_cap": 3319891968,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-11T18:44:48.236537+00:00",
+  "scanner_notes": "52w range 27.27\u201392.85"
+}

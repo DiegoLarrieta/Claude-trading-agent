@@ -1,0 +1,14 @@
+{
+  "ticker": "ASML",
+  "trigger": "radar",
+  "pct_move": 4.7,
+  "volume_multiple": null,
+  "price": 1808.89,
+  "prev_close": 1727.69,
+  "market_cap": 697178165687.6166,
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 34,
+  "detected_at": "2026-06-11T13:50:47.271583+00:00",
+  "scanner_notes": "radar: multi-bank price-target raises overnight, +3.6% at open; 52w range 683.48-1831.11"
+}

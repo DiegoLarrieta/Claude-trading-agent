@@ -1,0 +1,14 @@
+{
+  "ticker": "GOOGL",
+  "trigger": "radar",
+  "pct_move": -1.49,
+  "volume_multiple": null,
+  "price": 349.35,
+  "prev_close": 354.62,
+  "market_cap": 4260239660365.3306,
+  "watchlist": true,
+  "theme": "ai-models",
+  "days_to_earnings": 42,
+  "detected_at": "2026-06-11T13:50:46.607586+00:00",
+  "scanner_notes": "Diego discretionary core-buy review; AI-models watchlist; down ~2% at open in mega-cap pullback, no single catalyst; 52w range 162.0-408.61"
+}

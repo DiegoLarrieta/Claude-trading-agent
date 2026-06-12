@@ -1,21 +1,6 @@
 {
-  "cash_usd": 1349.68,
+  "cash_usd": 1499.61,
   "positions": [
-    {
-      "ticker": "DNTH",
-      "side": "buy",
-      "shares": 2,
-      "fill_price": 70.2,
-      "stop": 70.2,
-      "opened_at": "2026-06-10T16:12:35.892658+00:00",
-      "thesis": "Competitor trial failure is sympathy overreaction; Stifel reiterated Buy",
-      "owner": "diego-discretionary",
-      "firm_verdict_was": "PASS",
-      "candidate_folder": "candidates/2026-06-10/DNTH-1139",
-      "simulated": true,
-      "high_water": 76.41999816894531,
-      "prior_stop": 64.0
-    },
     {
       "ticker": "CASY",
       "side": "buy",
@@ -29,6 +14,23 @@
       "candidate_folder": "candidates/2026-06-10/CASY-1139",
       "simulated": true,
       "high_water": 915.5999755859375
+    },
+    {
+      "ticker": "F",
+      "side": "buy",
+      "shares": 1.0,
+      "fill_price": 14.23,
+      "stop": 13.52,
+      "horizon": "day",
+      "opened_at": "2026-06-11T14:20:06.618524+00:00",
+      "thesis": "PLUMBING DRILL \u2014 first order through the IBKR paper pipeline; not a thesis trade",
+      "owner": "plumbing-drill",
+      "firm_verdict_was": "N/A (drill)",
+      "candidate_folder": null,
+      "simulated": false,
+      "broker": "ibkr-paper",
+      "broker_order_id": 4,
+      "high_water": 14.395000457763672
     }
   ],
   "closed_trades": [
@@ -49,6 +51,26 @@
       "exit_reason": "stop",
       "pnl_usd": -9.9,
       "pnl_pct": -5.91
+    },
+    {
+      "ticker": "DNTH",
+      "side": "buy",
+      "shares": 2,
+      "fill_price": 70.2,
+      "stop": 75.27,
+      "opened_at": "2026-06-10T16:12:35.892658+00:00",
+      "thesis": "Competitor trial failure is sympathy overreaction; Stifel reiterated Buy",
+      "owner": "diego-discretionary",
+      "firm_verdict_was": "PASS",
+      "candidate_folder": "candidates/2026-06-10/DNTH-1139",
+      "simulated": true,
+      "high_water": 80.06999969482422,
+      "prior_stop": 74.89,
+      "closed_at": "2026-06-11T17:15:46.252517+00:00",
+      "exit_price": 74.965,
+      "exit_reason": "stop_gap",
+      "pnl_usd": 9.53,
+      "pnl_pct": 6.79
     }
   ],
   "simulated": true,

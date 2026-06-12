@@ -1,0 +1,16 @@
+{
+  "ticker": "MCW",
+  "name": "Mister Car Wash, Inc.",
+  "trigger": "volume",
+  "pct_move": 0.0,
+  "volume_multiple": 178.4,
+  "price": 7.1,
+  "prev_close": 7.1,
+  "market_cap": 2335151104,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-11T13:40:37.607263+00:00",
+  "scanner_notes": "52w range 4.61\u20137.155"
+}

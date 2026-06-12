@@ -1,0 +1,16 @@
+{
+  "ticker": "ICHR",
+  "name": "Ichor Holdings",
+  "trigger": "pct_move",
+  "pct_move": 10.03,
+  "volume_multiple": 0.9,
+  "price": 79.41,
+  "prev_close": 72.17,
+  "market_cap": 2768792832,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-11T18:49:04.750584+00:00",
+  "scanner_notes": "52w range 13.12\u201380.74"
+}

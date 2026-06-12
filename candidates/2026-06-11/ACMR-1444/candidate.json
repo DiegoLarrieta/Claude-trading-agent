@@ -1,0 +1,16 @@
+{
+  "ticker": "ACMR",
+  "name": "ACM Research, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.26,
+  "volume_multiple": 0.6,
+  "price": 88.16,
+  "prev_close": 79.96,
+  "market_cap": 6092692480,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-11T18:49:04.544260+00:00",
+  "scanner_notes": "52w range 23.03\u201394.212"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "CPNG",
+  "name": "Coupang, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 12.93,
+  "volume_multiple": 3.2,
+  "price": 17.075,
+  "prev_close": 15.12,
+  "market_cap": 30650722304,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-11T18:44:48.038340+00:00",
+  "scanner_notes": "52w range 14.92\u201334.075"
+}

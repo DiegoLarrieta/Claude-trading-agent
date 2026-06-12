@@ -1,0 +1,16 @@
+{
+  "ticker": "IDCC",
+  "name": "InterDigital, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 13.97,
+  "volume_multiple": 12.5,
+  "price": 289.3875,
+  "prev_close": 253.91,
+  "market_cap": 7479228416,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-11T13:40:34.145032+00:00",
+  "scanner_notes": "52w range 213.06\u2013412.6"
+}

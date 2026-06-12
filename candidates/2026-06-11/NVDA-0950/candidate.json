@@ -1,0 +1,14 @@
+{
+  "ticker": "NVDA",
+  "trigger": "radar",
+  "pct_move": 1.71,
+  "volume_multiple": null,
+  "price": 202.61,
+  "prev_close": 199.2,
+  "market_cap": 4907416824783.325,
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 76,
+  "detected_at": "2026-06-11T13:50:46.105561+00:00",
+  "scanner_notes": "Diego discretionary core-buy review; AI-chips watchlist; chips green on Oracle $70B capex guidance; 52w range 140.85-236.54"
+}

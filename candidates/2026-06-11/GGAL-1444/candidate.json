@@ -1,0 +1,16 @@
+{
+  "ticker": "GGAL",
+  "name": "Grupo Financiero Galicia S.A.",
+  "trigger": "pct_move+volume",
+  "pct_move": 10.77,
+  "volume_multiple": 3.5,
+  "price": 54.965,
+  "prev_close": 49.62,
+  "market_cap": 9314008064,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-11T18:46:55.041319+00:00",
+  "scanner_notes": "52w range 25.89\u201362.52"
+}

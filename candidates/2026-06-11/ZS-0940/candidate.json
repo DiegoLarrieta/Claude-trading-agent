@@ -1,0 +1,16 @@
+{
+  "ticker": "ZS",
+  "name": "Zscaler, Inc.",
+  "trigger": "volume",
+  "pct_move": -3.64,
+  "volume_multiple": 3.8,
+  "price": 120.19,
+  "prev_close": 124.73,
+  "market_cap": 19435868160,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-11T13:40:37.273270+00:00",
+  "scanner_notes": "52w range 114.625\u2013336.99"
+}

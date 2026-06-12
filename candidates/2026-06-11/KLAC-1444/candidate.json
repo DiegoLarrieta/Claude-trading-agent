@@ -1,0 +1,16 @@
+{
+  "ticker": "KLAC",
+  "name": "KLA Corporation",
+  "trigger": "pct_move+52w",
+  "pct_move": 11.28,
+  "volume_multiple": 1.1,
+  "price": 2376.41,
+  "prev_close": 2135.64,
+  "market_cap": 310424535040,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-11T18:46:55.129660+00:00",
+  "scanner_notes": "52w range 832.24\u20132385.0"
+}

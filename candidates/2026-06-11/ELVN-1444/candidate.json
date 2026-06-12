@@ -1,0 +1,16 @@
+{
+  "ticker": "ELVN",
+  "name": "Enliven Therapeutics, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 12.54,
+  "volume_multiple": 4.5,
+  "price": 41.64,
+  "prev_close": 37.0,
+  "market_cap": 2536081920,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-11T18:46:54.511834+00:00",
+  "scanner_notes": "52w range 14.785\u201348.53"
+}

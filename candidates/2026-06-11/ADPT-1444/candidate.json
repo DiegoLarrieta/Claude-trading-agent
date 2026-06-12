@@ -1,0 +1,16 @@
+{
+  "ticker": "ADPT",
+  "name": "Adaptive Biotechnologies Corpor",
+  "trigger": "pct_move",
+  "pct_move": 10.22,
+  "volume_multiple": 2.5,
+  "price": 18.815,
+  "prev_close": 17.07,
+  "market_cap": 3011235072,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-11T18:49:04.648410+00:00",
+  "scanner_notes": "52w range 9.9\u201320.76"
+}

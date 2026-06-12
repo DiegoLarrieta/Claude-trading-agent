@@ -1,0 +1,14 @@
+{
+  "ticker": "MU",
+  "trigger": "manual-scanner-gap",
+  "pct_move": 9.01,
+  "volume_multiple": 0.7,
+  "price": 956.01,
+  "prev_close": 877.0,
+  "market_cap": 1078125041109.5378,
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 13,
+  "detected_at": "2026-06-11T18:38:42.870857+00:00",
+  "scanner_notes": "caught by DIEGO, not the scanner \u2014 daily candidate budget exhausted at the open (bug, fix in flight); 52w 103.38-1089.29"
+}

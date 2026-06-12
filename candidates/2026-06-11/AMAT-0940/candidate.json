@@ -1,0 +1,16 @@
+{
+  "ticker": "AMAT",
+  "name": "Applied Materials, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.13,
+  "volume_multiple": 4.4,
+  "price": 522.52,
+  "prev_close": 497.01,
+  "market_cap": 414859689984,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 63,
+  "detected_at": "2026-06-11T13:40:36.036177+00:00",
+  "scanner_notes": "52w range 154.47\u2013534.44"
+}

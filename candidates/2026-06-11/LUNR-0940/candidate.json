@@ -1,0 +1,16 @@
+{
+  "ticker": "LUNR",
+  "name": "Intuitive Machines, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.67,
+  "volume_multiple": 3.9,
+  "price": 28.04,
+  "prev_close": 26.535,
+  "market_cap": 4499082752,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 56,
+  "detected_at": "2026-06-11T13:40:35.694862+00:00",
+  "scanner_notes": "52w range 7.78\u201346.75"
+}

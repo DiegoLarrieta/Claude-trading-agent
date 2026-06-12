@@ -1,0 +1,16 @@
+{
+  "ticker": "ESLT",
+  "name": "Elbit Systems Ltd.",
+  "trigger": "pct_move+volume",
+  "pct_move": 6.36,
+  "volume_multiple": 5.4,
+  "price": 871.07,
+  "prev_close": 818.97,
+  "market_cap": 40796192768,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 68,
+  "detected_at": "2026-06-11T13:40:34.859041+00:00",
+  "scanner_notes": "52w range 415.9\u20131016.06"
+}

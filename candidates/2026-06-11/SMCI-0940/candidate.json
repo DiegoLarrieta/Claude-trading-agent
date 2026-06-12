@@ -1,0 +1,16 @@
+{
+  "ticker": "SMCI",
+  "name": "Super Micro Computer, Inc.",
+  "trigger": "volume",
+  "pct_move": -0.07,
+  "volume_multiple": 58.4,
+  "price": 29.25,
+  "prev_close": 29.27,
+  "market_cap": 17591490560,
+  "exchange": "NasdaqGS",
+  "watchlist": true,
+  "theme": "ai-infrastructure",
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-11T13:40:37.499061+00:00",
+  "scanner_notes": "52w range 19.48\u201362.36"
+}

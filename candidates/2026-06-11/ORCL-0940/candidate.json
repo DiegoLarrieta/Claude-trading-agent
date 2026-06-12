@@ -1,0 +1,16 @@
+{
+  "ticker": "ORCL",
+  "name": "Oracle Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": -13.44,
+  "volume_multiple": 15.7,
+  "price": 176.115,
+  "prev_close": 203.47,
+  "market_cap": 506514866176,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 90,
+  "detected_at": "2026-06-11T13:40:36.146656+00:00",
+  "scanner_notes": "52w range 134.57\u2013345.72"
+}

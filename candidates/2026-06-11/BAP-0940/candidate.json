@@ -1,0 +1,16 @@
+{
+  "ticker": "BAP",
+  "name": "Credicorp Ltd.",
+  "trigger": "pct_move",
+  "pct_move": 4.81,
+  "volume_multiple": 2.7,
+  "price": 368.04,
+  "prev_close": 351.155,
+  "market_cap": 29240160256,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 63,
+  "detected_at": "2026-06-11T13:40:35.919743+00:00",
+  "scanner_notes": "52w range 213.75\u2013380.2"
+}

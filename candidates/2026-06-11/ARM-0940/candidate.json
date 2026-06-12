@@ -1,0 +1,16 @@
+{
+  "ticker": "ARM",
+  "name": "Arm Holdings plc",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.39,
+  "volume_multiple": 3.2,
+  "price": 324.005,
+  "prev_close": 307.43,
+  "market_cap": 346062880768,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-11T13:40:35.113663+00:00",
+  "scanner_notes": "52w range 100.02\u2013427.99"
+}
