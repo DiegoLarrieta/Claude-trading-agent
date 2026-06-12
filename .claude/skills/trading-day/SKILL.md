@@ -77,9 +77,13 @@ For each candidate with `bear-final.md: VERDICT: CLEARED`:
 
 ```json
 {"ticker": "X", "side": "buy", "shares": N, "fill_price": <limit>,
- "stop": S, "horizon": "day|swing|core", "opened_at": "ISO", "thesis": "...",
+ "stop": S, "setup": "dip-to-support|momentum-pop|breakout|other",
+ "horizon": "day|swing|core", "opened_at": "ISO", "thesis": "...",
+ "reference_price": <decision.md reference_price>,
  "candidate_folder": "candidates/.../", "simulated": true}
 ```
+
+   `setup` comes from `decision.md` (the head trader copies it from technicals.md SHAPE) — it's how the journal learns win rate per setup. `reference_price` is the price when the proposal was written; fill_price vs reference_price is the fill-quality record (how much the firm paid for its own latency), and the reporter tracks it.
 
 3. On **Reject**: journal it with the user's reason; apply ticker cooldown.
 4. VETOED or PASS candidates need no user interaction — they're journal material.

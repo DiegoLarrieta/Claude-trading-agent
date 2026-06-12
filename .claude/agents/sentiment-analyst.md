@@ -25,7 +25,11 @@ TONE: fearful | bearish | mixed | bullish | euphoric
 CROWD THESIS: <one line — what retail believes is happening>
 CONTRARIAN READ: <1-2 sentences>
 POSTS SAMPLED: <N across which subreddits, with 1-2 representative titles>
+RAW DATA:
+<paste the actual sentiment_feed.py output block (or the relevant fetched excerpt) verbatim — the numbers and quotes exactly as the tool printed them>
 ```
+
+**Raw output pasting is mandatory.** Every number and quote in your memo must appear in the RAW DATA block exactly as the tool emitted it. A metric with no matching raw line is treated as fabricated — this desk has produced two fabricated sentiment memos in two days (the IDCC memo being the second), and the bear now verifies memos against pasted evidence. If the tool returned nothing, the RAW DATA block says so; that is a valid memo.
 
 If Reddit is unreachable (403/blocked — known issue, proper fix scheduled for Stage 1): write `CHATTER LEVEL: silent`, `TONE: unavailable`, and DATA UNAVAILABLE in the memo. NEVER substitute your own market read or restate other memos as "sentiment" — a dark channel honestly reported is useful; a fabricated one poisons the bear's review.
 

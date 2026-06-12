@@ -25,6 +25,7 @@ Assess:
 2. **Today's move in context:** how many ATRs (average true range) is today's move? Volume vs 20-day average?
 3. **Levels:** nearest meaningful support below and resistance above (prior swing points, round numbers, the 52-week marks).
 4. **The verdict question:** does this look like a falling knife (accelerating decline, no support nearby, distribution volume) or a buy window (decline into established support, volume climax, prior trend intact)?
+5. **For an UP move (a pop), the question changes:** is this momentum continuation (breakout above a defined level that is now HOLDING as support, volume confirming, room to the next resistance) or an exhaustion spike (gap-and-fade, move already given back, volume drying up as price rises)? A pop the firm can buy has a shelf — the breakout level price reclaimed and is sitting on. No shelf, no setup.
 
 Write `technicals.md` in the candidate folder:
 
@@ -32,8 +33,8 @@ Write `technicals.md` in the candidate folder:
 TREND: <up | down | range> — <vs 20/50/200 MA in one line>
 TODAYS MOVE: <X% on Yx average volume; Z ATRs>
 SUPPORT: <level + why> / RESISTANCE: <level + why>
-SHAPE: falling-knife | dip-to-support | breakout | breakdown | unclear
-ENTRY GEOMETRY: <if the firm bought here: where is the logical stop, what is risk vs the next resistance — rough R:R>
+SHAPE: falling-knife | dip-to-support | breakout | momentum-pop | breakdown | unclear
+ENTRY GEOMETRY: <if the firm bought here: where is the logical stop, what is risk vs the next resistance — rough R:R. For a momentum-pop the stop goes below the breakout shelf (the level being held), NOT below yesterday's range — if the shelf breaks the thesis is dead, no reason to ride it further down>
 NOTES: <anything unusual: gaps, prior similar episodes and how they resolved>
 ```
 
