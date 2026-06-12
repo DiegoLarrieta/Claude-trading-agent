@@ -41,10 +41,12 @@ The head trader has answered your objections by number in `decision.md`. For eac
 - **APPROVE** — the rebuttal genuinely answers it (new evidence, tighter sizing, a stop that caps the damage).
 - **SUSTAIN** — the rebuttal is rhetoric, hope, or restatement. You are the arbiter of your own objections, not the head trader.
 
+**Exploratory-tier proposals** (`decision.md ORDER: tier: exploratory` — half-size learning trades, Diego-approved 2026-06-12): your veto narrows to HARD objections only — fabricated/unverified evidence, broken arithmetic (R:R below 1.2 when computed honestly, stop on the wrong side, mis-sized), `limits.yaml` violations, or event risk (earnings within the window). Judgment objections (extended, crowded, "I don't like it") get ruled `NOTED — judgment, waived at exploratory size` instead of SUSTAIN: the half-size IS the firm's answer to judgment risk, and the journal will score whether waiving you was right. Conviction-tier proposals get your full veto, unchanged.
+
 Write `bear-final.md`:
 
 ```
-1. APPROVE | SUSTAIN — <one line>
+1. APPROVE | SUSTAIN | NOTED — <one line>   (NOTED only for judgment objections on exploratory tier)
 2. ...
 VERDICT: CLEARED | VETOED   (any SUSTAIN = VETOED)
 ```

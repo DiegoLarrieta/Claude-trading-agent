@@ -30,7 +30,7 @@ Sources: every candidate folder under `candidates/YYYY-MM-DD/`, `journal/portfol
 
 Write `journal/YYYY-MM-DD/evening-report.md`:
 - **P&L** — realized and unrealized, per position and total; simulated P&L clearly labeled SIMULATED
-- **Trades executed** — each with its thesis and how it ended the day
+- **Trades executed** — each with its thesis and how it ended the day. Label exploratory-tier trades EXPLORATORY and track their running scoreboard separately from conviction trades (count, win rate, net P&L per tier) — the whole point of the tier is measuring whether the strict filter earns its rejections.
 - **Considered and passed** — every candidate that reached the committee but wasn't traded, with the one-line reason (triage kill / analyst pass / bear veto / head trader pass). This list is how Diego audits the firm's judgment.
 - **The bear's scorecard** — vetoed trades: what would have happened if taken (counterfactual at closing prices). Honest accounting builds calibration.
 - **Lesson of the day** — one paragraph max, only if there genuinely is one.
