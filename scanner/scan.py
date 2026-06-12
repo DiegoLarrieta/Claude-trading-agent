@@ -121,6 +121,42 @@ def triggers_fired(q, trig=None):
     return fired, pct, round(vol_mult, 1)
 
 
+def pre_triage_kill(pct: float, days_to_earn: int | None, watchlist: bool,
+                    trig_pct: float, cfg: dict) -> str | None:
+    """Deterministic kills that used to cost an LLM triage call.
+
+    Returns the kill reason, or None to let the candidate through. Only
+    rules with a mechanical answer belong here — anything needing judgment
+    stays with the triage analyst. Killed candidates create no folder and
+    consume no daily budget.
+    """
+    if not cfg:
+        return None
+    window = cfg.get("earnings_window_days", 1)
+    mult = cfg.get("extraordinary_pct_multiple", 2.0)
+    if (days_to_earn is not None and days_to_earn <= window
+            and not watchlist and abs(pct) < trig_pct * mult):
+        return (f"earnings reaction (T-{days_to_earn}): explained move, "
+                f"{pct:+.1f}% under the {trig_pct * mult:.0f}% extraordinary bar")
+    return None
+
+
+def budget_alerts(existing_today: int, max_per_day: int, announced: list[int]) -> list[int]:
+    """Daily-budget thresholds (as % of max) newly crossed and not yet announced.
+
+    A silent scanner is indistinguishable from a quiet market (lesson #7,
+    2026-06-11: blind from 9:50am while MU/SNDK/ANET ran). Each threshold
+    fires once per day.
+    """
+    crossed = []
+    for pct in (80, 100):
+        if pct in announced:
+            continue
+        if existing_today >= max_per_day * pct / 100:
+            crossed.append(pct)
+    return crossed
+
+
 def fetch_watchlist_quotes(tickers: list[str]) -> list[dict]:
     """Quote the thesis universe directly — watchlist names rarely make the
     top-movers screeners, so they get their own sweep."""
@@ -173,10 +209,17 @@ def run_scan() -> list[str]:
         theme = theme_of(sym, UNIVERSE)
         if not passes_universe(q):
             continue
-        fired, pct, vol_mult = triggers_fired(q, triggers_for(sym, UNIVERSE, CFG["triggers"]))
+        trig = triggers_for(sym, UNIVERSE, CFG["triggers"])
+        fired, pct, vol_mult = triggers_fired(q, trig)
         if not fired:
             continue
         if in_cooldown(sym):
+            continue
+        days_te = fetch_days_to_earnings(sym)
+        kill = pre_triage_kill(pct, days_te, bool(theme),
+                               trig["pct_move_intraday"], CFG.get("pre_triage") or {})
+        if kill:
+            print(f"  pre-triage KILL {sym}: {kill}")
             continue
         folder = day_dir / f"{sym}-{now_et.strftime('%H%M')}"
         folder.mkdir(exist_ok=True)
@@ -192,7 +235,7 @@ def run_scan() -> list[str]:
             "exchange": q.get("fullExchangeName"),
             "watchlist": bool(theme),
             "theme": theme,
-            "days_to_earnings": fetch_days_to_earnings(sym),
+            "days_to_earnings": days_te,
             "detected_at": datetime.now(timezone.utc).isoformat(),
             "scanner_notes": f"52w range {q.get('fiftyTwoWeekLow')}–{q.get('fiftyTwoWeekHigh')}",
         }

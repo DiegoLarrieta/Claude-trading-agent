@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scanner"))
 
-from scan import days_to_earnings, theme_of, triggers_for
+from scan import budget_alerts, days_to_earnings, pre_triage_kill, theme_of, triggers_for
 
 UNIVERSE = {
     "watchlist_triggers": {"pct_move_intraday": 2.5, "volume_multiple": 2.0},
@@ -71,3 +71,43 @@ def test_past_dates_ignored():
 def test_no_future_dates_is_none():
     assert days_to_earnings([date(2026, 3, 10)], TODAY) is None
     assert days_to_earnings([], TODAY) is None
+
+
+# ── pre_triage_kill ─────────────────────────────────────────────────
+
+PT_CFG = {"earnings_window_days": 1, "extraordinary_pct_multiple": 2.0}
+
+
+def test_earnings_reaction_killed_mechanically():
+    # +5% the day after earnings: explained move, under the 8% extraordinary bar
+    assert pre_triage_kill(5.0, 0, False, 4.0, PT_CFG) is not None
+    assert pre_triage_kill(-6.0, 1, False, 4.0, PT_CFG) is not None
+
+
+def test_extraordinary_earnings_reaction_survives():
+    assert pre_triage_kill(9.0, 0, False, 4.0, PT_CFG) is None
+    assert pre_triage_kill(-8.0, 0, False, 4.0, PT_CFG) is None  # exactly at the bar
+
+
+def test_watchlist_and_non_earnings_moves_survive():
+    assert pre_triage_kill(5.0, 0, True, 4.0, PT_CFG) is None  # watchlist exempt
+    assert pre_triage_kill(5.0, 5, False, 4.0, PT_CFG) is None  # earnings far away
+    assert pre_triage_kill(5.0, None, False, 4.0, PT_CFG) is None  # unknown calendar
+
+
+def test_missing_config_disables_pre_triage():
+    assert pre_triage_kill(5.0, 0, False, 4.0, {}) is None
+
+
+# ── budget_alerts ───────────────────────────────────────────────────
+
+def test_budget_thresholds_fire_once_each():
+    assert budget_alerts(47, 60, []) == []          # 78% — quiet
+    assert budget_alerts(48, 60, []) == [80]        # 80% — warn
+    assert budget_alerts(48, 60, [80]) == []        # already announced
+    assert budget_alerts(60, 60, [80]) == [100]     # exhausted
+    assert budget_alerts(60, 60, [80, 100]) == []   # never repeats
+
+
+def test_budget_jump_crosses_both_at_once():
+    assert budget_alerts(60, 60, []) == [80, 100]
