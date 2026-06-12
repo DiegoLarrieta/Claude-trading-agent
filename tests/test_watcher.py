@@ -60,3 +60,27 @@ def test_missing_heartbeat_is_stale():
 
 def test_garbage_heartbeat_is_stale():
     assert heartbeat_is_stale("yesterday-ish", NOW_DT)
+
+
+# ── candidate alert text ────────────────────────────────────────────
+
+from watcher import candidate_alert_text
+
+
+def test_alert_lists_ticker_move_and_volume():
+    text = candidate_alert_text([
+        {"ticker": "ELVN", "pct_move": 9.8, "volume_multiple": 7.1},
+        {"ticker": "FA", "pct_move": -7.3, "volume_multiple": 3.4},
+    ])
+    assert text == "ELVN +9.8% vol×7.1\nFA -7.3% vol×3.4"
+
+
+def test_alert_degrades_to_folder_name_on_unreadable_candidate():
+    text = candidate_alert_text([{"folder": "/x/candidates/2026-06-12/TGB-1202"}])
+    assert text == "TGB-1202 ?%"
+
+
+def test_alert_truncates_past_limit():
+    cands = [{"ticker": f"T{i}", "pct_move": 5.0, "volume_multiple": 2.0} for i in range(10)]
+    text = candidate_alert_text(cands, limit=8)
+    assert text.endswith("…and 2 more") and text.count("\n") == 8

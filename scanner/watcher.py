@@ -63,6 +63,27 @@ def enqueue_candidates(inbox_text: str, folders: list[str], now_iso: str) -> str
     return out
 
 
+def candidate_alert_text(cands: list[dict], limit: int = 8) -> str:
+    """One line per candidate for the Telegram alert — ticker, move, volume.
+
+    A bare count ("8 new candidate(s)") tells the human nothing actionable
+    (Diego, 2026-06-12); the tickers do. Unreadable candidate.json entries
+    degrade to the folder name rather than dropping the line.
+    """
+    lines = []
+    for c in cands[:limit]:
+        ticker = c.get("ticker") or Path(c.get("folder", "?")).name
+        pct = c.get("pct_move")
+        vol = c.get("volume_multiple")
+        detail = f"{pct:+.1f}%" if isinstance(pct, (int, float)) else "?%"
+        if isinstance(vol, (int, float)):
+            detail += f" vol×{vol}"
+        lines.append(f"{ticker} {detail}")
+    if len(cands) > limit:
+        lines.append(f"…and {len(cands) - limit} more")
+    return "\n".join(lines)
+
+
 def heartbeat_is_stale(heartbeat_iso: str | None, now: datetime, max_age_s: int = 300) -> bool:
     """True if the heartbeat is missing or older than max_age_s."""
     if not heartbeat_iso:
@@ -203,8 +224,17 @@ def main() -> None:
                     if created:
                         INBOX.write_text(
                             enqueue_candidates(INBOX.read_text(), created, now_utc.isoformat()))
+                        cands = []
+                        for folder in created:
+                            try:
+                                cand = json.loads(
+                                    (Path(folder) / "candidate.json").read_text())
+                            except (OSError, json.JSONDecodeError):
+                                cand = {}
+                            cands.append({**cand, "folder": folder})
                         notify("Trade Agent — new candidates",
-                               f"{len(created)} new candidate(s) queued for the committee")
+                               f"{len(created)} queued for the committee:\n"
+                               + candidate_alert_text(cands))
                     check_budget(cfg, datetime.now(ET).strftime("%Y-%m-%d"))
                 except Exception as e:
                     print(f"ERROR scan: {e}", file=sys.stderr)
