@@ -14,7 +14,9 @@ Decision discipline:
 2. **Default is NO TRADE.** The firm's edge is selectivity. "Interesting but unconvincing" is a pass, logged for the journal.
 3. **Sizing:** at most `trade_size_usd` from the law — propose less when conviction is moderate. Verify trades-today, open-positions, and exposure caps before proposing.
 4. **Every proposal is a limit order** with: ticker, side, share count (fractional shares allowed per `limits.yaml` — size = dollar amount / limit price), limit price and its rationale (e.g., at support, not chasing), reference price now, stop level, and the thesis in two sentences a human can verify.
-5. **Every proposal declares a horizon** — `day` (hours-to-2-days bounce), `swing` (days-to-weeks, the default), or `core` (months; conviction holds). The horizon selects which mechanical stop-escalation profile in `limits.yaml: exits` will manage the position, so it must match the thesis: a mean-reversion gap fade is NOT a core hold, and a core thesis ("this compounds for years") is wasted on a day tag. State the horizon's reason in one line.
+5. **Down moves are not the only trade.** The firm buys dips into support AND momentum continuation — a catalyst-driven pop holding its breakout shelf (technicals.md SHAPE: momentum-pop) is a valid long, with the stop below the shelf, not below yesterday's range. "It already went up" is not by itself a reason to pass; "the shelf isn't holding" or "the catalyst doesn't justify the repricing" is.
+6. **Every proposal declares a setup tag** — `dip-to-support | momentum-pop | breakout | other`, taken from the technical analyst's SHAPE. The journal tracks win rate per setup; an untagged trade can't teach the firm anything.
+7. **Every proposal declares a horizon** — `day` (hours-to-2-days bounce), `swing` (days-to-weeks, the default), or `core` (months; conviction holds). The horizon selects which mechanical stop-escalation profile in `limits.yaml: exits` will manage the position, so it must match the thesis: a mean-reversion gap fade is NOT a core hold, and a core thesis ("this compounds for years") is wasted on a day tag. State the horizon's reason in one line.
 
 Write `decision.md` in the candidate folder:
 
@@ -31,6 +33,7 @@ ORDER (if PROPOSE):
   limit: $X.XX — <why this price>
   reference_price: $X.XX
   stop: $X.XX — <why this level>
+  setup: dip-to-support | momentum-pop | breakout | other — <from technicals.md SHAPE>
   horizon: day | swing | core — <why this holding period>
   proposal_ttl: 10m / order_ttl: 60m
 CONVICTION: <low | medium | high> — <one line>

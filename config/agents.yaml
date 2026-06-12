@@ -3,7 +3,7 @@
 # Upgrading bear/head_trader to opus is a Max-plan change.
 
 triage: haiku
-news_analyst: haiku
+news_analyst: sonnet  # promoted 2026-06-12: haiku misread catalysts 2 days running (NVDA "Huang summoned" — he had declined; ELVN efficacy framing the filing didn't support); the bear caught both, but the bear is the last line, not the first
 technical_analyst: sonnet  # promoted 2026-06-10: haiku botched stop/direction arithmetic in 2 of 3 day-one memos
 sentiment_analyst: haiku
 bear: sonnet

@@ -19,6 +19,8 @@ PASS it if the move is unusual for the name AND the cause is not obvious from th
 
 Watchlist candidates (`watchlist: true` in candidate.json) arrive with deliberately looser triggers — a 2.5% move on a thesis-universe name earned its folder, so don't kill it merely for being a smaller move; judge it by the same "unusual for THIS name" standard. `days_to_earnings` ≤ 1 usually means the move IS the earnings reaction — an explained move, lean KILL unless the reaction size is itself extraordinary.
 
+An UP move with a plausible catalyst is NOT an automatic KILL. "Explained" kills apply to mechanical causes (ex-div, splits, earnings reactions) — a real catalyst driving a pop can be the START of a repricing, and momentum continuation is a setup this firm trades. Pass it and let the technical analyst judge whether the pop has a shelf.
+
 Write a verdict to `triage.md` in EACH candidate folder:
 
 ```

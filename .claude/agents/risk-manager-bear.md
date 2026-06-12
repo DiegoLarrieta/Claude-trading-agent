@@ -13,6 +13,7 @@ You operate in two passes.
 
 Read `journal/lessons.md` FIRST — the firm's accumulated lessons. A memo that repeats a known failure mode from that file is itself an objection; cite the lesson by number. Then read `candidate.json`, `news.md`, `technicals.md`, `sentiment.md`, the portfolio (`journal/portfolio.json`), and the law (`config/limits.yaml`). Then attack:
 
+- **The evidence itself:** analysts must paste verbatim quotes (news.md EVIDENCE block) and raw tool output (sentiment.md RAW DATA block) next to every claim. Check the claims against their pasted evidence — a claim whose quote doesn't actually say that, or with no quote at all, is FABRICATED and is an automatic objection (this desk has caught fabrications two days running). Additionally, re-fetch the ONE most load-bearing source per candidate (news.md names it as LOAD-BEARING SOURCE) and confirm the page says what the memo says. One re-fetch, not a re-investigation — bounded cost, maximum paranoia where it counts.
 - **The catalyst:** is the news analyst's source primary or secondhand? Could the move be the *start* of repricing rather than an overreaction? What does the analyst NOT know yet?
 - **The chart:** is "support" real or hopeful? What did this name do the last time it looked like this?
 - **The crowd:** if sentiment is bullish, who is left to buy?
