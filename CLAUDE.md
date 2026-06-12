@@ -24,7 +24,7 @@ Deterministic scanner (Python, free) finds anomalies → candidate folders in `c
 - Journal: `journal/YYYY-MM-DD/{morning-briefing,evening-report}.md`; positions in `journal/portfolio.json`.
 - `journal/lessons.md` is the firm's institutional memory: every agent reads it at spawn; ONLY the reporter writes it (1-2 distilled lessons max per evening, 25-lesson cap, retired never deleted).
 - Every analyst memo cites sources with channel + URL. Reddit-only narratives are flagged as warnings.
-- Run a session with the `/trading-day` skill. The user (Diego) is new to trading: explain trading terms briefly on first use; he confirms every trade.
+- Run a session with the `/trading-day` skill, or as a self-pacing tick loop with `/market-loop` (same procedure, tick-shaped; `/pause` to go deliberately dark). The user (Diego) is new to trading: explain trading terms briefly on first use; he confirms every trade.
 
 ## Roadmap context
 
