@@ -40,6 +40,8 @@ cat > "$AGENTS_DIR/com.trade-agent.watcher.plist" <<EOF
   <key>StartCalendarInterval</key><array>
 $(calendar_entries)
   </array>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>ThrottleInterval</key><integer>60</integer>
   <key>StandardOutPath</key><string>$ROOT/journal/logs/watcher.log</string>
   <key>StandardErrorPath</key><string>$ROOT/journal/logs/watcher.err</string>
 </dict></plist>
@@ -58,6 +60,8 @@ cat > "$AGENTS_DIR/com.trade-agent.telegram.plist" <<EOF
   <key>StartCalendarInterval</key><array>
 $(calendar_entries)
   </array>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>ThrottleInterval</key><integer>60</integer>
   <key>StandardOutPath</key><string>$ROOT/journal/logs/telegram.log</string>
   <key>StandardErrorPath</key><string>$ROOT/journal/logs/telegram.err</string>
 </dict></plist>
@@ -78,12 +82,77 @@ cat > "$AGENTS_DIR/com.trade-agent.heartbeat.plist" <<EOF
 </dict></plist>
 EOF
 
+# Archive any existing log files BEFORE loading. Root cause of the
+# 2026-06-11 EX_CONFIG/78 outage: launchd opens Standard{Out,Error}Path
+# with its own TCC identity before exec; a log file created by another
+# process inside ~/Documents (com.apple.provenance, no com.apple.macl
+# grant) gets DENIED, the spawn stub dies at init in ~13ms, and the job
+# never runs — with empty logs, invisibly. Files launchd creates itself
+# carry the macl grant and keep working.
+STAMP=$(date +%Y%m%d-%H%M%S)
+for f in watcher telegram heartbeat; do
+  for ext in log err; do
+    if [ -s "$ROOT/journal/logs/$f.$ext" ]; then
+      mv "$ROOT/journal/logs/$f.$ext" "$ROOT/journal/logs/$f.$ext.$STAMP"
+    else
+      rm -f "$ROOT/journal/logs/$f.$ext"
+    fi
+  done
+done
+
 for svc in watcher telegram heartbeat; do
-  launchctl unload "$AGENTS_DIR/com.trade-agent.$svc.plist" 2>/dev/null || true
-  launchctl load "$AGENTS_DIR/com.trade-agent.$svc.plist"
+  launchctl bootout "gui/$(id -u)/com.trade-agent.$svc" 2>/dev/null || true
+  launchctl bootstrap "gui/$(id -u)" "$AGENTS_DIR/com.trade-agent.$svc.plist"
 done
 
 echo "installed (market-hours policy):"
 launchctl list | grep com.trade-agent || true
-echo "watcher+telegram start weekday mornings and exit after the close."
+echo "watcher+telegram start weekday mornings, exit after the close, and"
+echo "are auto-restarted by launchd if they CRASH (clean exits stay down)."
 echo "manual control: ops/firm up | down | status"
+
+# ── TCC self-test ───────────────────────────────────────────────────
+# macOS denies launchd agents access to ~/Documents until the interpreter
+# is granted Full Disk Access (2026-06-12: every job died at spawn with
+# EX_CONFIG/78 and empty logs — invisible without this probe). Run the
+# real python binary under launchd and try to read the repo.
+PROBE_LABEL="com.trade-agent.tcc-probe"
+PROBE_PLIST="/tmp/$PROBE_LABEL.plist"
+PROBE_OUT="/tmp/$PROBE_LABEL.out"
+rm -f "$PROBE_OUT"
+cat > "$PROBE_PLIST" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>$PROBE_LABEL</string>
+  <key>ProgramArguments</key><array>
+    <string>$PY</string><string>-c</string>
+    <string>import os; os.listdir("$ROOT"); open("$PROBE_OUT","w").write("ok")</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+</dict></plist>
+EOF
+launchctl unload "$PROBE_PLIST" 2>/dev/null || true
+launchctl load "$PROBE_PLIST"
+sleep 3
+launchctl unload "$PROBE_PLIST" 2>/dev/null || true
+rm -f "$PROBE_PLIST"
+if [ -f "$PROBE_OUT" ]; then
+  rm -f "$PROBE_OUT"
+  echo "TCC self-test: OK — launchd jobs can read the repo."
+else
+  REAL_PY="$(readlink -f "$PY")"
+  cat <<MSG
+
+╔═══════════════════════════════════════════════════════════════════╗
+║  TCC self-test FAILED — launchd jobs CANNOT read ~/Documents.      ║
+║  Every daemon will die at spawn (exit 78, empty logs).             ║
+║                                                                    ║
+║  FIX (one-time, human-only):                                       ║
+║    System Settings -> Privacy & Security -> Full Disk Access      ║
+║    -> '+' -> add this binary (Cmd+Shift+G to paste the path):      ║
+║      $REAL_PY
+║    Then re-run: bash ops/install-watcher.sh                        ║
+╚═══════════════════════════════════════════════════════════════════╝
+MSG
+fi

@@ -9,7 +9,7 @@ You are orchestrating the trading firm defined in `.claude/agents/`. Today's dat
 
 ## 0. Setup
 
-1. Read `config/limits.yaml` (the law), `config/scanner.yaml` (thresholds), `journal/portfolio.json` (state). If `kill_switch: true`, stop and tell the user.
+1. Read `config/limits.yaml` (the law), `config/scanner.yaml` (thresholds), `journal/portfolio.json` (state). If `kill_switch: true`, stop and tell the user. Announce presence so the watchdog holds you to it: `.venv/bin/python scanner/session_state.py set active` — and touch the heartbeat (`session_state.py touch`) at every numbered checkpoint you pass during the session. If the user pauses or you resume after a gap, follow the `/pause` skill.
 2. Create today's folders if missing: `candidates/YYYY-MM-DD/`, `journal/YYYY-MM-DD/`.
 3. If no morning briefing exists for today, launch the **reporter** subagent to write it, and show the user a 3-line summary.
 4. If the briefing's **Opportunities radar** has `→ queue for committee` items, present them to the user (one line each). For each one the user wants pursued, create a candidate folder by hand — `candidates/YYYY-MM-DD/TICKER-HHMM/candidate.json` with real yfinance numbers, `"trigger": "radar"`, and the radar's one-line reason in `scanner_notes` — then send it through triage like any scanner candidate. The radar nominates; the committee still decides. Radar candidates must carry the same metadata the scanner stamps — compute it with the scanner's own helpers, never by hand:
@@ -96,7 +96,7 @@ Once per session — at session start if positions are open, or after material n
 
 - During the session, also check open positions against their stops (current price via yfinance). A breached stop = simulated exit at the stop price; record the close in `portfolio.json` and inform the user.
 - At day's end (or when the user says "wrap up"), launch the **reporter** subagent for the evening report, then show the user the P&L line and the considered-and-passed list inline.
-- After the evening report, archive the day's inbox (the watcher has self-terminated by then): `.venv/bin/python scanner/inbox_queue.py rotate`.
+- After the evening report, archive the day's inbox (the watcher has self-terminated by then): `.venv/bin/python scanner/inbox_queue.py rotate`, and sign off: `.venv/bin/python scanner/session_state.py set ended`.
 
 ## Rules
 
