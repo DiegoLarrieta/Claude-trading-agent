@@ -12,10 +12,14 @@ levels:
     when: at_or_below
     level: 341.00
     note: "core entry zone 335-341 reached — fast re-review, planned stop ~330"
-  - ticker: UNIT
-    when: at_or_above
-    level: 12.45
-    note: "52-week-high breakout — convene first committee review"
+  - ticker: RKLB
+    when: at_or_below
+    level: 101.00
+    note: "shelf test (50MA + June 9 low) — re-run committee on a REACTION there, never an auto-order"
+  - ticker: SNDK
+    when: at_or_below
+    level: 1895.00
+    note: "breakout shelf (June 11 close/high zone) — re-run committee on a HOLD with volume, never an auto-order; chased-at-1986 PASS 06-12"
   - ticker: IDCC
     when: at_or_below
     level: 273.00

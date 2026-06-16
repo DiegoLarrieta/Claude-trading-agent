@@ -1,0 +1,16 @@
+{
+  "ticker": "EC",
+  "name": "Ecopetrol S.A.",
+  "trigger": "pct_move",
+  "pct_move": -5.79,
+  "volume_multiple": 1.2,
+  "price": 15.62,
+  "prev_close": 16.58,
+  "market_cap": 32112138240,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T16:02:37.813011+00:00",
+  "scanner_notes": "52w range 8.27\u201316.81"
+}

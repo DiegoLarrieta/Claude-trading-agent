@@ -1,0 +1,16 @@
+{
+  "ticker": "WHR",
+  "name": "Whirlpool Corporation",
+  "trigger": "pct_move",
+  "pct_move": -6.26,
+  "volume_multiple": 1.1,
+  "price": 39.24,
+  "prev_close": 41.86,
+  "market_cap": 2543659264,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 43,
+  "detected_at": "2026-06-16T16:05:10.554657+00:00",
+  "scanner_notes": "52w range 38.38\u2013111.96"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "CART",
+  "name": "Maplebear Inc.",
+  "trigger": "pct_move",
+  "pct_move": 4.8,
+  "volume_multiple": 0.8,
+  "price": 44.2042,
+  "prev_close": 42.18,
+  "market_cap": 10389304320,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-16T15:22:14.204088+00:00",
+  "scanner_notes": "52w range 32.73\u201353.5"
+}

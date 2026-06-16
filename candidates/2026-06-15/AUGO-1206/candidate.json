@@ -1,0 +1,16 @@
+{
+  "ticker": "AUGO",
+  "name": "Aura Minerals Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.1,
+  "volume_multiple": 1.4,
+  "price": 67.04,
+  "prev_close": 60.89,
+  "market_cap": 5597839872,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-15T16:06:59.159632+00:00",
+  "scanner_notes": "52w range 22.243\u2013110.321"
+}

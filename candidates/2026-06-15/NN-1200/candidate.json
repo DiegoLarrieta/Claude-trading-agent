@@ -1,0 +1,16 @@
+{
+  "ticker": "NN",
+  "name": "NextNav Inc.",
+  "trigger": "pct_move",
+  "pct_move": -6.33,
+  "volume_multiple": 1.1,
+  "price": 20.14,
+  "prev_close": 21.5,
+  "market_cap": 2747840000,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-15T16:00:25.737854+00:00",
+  "scanner_notes": "52w range 10.87\u201324.42"
+}

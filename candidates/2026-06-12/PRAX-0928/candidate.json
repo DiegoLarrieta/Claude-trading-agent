@@ -1,0 +1,16 @@
+{
+  "ticker": "PRAX",
+  "name": "Praxis Precision Medicines, Inc",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.6,
+  "volume_multiple": 41.1,
+  "price": 266.67,
+  "prev_close": 247.98,
+  "market_cap": 7434433024,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-12T14:06:54.552915+00:00",
+  "scanner_notes": "52w range 37.19\u2013366.52"
+}

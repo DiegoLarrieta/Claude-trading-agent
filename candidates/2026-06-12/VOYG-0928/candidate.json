@@ -1,0 +1,16 @@
+{
+  "ticker": "VOYG",
+  "name": "Voyager Technologies, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -10.99,
+  "volume_multiple": 147.0,
+  "price": 42.61,
+  "prev_close": 47.87,
+  "market_cap": 2525160192,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-12T14:12:26.493503+00:00",
+  "scanner_notes": "52w range 17.41\u201356.68"
+}

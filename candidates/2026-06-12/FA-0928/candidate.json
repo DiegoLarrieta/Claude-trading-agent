@@ -1,0 +1,16 @@
+{
+  "ticker": "FA",
+  "name": "First Advantage Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": 8.26,
+  "volume_multiple": 224.7,
+  "price": 16.845,
+  "prev_close": 15.56,
+  "market_cap": 2889541376,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-12T14:16:42.250397+00:00",
+  "scanner_notes": "52w range 8.82\u201318.55"
+}

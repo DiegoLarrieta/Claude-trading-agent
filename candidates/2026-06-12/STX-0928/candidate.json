@@ -1,0 +1,16 @@
+{
+  "ticker": "STX",
+  "name": "Seagate Technology Holdings PLC",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.39,
+  "volume_multiple": 77.4,
+  "price": 932.245,
+  "prev_close": 868.09,
+  "market_cap": 209036361728,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 46,
+  "detected_at": "2026-06-12T14:06:54.458101+00:00",
+  "scanner_notes": "52w range 124.63\u2013966.8"
+}

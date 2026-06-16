@@ -1,0 +1,2 @@
+VERDICT: PASS
+REASON: 7.84% move on 2.57x volume in a micro-cap (3B market cap) is substantial. 48 days to earnings rules out earnings reaction. Breakout held from Wednesday alert into Thursday close at 12.52 (52w high is 12.65) — this is a technical structure worth analyzing. Not mechanical. Per lesson #8, momentum continuation has measurable positive edge; this pop on volume deserves committee review for shelf analysis.

@@ -1,0 +1,16 @@
+{
+  "ticker": "AMD",
+  "name": "Advanced Micro Devices, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.69,
+  "volume_multiple": 89.1,
+  "price": 516.24,
+  "prev_close": 488.45,
+  "market_cap": 841781215232,
+  "exchange": "NasdaqGS",
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 53,
+  "detected_at": "2026-06-12T14:10:17.615072+00:00",
+  "scanner_notes": "52w range 115.06\u2013546.44"
+}

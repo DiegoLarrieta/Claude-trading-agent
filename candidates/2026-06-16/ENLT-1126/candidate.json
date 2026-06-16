@@ -1,0 +1,16 @@
+{
+  "ticker": "ENLT",
+  "name": "Enlight Renewable Energy Ltd.",
+  "trigger": "pct_move",
+  "pct_move": -8.14,
+  "volume_multiple": 2.7,
+  "price": 88.59,
+  "prev_close": 96.44,
+  "market_cap": 12377374720,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-16T15:26:34.539725+00:00",
+  "scanner_notes": "52w range 19.403\u2013108.65"
+}

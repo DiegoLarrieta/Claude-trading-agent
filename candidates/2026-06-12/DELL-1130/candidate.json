@@ -1,0 +1,17 @@
+{
+  "ticker": "DELL",
+  "name": "Dell Technologies Inc.",
+  "price": 406.88,
+  "prev_close": 391.45,
+  "pct_move": 3.94,
+  "volume_multiple": 1.0,
+  "days_to_earnings": 83,
+  "theme": "ai-infrastructure",
+  "watchlist": true,
+  "week52_high": 469.47,
+  "week52_low": 109.17,
+  "market_cap": 263702167552,
+  "trigger": "radar",
+  "detected_at": "2026-06-12T11:30:45.032214-04:00",
+  "scanner_notes": "user nomination 11:30 ET \u2014 scanner blind (daily candidate budget exhausted by opening flood); move verified live: pct/vol computed from yfinance at nomination time"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "BBWI",
+  "name": "Bath & Body Works, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 7.61,
+  "volume_multiple": 1.7,
+  "price": 20.94,
+  "prev_close": 19.46,
+  "market_cap": 4220704256,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-16T14:49:54.538549+00:00",
+  "scanner_notes": "52w range 14.28\u201333.96"
+}

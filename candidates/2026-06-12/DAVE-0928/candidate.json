@@ -1,0 +1,16 @@
+{
+  "ticker": "DAVE",
+  "name": "Dave Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -5.48,
+  "volume_multiple": 212.2,
+  "price": 269.8,
+  "prev_close": 285.43,
+  "market_cap": 3430303744,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-12T14:16:42.370626+00:00",
+  "scanner_notes": "52w range 152.21\u2013300.09"
+}

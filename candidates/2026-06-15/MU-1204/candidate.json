@@ -1,0 +1,16 @@
+{
+  "ticker": "MU",
+  "name": "Micron Technology, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 9.33,
+  "volume_multiple": 1.1,
+  "price": 1073.18,
+  "prev_close": 981.61,
+  "market_cap": 1210261700608,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 9,
+  "detected_at": "2026-06-15T16:04:47.992801+00:00",
+  "scanner_notes": "52w range 103.38\u20131089.29"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "NOW",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 3.87,
+  "volume_multiple": 1.0,
+  "price": 106.86499786376953,
+  "prev_close": 102.88,
+  "market_cap": 110210727216.88843,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-applications",
+  "days_to_earnings": 37,
+  "detected_at": "2026-06-15T16:11:22.553277+00:00",
+  "scanner_notes": "52w range 81.23999786376953\u2013211.47799682617188"
+}

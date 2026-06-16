@@ -1,0 +1,16 @@
+{
+  "ticker": "VIAV",
+  "name": "Viavi Solutions Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.32,
+  "volume_multiple": 40.1,
+  "price": 53.92,
+  "prev_close": 50.24,
+  "market_cap": 13301289984,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-12T14:06:54.650295+00:00",
+  "scanner_notes": "52w range 9.08\u201360.43"
+}

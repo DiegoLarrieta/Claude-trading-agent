@@ -1,0 +1,16 @@
+{
+  "ticker": "NTSK",
+  "name": "Netskope, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 6.83,
+  "volume_multiple": 88.5,
+  "price": 9.305,
+  "prev_close": 8.71,
+  "market_cap": 3758509568,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 61,
+  "detected_at": "2026-06-12T14:06:54.745833+00:00",
+  "scanner_notes": "52w range 7.665\u201327.99"
+}

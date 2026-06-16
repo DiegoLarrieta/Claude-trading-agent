@@ -1,0 +1,16 @@
+{
+  "ticker": "CAMT",
+  "name": "Camtek Ltd.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.71,
+  "volume_multiple": 84.7,
+  "price": 194.67,
+  "prev_close": 184.15,
+  "market_cap": 8963478528,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 61,
+  "detected_at": "2026-06-12T14:10:17.720041+00:00",
+  "scanner_notes": "52w range 70.07\u2013215.99"
+}

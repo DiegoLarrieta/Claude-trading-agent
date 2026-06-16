@@ -1,0 +1,16 @@
+{
+  "ticker": "QUBT",
+  "name": "Quantum Computing Inc.",
+  "trigger": "pct_move",
+  "pct_move": -6.04,
+  "volume_multiple": 1.2,
+  "price": 10.43,
+  "prev_close": 11.1,
+  "market_cap": 2352329984,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-16T16:05:10.289516+00:00",
+  "scanner_notes": "52w range 6.18\u201325.84"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "ASTS",
+  "name": "AST SpaceMobile, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -10.41,
+  "volume_multiple": 304.7,
+  "price": 87.405,
+  "prev_close": 97.56,
+  "market_cap": 33924028416,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 59,
+  "detected_at": "2026-06-12T14:12:26.702830+00:00",
+  "scanner_notes": "52w range 36.08\u2013133.86"
+}

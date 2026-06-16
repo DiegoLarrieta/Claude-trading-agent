@@ -1,0 +1,16 @@
+{
+  "ticker": "AAOI",
+  "name": "Applied Optoelectronics, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.98,
+  "volume_multiple": 1.6,
+  "price": 187.61,
+  "prev_close": 169.05,
+  "market_cap": 15054346240,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-15T15:56:04.728390+00:00",
+  "scanner_notes": "52w range 15.895\u2013233.67"
+}

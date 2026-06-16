@@ -1,0 +1,16 @@
+{
+  "ticker": "VG",
+  "name": "Venture Global, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -8.02,
+  "volume_multiple": 1.2,
+  "price": 12.015,
+  "prev_close": 13.062,
+  "market_cap": 29849563136,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 58,
+  "detected_at": "2026-06-15T16:00:24.800013+00:00",
+  "scanner_notes": "52w range 5.72\u201319.5"
+}

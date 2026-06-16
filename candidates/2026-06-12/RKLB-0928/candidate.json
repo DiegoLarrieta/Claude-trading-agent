@@ -1,0 +1,16 @@
+{
+  "ticker": "RKLB",
+  "name": "Rocket Lab Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": -7.68,
+  "volume_multiple": 298.6,
+  "price": 105.97,
+  "prev_close": 114.78,
+  "market_cap": 66212044800,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-12T14:14:33.687881+00:00",
+  "scanner_notes": "52w range 25.24\u2013151.0"
+}

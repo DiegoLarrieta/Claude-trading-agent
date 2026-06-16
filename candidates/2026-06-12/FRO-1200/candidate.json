@@ -1,0 +1,16 @@
+{
+  "ticker": "FRO",
+  "name": "Frontline Plc",
+  "trigger": "pct_move",
+  "pct_move": 7.66,
+  "volume_multiple": 1.7,
+  "price": 38.305,
+  "prev_close": 35.58,
+  "market_cap": 8527569920,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-12T16:00:28.890333+00:00",
+  "scanner_notes": "52w range 16.25\u201339.89"
+}

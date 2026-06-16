@@ -1,0 +1,16 @@
+{
+  "ticker": "CIFR",
+  "name": "Cipher Digital Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.75,
+  "volume_multiple": 51.4,
+  "price": 23.93,
+  "prev_close": 22.63,
+  "market_cap": 9788547072,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-12T13:44:12.371356+00:00",
+  "scanner_notes": "52w range 3.29\u201328.62"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "HIMS",
+  "name": "Hims & Hers Health, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.91,
+  "volume_multiple": 1.1,
+  "price": 29.745,
+  "prev_close": 26.82,
+  "market_cap": 6884709376,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 56,
+  "detected_at": "2026-06-15T15:56:04.489591+00:00",
+  "scanner_notes": "52w range 13.74\u201370.43"
+}

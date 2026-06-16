@@ -1,0 +1,16 @@
+{
+  "ticker": "COHR",
+  "name": "Coherent Corp.",
+  "trigger": "pct_move+volume",
+  "pct_move": 6.35,
+  "volume_multiple": 90.3,
+  "price": 386.67,
+  "prev_close": 363.58,
+  "market_cap": 75647860736,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-12T14:21:44.162975+00:00",
+  "scanner_notes": "52w range 76.88\u2013440.0"
+}

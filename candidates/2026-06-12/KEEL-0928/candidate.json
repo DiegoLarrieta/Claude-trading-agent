@@ -1,0 +1,16 @@
+{
+  "ticker": "KEEL",
+  "name": "Keel Infrastructure Corp.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.34,
+  "volume_multiple": 95.1,
+  "price": 5.815,
+  "prev_close": 5.52,
+  "market_cap": 3511263744,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 59,
+  "detected_at": "2026-06-12T13:44:12.461770+00:00",
+  "scanner_notes": "52w range 0.7\u20136.6"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "UNIT",
+  "name": "Uniti Group Inc.",
+  "trigger": "radar",
+  "pct_move": 7.84,
+  "volume_multiple": 2.57,
+  "price": 12.52,
+  "prev_close": 11.61,
+  "market_cap": 3040052074,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-12T07:17:24.573330+00:00",
+  "scanner_notes": "REHEARSAL + scheduled review: Diego watch-level tripwire at_or_above 12.45 fired 2026-06-11 (alert at 12.54); breakout held into the Thursday close at 12.52. Numbers are Thursday full-day. 52w range 7.42-12.65. Market CLOSED at analysis time (pre-open Friday) \u2014 any proposal is for the open."
+}

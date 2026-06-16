@@ -1,0 +1,17 @@
+{
+  "ticker": "RKLB",
+  "name": "Rocket Lab Corporation",
+  "price": 105.33,
+  "prev_close": 114.78,
+  "pct_move": -8.23,
+  "volume_multiple": 3.7,
+  "days_to_earnings": 55,
+  "theme": null,
+  "watchlist": false,
+  "week52_high": 151.0,
+  "week52_low": 25.24,
+  "market_cap": 65812160512,
+  "trigger": "watch-level",
+  "detected_at": "2026-06-12T12:24:23.565208-04:00",
+  "scanner_notes": "WATCH LEVEL FIRED: 101.00 at_or_below printed (session low 99.61) and price reacted to ~105 within the hour. Level set by candidates/2026-06-12/RKLB-0928/decision.md (SpaceX-IPO sector selloff; shelf = 50MA ~100.82 + June 9 low 101.20; Nasdaq-100 inclusion June 22 tailwind). This folder is the committee re-review the level demands."
+}

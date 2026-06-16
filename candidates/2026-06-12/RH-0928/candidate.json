@@ -1,0 +1,16 @@
+{
+  "ticker": "RH",
+  "name": "RH",
+  "trigger": "pct_move+volume",
+  "pct_move": -5.18,
+  "volume_multiple": 183.3,
+  "price": 151.06,
+  "prev_close": 159.32,
+  "market_cap": 2855150080,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 90,
+  "detected_at": "2026-06-12T14:19:02.568673+00:00",
+  "scanner_notes": "52w range 106.3\u2013257.0"
+}

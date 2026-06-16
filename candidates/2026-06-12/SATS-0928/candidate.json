@@ -1,0 +1,16 @@
+{
+  "ticker": "SATS",
+  "name": "EchoStar Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": -9.3,
+  "volume_multiple": 642.9,
+  "price": 116.21,
+  "prev_close": 128.13,
+  "market_cap": 33679226880,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-12T14:14:33.212777+00:00",
+  "scanner_notes": "52w range 16.73\u2013147.25"
+}

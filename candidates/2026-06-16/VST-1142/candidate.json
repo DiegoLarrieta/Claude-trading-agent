@@ -1,0 +1,16 @@
+{
+  "ticker": "VST",
+  "name": "Vistra Corp.",
+  "trigger": "radar",
+  "pct_move": 2.97,
+  "volume_multiple": 0.41,
+  "price": 158.25,
+  "prev_close": 153.69,
+  "market_cap": 53359125561,
+  "exchange": "NYQ",
+  "watchlist": true,
+  "theme": "ai-energy",
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-16T15:42:20.867934+00:00",
+  "scanner_notes": "RADAR (Diego-flagged, fundamental thesis \u2014 NOT a momentum-pop): named preferred power provider in a $10B AI-infrastructure JV with Nvidia and KKR; record EBITDA, investment-grade rating, Morgan Stanley PT $212. Ex-div June 22. Different setup type than this week's extended momentum chases. Timing risk: FOMC decision tomorrow; this is a hold-through-the-event swing/core thesis."
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "ADBE",
+  "name": "Adobe Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -7.94,
+  "volume_multiple": 789.7,
+  "price": 201.42,
+  "prev_close": 218.8,
+  "market_cap": 81413963776,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 90,
+  "detected_at": "2026-06-12T14:14:33.592346+00:00",
+  "scanner_notes": "52w range 196.9\u2013405.0"
+}

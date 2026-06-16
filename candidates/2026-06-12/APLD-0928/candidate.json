@@ -1,0 +1,16 @@
+{
+  "ticker": "APLD",
+  "name": "Applied Digital Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.48,
+  "volume_multiple": 93.8,
+  "price": 44.57,
+  "prev_close": 41.47,
+  "market_cap": 12736748544,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 47,
+  "detected_at": "2026-06-12T14:06:55.013003+00:00",
+  "scanner_notes": "52w range 9.02\u201350.725"
+}

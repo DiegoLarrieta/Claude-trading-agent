@@ -1,0 +1,23 @@
+DECISION: PASS
+
+OBJECTION RESPONSES:
+
+1. **No fresh catalyst.** Agreed. The $458M convertible-notes closing is a June 9 event already substantially priced on June 11 (+5.14% close). No June 12 primary source (8-K, press release, wire) confirms a lease at Panther Creek, Sharon, or Moses Lake — the "imminent deal" narrative is Stocktwits-only, which the firm treats as a flagged low-quality channel. Without a confirmed fresh catalyst, today's continuation cannot be framed as "underreaction" — it is a second leg on an already-played story plus sector sympathy (MRVL, SNDK rally).
+
+2. **Sub-1 R:R is decisive and unfixable.** This is the kill shot. At $6.00-6.02, the technicals memo's own numbers put risk to the shelf-stop (~$5.45) at ~$0.55-0.57 (~9%) against reward to the only resistance level that matters for a momentum-pop thesis ($6.355) of ~$0.34 (~5.6%) — ~0.6:1. Per lesson #1, the stop must sit below real structure (the $5.50-5.60 shelf), not be arbitrarily tightened to manufacture better R:R, and the entry can't be moved down to the shelf because that's not where price is — chasing the current print at $6.00+ into a sub-1 R:R is exactly the geometry the firm's stop discipline exists to prevent. No size or limit-price adjustment fixes arithmetic that's broken at the level of "where is resistance vs. where is the stop."
+
+3. **June 9 precedent confirms #2.** The stock visited this exact $6.30-6.45 zone three sessions ago, printed an intraday high of $6.355, and closed -10.4% off that high on heavy volume. Today's push toward the same zone, already +9.1% intraday on a non-event, is the same setup that failed last time it occurred. This is not abstract overhead supply — it's a tested, recently-failed level.
+
+4. **Unanimous euphoric sentiment is a real warning, not noise.** 20/20 tagged posts bullish, zero bearish, including hyperbolic dismissal of any bear case — a textbook late-stage crowd signature. Combined with #1 (no new information) this suggests the marginal buyer pool is thin and largely exhausted into this morning's run.
+
+5. **MarketBeat target gap is unaddressed and adds uncertainty, not comfort.** A $4.88 target vs. $6.02 spot (-19%) was not checked for staleness or pivot-adjustment by any memo. Whether it's stale or reflects real skepticism about the AI-pivot economics, it's an unresolved red flag that should have been run down before this folder reached decision — its absence is itself informative about memo discipline today, and tips toward caution rather than confidence.
+
+6. **Capped-call/conversion structure is a legitimate caution signal.** Management priced the new convert's conversion at $7.41 (25% above the June 4 close) and capped the call at $11.86 — i.e., management itself didn't think the stock was worth defending dilution against at today's $6.02. Raising $458M of dilutive paper during the week of a multi-month high is a standard "insiders see value in selling equity-linked paper here" signal. It doesn't independently kill the trade, but it removes any "smart money is bullish too" support for paying up at current levels.
+
+7. **Fat-tail micro-cap with a recent radical pivot — lesson #3 analog applies.** A former Bitfarms crypto-to-AI pivot story, 455% one-year run, $3.5B market cap, that gave back -10.4%+ intraday three days ago in this exact zone. A ~9% stop here is not "tight" in the sense lesson #3 requires — it's a coin-flip against a name that has demonstrated it can move through that range in hours.
+
+8. **Lesson #8 does not apply here and citing it would be a misapplication.** The momentum-continuation backtest assumed roughly 2:1 R:R structure (stop 6/target 12). This setup's own numbers compute to ~0.6:1 to first resistance. The edge measured in lesson #8 does not transfer to a trade with the opposite risk/reward shape — both memos effectively talked themselves out of the trade, and the bear is right that this folder should not have advanced past that point. Logged for the journal as a process note: triage/analyst memos should flag sub-1 R:R as a structural disqualifier before reaching the trader.
+
+THESIS: No trade. The catalyst is stale and unconfirmed, the crowd is unanimously euphoric on a non-event, and — decisively — the technicals memo's own numbers show this entry risks more (~9% to the shelf) than it can win (~5.6% to the only resistance that matters), with a recent direct precedent (June 9) showing exactly this failure mode in this exact price zone three days ago.
+
+CONVICTION: high — pass. Clean disqualification on arithmetic (objection #2) independently of the narrative objections; no size reduction or limit-price adjustment repairs a sub-1 R:R against real structure. Logged as "interesting but unconvincing" per lesson #4.

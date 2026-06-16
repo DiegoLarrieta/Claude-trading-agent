@@ -1,0 +1,16 @@
+{
+  "ticker": "FISV",
+  "name": "Fiserv, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -8.27,
+  "volume_multiple": 4.6,
+  "price": 49.33,
+  "prev_close": 53.78,
+  "market_cap": 26305419264,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 37,
+  "detected_at": "2026-06-15T16:00:24.656215+00:00",
+  "scanner_notes": "52w range 48.44\u2013177.36"
+}

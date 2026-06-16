@@ -1,0 +1,16 @@
+{
+  "ticker": "GPGI",
+  "name": "GPGI, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 12.23,
+  "volume_multiple": 1.3,
+  "price": 14.365,
+  "prev_close": 12.8,
+  "market_cap": 4163859456,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:51:45.877288+00:00",
+  "scanner_notes": "52w range 11.22\u201326.78"
+}

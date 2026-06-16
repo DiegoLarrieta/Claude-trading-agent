@@ -1,0 +1,16 @@
+{
+  "ticker": "POET",
+  "name": "POET Technologies Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 9.56,
+  "volume_multiple": 78.0,
+  "price": 12.325,
+  "prev_close": 11.25,
+  "market_cap": 2127238400,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 60,
+  "detected_at": "2026-06-12T14:06:54.241588+00:00",
+  "scanner_notes": "52w range 3.87\u201320.81"
+}

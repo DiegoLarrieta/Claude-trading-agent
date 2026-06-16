@@ -1,0 +1,16 @@
+{
+  "ticker": "BMNR",
+  "name": "BitMine Immersion Technologies,",
+  "trigger": "pct_move",
+  "pct_move": 9.87,
+  "volume_multiple": 1.7,
+  "price": 17.7,
+  "prev_close": 16.11,
+  "market_cap": 10081510400,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 17,
+  "detected_at": "2026-06-15T16:04:47.756854+00:00",
+  "scanner_notes": "52w range 3.92\u2013161.0"
+}

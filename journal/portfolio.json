@@ -1,26 +1,12 @@
 {
-  "cash_usd": 1499.61,
+  "cash_usd": 1537.62,
   "positions": [
-    {
-      "ticker": "CASY",
-      "side": "buy",
-      "shares": 0.2296,
-      "fill_price": 871.15,
-      "stop": 830.0,
-      "opened_at": "2026-06-10T16:21:01.751207+00:00",
-      "thesis": "Earnings beat + 14% dividend hike justify re-rating; knowingly buying post-pop against the bear's chase objection",
-      "owner": "diego-discretionary",
-      "firm_verdict_was": "PASS",
-      "candidate_folder": "candidates/2026-06-10/CASY-1139",
-      "simulated": true,
-      "high_water": 915.5999755859375
-    },
     {
       "ticker": "F",
       "side": "buy",
       "shares": 1.0,
       "fill_price": 14.23,
-      "stop": 13.52,
+      "stop": 14.23,
       "horizon": "day",
       "opened_at": "2026-06-11T14:20:06.618524+00:00",
       "thesis": "PLUMBING DRILL \u2014 first order through the IBKR paper pipeline; not a thesis trade",
@@ -30,7 +16,36 @@
       "simulated": false,
       "broker": "ibkr-paper",
       "broker_order_id": 4,
-      "high_water": 14.395000457763672
+      "high_water": 14.805000305175781,
+      "prior_stop": 13.52,
+      "last_announced_stop": 14.23
+    },
+    {
+      "ticker": "VST",
+      "side": "buy",
+      "shares": 1.0,
+      "fill_price": 158.73,
+      "stop": 137.0,
+      "setup": "dip-to-support",
+      "tier": "exploratory",
+      "horizon": "swing",
+      "opened_at": "2026-06-16T16:05:20.677226+00:00",
+      "thesis": "IG-rated, record-EBITDA power producer named preferred provider in $10B Nvidia/KKR Helix AI-infra JV; base breakout. Exploratory test of a fundamentals-filtered dip-buy vs the negative-expectancy backtest.",
+      "reference_price": 158.13,
+      "candidate_folder": "candidates/2026-06-16/VST-1142/",
+      "simulated": false,
+      "broker": "ibkr-paper",
+      "broker_order_id": 28,
+      "watchlist_bias": true,
+      "review_conditions": [
+        "journal FOMC outcome vs this position",
+        "score dip-buy filter for Lessons #4/#8",
+        "watchlist-bias entry per Lesson #6"
+      ],
+      "commission_usd": 1.0,
+      "effective_cost_basis": 159.73,
+      "account": "real-mirrored",
+      "note": "Firm's committee decision; Diego mirrored it in his real IB account. Real fill 158.73 + $1 IB commission = 159.73 all-in."
     }
   ],
   "closed_trades": [
@@ -71,6 +86,25 @@
       "exit_reason": "stop_gap",
       "pnl_usd": 9.53,
       "pnl_pct": 6.79
+    },
+    {
+      "ticker": "CASY",
+      "side": "buy",
+      "shares": 0.2296,
+      "fill_price": 871.15,
+      "stop": 830.0,
+      "opened_at": "2026-06-10T16:21:01.751207+00:00",
+      "thesis": "Earnings beat + 14% dividend hike justify re-rating; knowingly buying post-pop against the bear's chase objection",
+      "owner": "diego-discretionary",
+      "firm_verdict_was": "PASS",
+      "candidate_folder": "candidates/2026-06-10/CASY-1139",
+      "simulated": true,
+      "high_water": 915.5999755859375,
+      "closed_at": "2026-06-15T16:11:43.197930+00:00",
+      "exit_price": 861.25,
+      "exit_reason": "discretionary_close",
+      "pnl_usd": -2.27,
+      "pnl_pct": -1.14
     }
   ],
   "simulated": true,

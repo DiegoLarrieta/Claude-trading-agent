@@ -1,0 +1,16 @@
+{
+  "ticker": "DDS",
+  "name": "Dillard's, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -6.07,
+  "volume_multiple": 1.5,
+  "price": 572.975,
+  "prev_close": 610.01,
+  "market_cap": 8948178944,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 59,
+  "detected_at": "2026-06-15T16:02:37.263617+00:00",
+  "scanner_notes": "52w range 396.99\u2013741.98"
+}

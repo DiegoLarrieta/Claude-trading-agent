@@ -1,0 +1,16 @@
+{
+  "ticker": "SSRM",
+  "name": "SSR Mining Inc.",
+  "trigger": "pct_move",
+  "pct_move": 8.97,
+  "volume_multiple": 1.5,
+  "price": 31.535,
+  "prev_close": 28.94,
+  "market_cap": 6543230976,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-16T16:00:50.058629+00:00",
+  "scanner_notes": "52w range 11.7\u201336.52"
+}

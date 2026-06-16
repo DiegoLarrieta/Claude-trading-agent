@@ -1,0 +1,16 @@
+{
+  "ticker": "INOD",
+  "name": "Innodata Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.86,
+  "volume_multiple": 3.8,
+  "price": 107.49,
+  "prev_close": 99.66,
+  "market_cap": 3510124288,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 44,
+  "detected_at": "2026-06-16T13:43:08.813549+00:00",
+  "scanner_notes": "52w range 34.23\u2013125.14"
+}

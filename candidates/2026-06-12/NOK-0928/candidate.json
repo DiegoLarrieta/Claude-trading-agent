@@ -1,0 +1,16 @@
+{
+  "ticker": "NOK",
+  "name": "Nokia Corporation Sponsored",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.78,
+  "volume_multiple": 135.6,
+  "price": 14.905,
+  "prev_close": 14.09,
+  "market_cap": 83207667712,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 41,
+  "detected_at": "2026-06-12T14:10:17.315490+00:00",
+  "scanner_notes": "52w range 4.0\u201317.45"
+}

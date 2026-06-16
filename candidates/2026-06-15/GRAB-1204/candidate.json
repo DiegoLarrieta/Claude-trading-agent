@@ -1,0 +1,16 @@
+{
+  "ticker": "GRAB",
+  "name": "Grab Holdings Limited",
+  "trigger": "pct_move",
+  "pct_move": 9.39,
+  "volume_multiple": 2.2,
+  "price": 3.6099,
+  "prev_close": 3.3,
+  "market_cap": 14764490752,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 44,
+  "detected_at": "2026-06-15T16:04:47.397918+00:00",
+  "scanner_notes": "52w range 3.18\u20136.62"
+}

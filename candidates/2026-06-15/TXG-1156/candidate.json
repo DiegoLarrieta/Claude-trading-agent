@@ -1,0 +1,16 @@
+{
+  "ticker": "TXG",
+  "name": "10x Genomics, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.09,
+  "volume_multiple": 1.7,
+  "price": 31.75,
+  "prev_close": 28.84,
+  "market_cap": 4030859008,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-15T15:56:05.215491+00:00",
+  "scanner_notes": "52w range 10.17\u201335.645"
+}

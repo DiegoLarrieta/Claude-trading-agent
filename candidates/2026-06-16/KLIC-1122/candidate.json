@@ -1,0 +1,16 @@
+{
+  "ticker": "KLIC",
+  "name": "Kulicke and Soffa Industries, I",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.69,
+  "volume_multiple": 3.9,
+  "price": 122.0,
+  "prev_close": 115.435,
+  "market_cap": 6384610816,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-16T15:22:13.679794+00:00",
+  "scanner_notes": "52w range 31.32\u2013124.64"
+}

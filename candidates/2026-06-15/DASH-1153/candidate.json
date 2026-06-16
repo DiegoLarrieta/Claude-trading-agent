@@ -1,0 +1,16 @@
+{
+  "ticker": "DASH",
+  "name": "DoorDash, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 11.54,
+  "volume_multiple": 1.4,
+  "price": 167.955,
+  "prev_close": 150.58,
+  "market_cap": 73181134848,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:53:54.218285+00:00",
+  "scanner_notes": "52w range 143.3\u2013285.5"
+}

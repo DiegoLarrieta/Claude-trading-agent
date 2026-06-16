@@ -1,0 +1,16 @@
+{
+  "ticker": "NXT",
+  "name": "Nextpower Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 5.85,
+  "volume_multiple": 87.9,
+  "price": 126.685,
+  "prev_close": 119.68,
+  "market_cap": 19279339520,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-12T14:10:17.217636+00:00",
+  "scanner_notes": "52w range 51.69\u2013163.13"
+}

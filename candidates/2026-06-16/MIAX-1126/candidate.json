@@ -1,0 +1,16 @@
+{
+  "ticker": "MIAX",
+  "name": "Miami International Holdings, I",
+  "trigger": "pct_move+volume",
+  "pct_move": -7.66,
+  "volume_multiple": 3.0,
+  "price": 40.73,
+  "prev_close": 44.11,
+  "market_cap": 3865565696,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-16T15:26:34.303884+00:00",
+  "scanner_notes": "52w range 28.63\u201357.14"
+}

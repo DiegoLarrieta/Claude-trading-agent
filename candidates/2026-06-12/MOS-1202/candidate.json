@@ -1,0 +1,16 @@
+{
+  "ticker": "MOS",
+  "name": "Mosaic Company (The)",
+  "trigger": "pct_move",
+  "pct_move": 6.99,
+  "volume_multiple": 1.6,
+  "price": 22.565,
+  "prev_close": 21.09,
+  "market_cap": 7172210176,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 53,
+  "detected_at": "2026-06-12T16:02:38.732528+00:00",
+  "scanner_notes": "52w range 19.8\u201338.23"
+}

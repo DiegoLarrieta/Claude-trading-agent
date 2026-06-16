@@ -1,0 +1,16 @@
+{
+  "ticker": "FOXA",
+  "name": "Fox Corporation",
+  "trigger": "pct_move+volume+52w",
+  "pct_move": -5.99,
+  "volume_multiple": 7.1,
+  "price": 51.48,
+  "prev_close": 54.76,
+  "market_cap": 21631191040,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-16T16:05:10.168229+00:00",
+  "scanner_notes": "52w range 51.38\u201376.39"
+}

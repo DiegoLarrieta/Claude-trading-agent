@@ -1,0 +1,16 @@
+{
+  "ticker": "GRND",
+  "name": "Grindr Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.23,
+  "volume_multiple": 1.4,
+  "price": 13.29,
+  "prev_close": 12.63,
+  "market_cap": 2361978368,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-16T16:02:58.775158+00:00",
+  "scanner_notes": "52w range 9.732\u201323.66"
+}

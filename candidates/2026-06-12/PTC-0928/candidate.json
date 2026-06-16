@@ -1,0 +1,16 @@
+{
+  "ticker": "PTC",
+  "name": "PTC Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -6.19,
+  "volume_multiple": 228.0,
+  "price": 111.06,
+  "prev_close": 118.39,
+  "market_cap": 12828072960,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-12T14:16:42.477960+00:00",
+  "scanner_notes": "52w range 108.52\u2013219.69"
+}

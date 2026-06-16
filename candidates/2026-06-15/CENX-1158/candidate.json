@@ -1,0 +1,16 @@
+{
+  "ticker": "CENX",
+  "name": "Century Aluminum Company",
+  "trigger": "pct_move",
+  "pct_move": -11.54,
+  "volume_multiple": 2.0,
+  "price": 54.13,
+  "prev_close": 61.19,
+  "market_cap": 5357465088,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-15T15:58:15.841733+00:00",
+  "scanner_notes": "52w range 16.59\u201370.43"
+}

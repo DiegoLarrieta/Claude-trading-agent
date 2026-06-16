@@ -1,0 +1,16 @@
+{
+  "ticker": "ALB",
+  "name": "Albemarle Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": 4.35,
+  "volume_multiple": 46.8,
+  "price": 165.895,
+  "prev_close": 158.98,
+  "market_cap": 19564769280,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 47,
+  "detected_at": "2026-06-12T13:44:13.002140+00:00",
+  "scanner_notes": "52w range 55.9\u2013221.0"
+}

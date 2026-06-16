@@ -1,0 +1,16 @@
+{
+  "ticker": "RDDT",
+  "name": "Reddit, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 11.07,
+  "volume_multiple": 1.1,
+  "price": 180.05,
+  "prev_close": 162.1,
+  "market_cap": 34661253120,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 45,
+  "detected_at": "2026-06-15T15:53:54.336425+00:00",
+  "scanner_notes": "52w range 119.27\u2013282.95"
+}

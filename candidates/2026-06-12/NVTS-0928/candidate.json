@@ -1,0 +1,16 @@
+{
+  "ticker": "NVTS",
+  "name": "Navitas Semiconductor Corporati",
+  "trigger": "pct_move+volume",
+  "pct_move": 6.26,
+  "volume_multiple": 59.6,
+  "price": 23.6,
+  "prev_close": 22.21,
+  "market_cap": 5670477312,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-12T14:14:33.110517+00:00",
+  "scanner_notes": "52w range 5.44\u201334.17"
+}
