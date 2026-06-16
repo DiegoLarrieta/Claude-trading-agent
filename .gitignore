@@ -6,3 +6,15 @@ __pycache__/
 journal/.watcher-heartbeat
 journal/.monitor-heartbeat
 journal/logs/
+
+# runtime state — daemons rewrite these every loop; not audit artifacts
+journal/.session-heartbeat
+journal/.session-state.json
+journal/.watch-alerts.json
+journal/.scanner-budget-alerts.json
+journal/.gateway-alert-ts
+tmp_*.py
+
+# inbox queue (live working state; the audit trail lives in candidates/<date>/ + portfolio.json)
+candidates/inbox/pending.jsonl
+candidates/inbox/processed.jsonl
