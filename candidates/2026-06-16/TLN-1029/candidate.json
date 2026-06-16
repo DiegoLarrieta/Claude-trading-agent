@@ -1,0 +1,16 @@
+{
+  "ticker": "TLN",
+  "name": "Talen Energy Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": 9.41,
+  "volume_multiple": 3.1,
+  "price": 422.56,
+  "prev_close": 386.21,
+  "market_cap": 19308881920,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-16T14:29:38.131833+00:00",
+  "scanner_notes": "52w range 255.5\u2013451.28"
+}

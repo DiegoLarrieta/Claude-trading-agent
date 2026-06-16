@@ -1,0 +1,16 @@
+{
+  "ticker": "CRWV",
+  "name": "CoreWeave, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 8.3,
+  "volume_multiple": 6.3,
+  "price": 115.57,
+  "prev_close": 106.71,
+  "market_cap": 63051567104,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-16T13:43:08.923807+00:00",
+  "scanner_notes": "52w range 63.8\u2013187.0"
+}

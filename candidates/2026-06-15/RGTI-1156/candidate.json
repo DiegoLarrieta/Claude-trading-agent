@@ -1,0 +1,16 @@
+{
+  "ticker": "RGTI",
+  "name": "Rigetti Computing, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.63,
+  "volume_multiple": 1.6,
+  "price": 23.2101,
+  "prev_close": 20.98,
+  "market_cap": 7715010048,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:56:04.612957+00:00",
+  "scanner_notes": "52w range 10.3\u201358.15"
+}

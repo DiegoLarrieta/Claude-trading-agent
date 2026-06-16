@@ -1,0 +1,16 @@
+{
+  "ticker": "APA",
+  "name": "APA Corporation",
+  "trigger": "pct_move",
+  "pct_move": -5.32,
+  "volume_multiple": 1.0,
+  "price": 35.05,
+  "prev_close": 37.02,
+  "market_cap": 12389131264,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-15T16:06:59.308009+00:00",
+  "scanner_notes": "52w range 17.74\u201345.66"
+}

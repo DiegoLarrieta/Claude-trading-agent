@@ -1,0 +1,16 @@
+{
+  "ticker": "VECO",
+  "name": "Veeco Instruments Inc.",
+  "trigger": "pct_move",
+  "pct_move": -6.98,
+  "volume_multiple": 1.8,
+  "price": 77.24,
+  "prev_close": 83.04,
+  "market_cap": 4714226176,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-16T16:02:59.420493+00:00",
+  "scanner_notes": "52w range 19.29\u201386.63"
+}

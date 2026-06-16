@@ -1,0 +1,16 @@
+{
+  "ticker": "HMY",
+  "name": "Harmony Gold Mining Company Lim",
+  "trigger": "pct_move",
+  "pct_move": 10.72,
+  "volume_multiple": 1.5,
+  "price": 17.56,
+  "prev_close": 15.86,
+  "market_cap": 11087122432,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:53:54.565770+00:00",
+  "scanner_notes": "52w range 12.58\u201326.06"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "TGB",
+  "name": "Taseko Mines, Ltd.",
+  "trigger": "pct_move",
+  "pct_move": 7.59,
+  "volume_multiple": 1.7,
+  "price": 7.3701,
+  "prev_close": 6.85,
+  "market_cap": 2694857472,
+  "exchange": "NYSE American",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-12T16:02:38.615492+00:00",
+  "scanner_notes": "52w range 2.77\u20139.25"
+}

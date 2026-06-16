@@ -1,0 +1,16 @@
+{
+  "ticker": "CBOE",
+  "name": "Cboe Global Markets, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -6.89,
+  "volume_multiple": 2.6,
+  "price": 272.72,
+  "prev_close": 292.91,
+  "market_cap": 28541179904,
+  "exchange": "Cboe US",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 45,
+  "detected_at": "2026-06-16T16:02:59.292332+00:00",
+  "scanner_notes": "52w range 223.54\u2013371.18"
+}

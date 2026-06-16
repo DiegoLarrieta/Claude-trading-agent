@@ -1,0 +1,16 @@
+{
+  "ticker": "AMD",
+  "name": "Advanced Micro Devices, Inc.",
+  "trigger": "radar",
+  "pct_move": 6.33,
+  "volume_multiple": 0.5,
+  "price": 547.46,
+  "prev_close": 514.87,
+  "market_cap": 892688661655,
+  "exchange": "NMS",
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-15T16:12:17.593639+00:00",
+  "scanner_notes": "RADAR: Citi upgrade to Buy ($575 PT) on Meta MI450 GPU deal economics \u2014 name-specific AI-accelerator catalyst, not just broad risk-on beta. Caveat: already ~+21% over the trailing month; bear must weigh how much is priced in."
+}

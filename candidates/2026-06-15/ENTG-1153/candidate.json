@@ -1,0 +1,16 @@
+{
+  "ticker": "ENTG",
+  "name": "Entegris, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.82,
+  "volume_multiple": 2.0,
+  "price": 166.8,
+  "prev_close": 150.52,
+  "market_cap": 25403639808,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 45,
+  "detected_at": "2026-06-15T15:53:54.450051+00:00",
+  "scanner_notes": "52w range 67.97\u2013168.0"
+}

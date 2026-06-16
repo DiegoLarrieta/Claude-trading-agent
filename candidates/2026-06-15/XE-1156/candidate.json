@@ -1,0 +1,16 @@
+{
+  "ticker": "XE",
+  "name": "X-Energy, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.27,
+  "volume_multiple": 1.2,
+  "price": 20.5001,
+  "prev_close": 18.59,
+  "market_cap": 5892932096,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 60,
+  "detected_at": "2026-06-15T15:56:05.335409+00:00",
+  "scanner_notes": "52w range 17.37\u201337.1"
+}

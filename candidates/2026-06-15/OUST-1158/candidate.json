@@ -1,0 +1,16 @@
+{
+  "ticker": "OUST",
+  "name": "Ouster, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 16.66,
+  "volume_multiple": 2.0,
+  "price": 46.43,
+  "prev_close": 39.8,
+  "market_cap": 2956335104,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:58:15.206913+00:00",
+  "scanner_notes": "52w range 16.4\u201349.39"
+}

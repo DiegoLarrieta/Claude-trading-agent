@@ -1,0 +1,16 @@
+{
+  "ticker": "SHAK",
+  "name": "Shake Shack, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 4.95,
+  "volume_multiple": 1.1,
+  "price": 61.29,
+  "prev_close": 58.4,
+  "market_cap": 2622079488,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 44,
+  "detected_at": "2026-06-16T15:24:22.172782+00:00",
+  "scanner_notes": "52w range 51.6\u2013144.65"
+}

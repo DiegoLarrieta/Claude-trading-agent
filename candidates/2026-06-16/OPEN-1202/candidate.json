@@ -1,0 +1,16 @@
+{
+  "ticker": "OPEN",
+  "name": "Opendoor Technologies Inc",
+  "trigger": "pct_move",
+  "pct_move": 8.89,
+  "volume_multiple": 1.9,
+  "price": 5.02,
+  "prev_close": 4.61,
+  "market_cap": 4842977792,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-16T16:02:58.643849+00:00",
+  "scanner_notes": "52w range 0.508\u201310.87"
+}

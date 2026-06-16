@@ -1,0 +1,16 @@
+{
+  "ticker": "META",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 5.35,
+  "volume_multiple": 1.1,
+  "price": 599.75,
+  "prev_close": 569.3,
+  "market_cap": 1522419376574.0,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-models",
+  "days_to_earnings": 44,
+  "detected_at": "2026-06-15T16:09:12.154170+00:00",
+  "scanner_notes": "52w range 520.260009765625\u2013796.25"
+}

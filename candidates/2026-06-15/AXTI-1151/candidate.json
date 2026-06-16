@@ -1,0 +1,16 @@
+{
+  "ticker": "AXTI",
+  "name": "AXT Inc",
+  "trigger": "pct_move",
+  "pct_move": 14.33,
+  "volume_multiple": 1.5,
+  "price": 111.11,
+  "prev_close": 97.18,
+  "market_cap": 7269170176,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 45,
+  "detected_at": "2026-06-15T15:51:45.446523+00:00",
+  "scanner_notes": "52w range 1.8\u2013143.16"
+}

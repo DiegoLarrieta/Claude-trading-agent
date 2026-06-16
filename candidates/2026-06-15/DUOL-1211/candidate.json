@@ -1,0 +1,16 @@
+{
+  "ticker": "DUOL",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 4.52,
+  "volume_multiple": 1.0,
+  "price": 128.55499267578125,
+  "prev_close": 122.99,
+  "market_cap": 5989777814.676819,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-applications",
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T16:11:22.685198+00:00",
+  "scanner_notes": "52w range 87.88999938964844\u2013489.0"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "RDW",
+  "name": "Redwire Corporation",
+  "trigger": "pct_move+volume",
+  "pct_move": -7.78,
+  "volume_multiple": 246.5,
+  "price": 15.76,
+  "prev_close": 17.09,
+  "market_cap": 3134959104,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-12T14:14:33.307928+00:00",
+  "scanner_notes": "52w range 4.87\u201326.64"
+}

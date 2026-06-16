@@ -1,0 +1,16 @@
+{
+  "ticker": "LI",
+  "name": "Li Auto Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 4.75,
+  "volume_multiple": 97.3,
+  "price": 14.435,
+  "prev_close": 13.78,
+  "market_cap": 14551940096,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 76,
+  "detected_at": "2026-06-12T13:44:12.909726+00:00",
+  "scanner_notes": "52w range 13.36\u201332.025"
+}

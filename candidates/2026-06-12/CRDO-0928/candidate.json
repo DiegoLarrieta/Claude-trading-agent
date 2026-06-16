@@ -1,0 +1,16 @@
+{
+  "ticker": "CRDO",
+  "name": "Credo Technology Group Holding ",
+  "trigger": "pct_move+volume",
+  "pct_move": -4.34,
+  "volume_multiple": 123.8,
+  "price": 253.26,
+  "prev_close": 264.76,
+  "market_cap": 46713790464,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-12T14:19:02.480676+00:00",
+  "scanner_notes": "52w range 72.03\u2013270.2117"
+}

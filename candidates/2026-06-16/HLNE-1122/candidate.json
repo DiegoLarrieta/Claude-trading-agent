@@ -1,0 +1,16 @@
+{
+  "ticker": "HLNE",
+  "name": "Hamilton Lane Incorporated",
+  "trigger": "pct_move",
+  "pct_move": 6.24,
+  "volume_multiple": 0.7,
+  "price": 87.11,
+  "prev_close": 81.99,
+  "market_cap": 4837550592,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-16T15:22:13.443763+00:00",
+  "scanner_notes": "52w range 75.93\u2013161.13"
+}

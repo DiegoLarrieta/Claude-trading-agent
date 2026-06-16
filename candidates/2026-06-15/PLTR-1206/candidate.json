@@ -1,0 +1,16 @@
+{
+  "ticker": "PLTR",
+  "name": "Palantir Technologies Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.17,
+  "volume_multiple": 1.2,
+  "price": 134.605,
+  "prev_close": 127.99,
+  "market_cap": 322690187264,
+  "exchange": "NasdaqGS",
+  "watchlist": true,
+  "theme": "ai-applications",
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-15T16:06:59.831542+00:00",
+  "scanner_notes": "52w range 122.68\u2013207.52"
+}

@@ -1,0 +1,36 @@
+DECISION: PASS
+
+OBJECTION RESPONSES:
+
+1. Conceded — controlling, as the bear flags. At $105.69 the R:R is 0.3:1 to $107.5-108.2, ~1.0:1 to $111.96, and ~1.5:1 only to the $114.78-115.05 gap-fill — and technicals.md's own bottom line says the 1.2:1 exploratory bar (~$113.12) requires clearing two layers of overhead supply first and is "not realistic as a near-term target from here." Per charter item 7, exploratory NEVER waives R:R >= 1.2 to an honest target, and there is no honest target from here that clears it without massaging the arithmetic. This alone kills any proposal at $105.69, at any size.
+
+2. Conceded as a factual correction, not a framing choice. The $100.82-101.20 shelf was PIERCED to $99.61 (1.6-2.0% below it) before reversing — it was BROKEN, not defended. This memo does not frame "the shelf held." The correct read is "an untested reclaim of a broken level, ~25 minutes old at time of technicals write-up, now ~50+ minutes old." Untested reclaims get retested, and the retest is the thing we'd actually need to see — which is the morning memo's framing all over again, just at a different price.
+
+3. Conceded. SPCX accelerated from +11% open to +22.11% intraday — accelerating, not fading. News.md's own read-through calls this "mildly bearish for the 'rotation is fading' read." If the proximate cause of RKLB's weakness is sector capital rotation into SPCX, and that rotation is getting MORE extreme as the session progresses, there is no evidentiary basis to call the pressure "passed." This argues against any framing that today's flush is "done."
+
+4. Conceded. Sentiment shows positioned longs averaging down ("Added"), while the highest-follower voices in the sample are reframing RKLB as structurally subordinate to SPCX going forward ("inverse $SPCX," "congrats... except for $RKLB"). That is not "everyone who wanted to sell already sold" — it's "current holders adding while the more credible voices recalibrate the long-term comp." If that reframing gains traction over the weekend, Monday could bring MORE motivated sellers, not fewer. Sentiment is a wash at best, not a supporting pillar.
+
+5. Conceded — and dispositive on its own for any holding-period that crosses the weekend. It's Friday ~12:40 ET; SPCX just had the largest IPO ever and closed its first session still elevated and volatile, with the rotation-into-SPCX-vs-RKLB question explicitly unresolved (per #3). Taking a fresh RKLB long into two full days of gap risk on a thesis that news.md itself frames as "we don't know yet whether the rotation pressure has passed" is exactly the event-risk this charter flags. Nasdaq-100 inclusion (June 22) is ten days out and does not require entering today or over this weekend.
+
+6. Conceded in full — this is the alternative I would otherwise float, and the bear correctly forecloses it. The bull case for THIS re-review rests on "climax volume + V-bounce + reclaim of the broken shelf, holding at ~$105.69." A passive resting limit at $101-102 placed now would only fill if that reclaim FAILS and price round-trips back down to re-test (or breach) $99.61 — i.e., a fill there falsifies the very thesis that would justify the order. And a standing weekend limit removes the human reaction-quality check at the moment of the actual test, which is strictly worse than this morning's "watch level, re-run the committee on trigger" framework that we are already operating inside (this folder IS that re-run). No resting order at $101-102.
+
+7. Conceded. Per lesson #8 (2026-06-11), momentum continuation has measured positive edge and dip-buying measures negative. This trade, at $105.69 or at a $101-102 limit, is structurally a dip-buy into a -7.9% to -8.2% day below the 20MA, on the hope of a reversal that has not been confirmed by a tested retest. Nothing in today's re-review materials presents new evidence that this specific instance is the exception to that measured edge.
+
+8. Conceded. News.md confirms nothing RKLB-specific changed since the 9:28 memo — this re-review exists because a price level fired, not because new information arrived. The morning bear's "round trip of yesterday's same catalyst" framing is now a SECOND round trip within that round trip ($105.69 -> $99.61 -> $105.69), still on the same SpaceX-IPO/Nasdaq-100 story, still with zero fresh catalyst. This is volatility (ATR14=$11.86, today's range = 0.77 ATR), not new evidence of a thesis.
+
+9. Addressed for the record, though moot given the PASS: trades-today = 0 so far (CASY and F were opened on 6/10 and 6/11 respectively per portfolio.json; no trades executed yet today), well under max_trades_per_day=3. Open positions = 2 of 5. Total exposure currently ~$214 ([CASY 0.2296 * ~$871 cost basis ~$200] + [F 1.0 * $14.23]) of the $1400 cap, so a new $200 RKLB position would not breach exposure caps. This objection does not block the trade on process grounds — but #1, #5, and #6 do on substance, so the administrative math is academic today.
+
+10. Conceded. RKLB has no standing watchlist edge (watchlist: false, consistent with this morning's folder) — it must win purely on today's setup quality. Per #1 and #2, today's setup is strictly worse than the ~1.2:1 setup the full committee unanimously passed on this morning. No special pleading available.
+
+THESIS: At $105.69 the R:R fails the 1.2:1 exploratory floor against every honest target technicals.md identifies, and the only alternative entry (a resting limit at $101-102) would only fill by falsifying the reclaim thesis that justifies the trade in the first place, while adding weekend gap risk on an unresolved sector-rotation question (SPCX still accelerating into the close). No trade today; the watch-level framework continues.
+
+ORDER: none — PASS, no order proposed.
+
+WATCH LEVEL RECOMMENDATION (for Diego, tripwire only — not an order):
+- Ticker: RKLB
+- Watch zone: $99.00 - $100.50 (below today's actual session low of $99.61, since the prior $100.82-101.20 shelf has now been pierced once already and is no longer "untested support" — a retest needs to clear the new low with a fresh reaction)
+- Trigger condition: price prints into the zone on a FRESH session (Monday or later, post weekend-gap resolution) AND shows a reaction (reversal candle / volume climax / hammer) at that time — not a touch, and not a reclaim that's already a day stale
+- If triggered: re-run the full committee fresh with updated SPCX-settlement data (where did SPCX close Friday, and Monday's open) to resolve objection #3 before any RKLB action
+- Also worth tracking before Monday: SPCX Friday close vs. its +22% intraday high (did the rotation pressure ease into the close, per bear's "what would change my mind" #3); peer space names (ASTS, RDW, LUNR) Friday performance to separate sector-beta from RKLB-specific weakness (unresolved objection #6 from this morning's bear, still open)
+
+CONVICTION: low — the structural bull case (Nasdaq-100 inclusion, sector sympathy) is intact but unconfirmed at the price level needed for acceptable R:R, and both the price-chasing entry and the relocate-to-$101-102 entry fail on the firm's own discipline (charter item 7's R:R floor, and the bear's #6 thesis-falsification point), respectively.

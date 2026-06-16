@@ -1,0 +1,17 @@
+{
+  "ticker": "ANET",
+  "name": "Arista Networks, Inc.",
+  "price": 164.58,
+  "prev_close": 156.4,
+  "pct_move": 5.23,
+  "volume_multiple": 0.9,
+  "days_to_earnings": 53,
+  "theme": "ai-infrastructure",
+  "watchlist": true,
+  "week52_high": 179.8,
+  "week52_low": 85.58,
+  "market_cap": 207234105344,
+  "trigger": "radar",
+  "detected_at": "2026-06-12T11:30:45.032214-04:00",
+  "scanner_notes": "user nomination 11:30 ET \u2014 scanner blind (daily candidate budget exhausted by opening flood); move verified live: pct/vol computed from yfinance at nomination time"
+}

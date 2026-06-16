@@ -1,0 +1,16 @@
+{
+  "ticker": "HYMC",
+  "name": "Hycroft Mining Holding Corporat",
+  "trigger": "pct_move",
+  "pct_move": 11.92,
+  "volume_multiple": 1.4,
+  "price": 28.83,
+  "prev_close": 25.76,
+  "market_cap": 2633926144,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:53:54.102910+00:00",
+  "scanner_notes": "52w range 2.93\u201358.73"
+}

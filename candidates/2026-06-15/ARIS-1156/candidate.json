@@ -1,0 +1,16 @@
+{
+  "ticker": "ARIS",
+  "name": "Aris Mining Corporation",
+  "trigger": "pct_move",
+  "pct_move": 10.2,
+  "volume_multiple": 1.3,
+  "price": 17.51,
+  "prev_close": 15.89,
+  "market_cap": 3614064128,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-15T15:56:05.090291+00:00",
+  "scanner_notes": "52w range 6.31\u201323.29"
+}

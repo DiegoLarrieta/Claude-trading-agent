@@ -1,0 +1,16 @@
+{
+  "ticker": "CEG",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 2.51,
+  "volume_multiple": 1.2,
+  "price": 269.3999938964844,
+  "prev_close": 262.8,
+  "market_cap": 96203281200.22226,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-energy",
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-16T16:05:11.024504+00:00",
+  "scanner_notes": "52w range 240.50999450683594\u2013412.70001220703125"
+}

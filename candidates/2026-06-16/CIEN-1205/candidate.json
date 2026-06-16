@@ -1,0 +1,16 @@
+{
+  "ticker": "CIEN",
+  "name": "Ciena Corporation",
+  "trigger": "pct_move",
+  "pct_move": -6.16,
+  "volume_multiple": 1.1,
+  "price": 434.86,
+  "prev_close": 463.41,
+  "market_cap": 61555703808,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-16T16:05:10.417544+00:00",
+  "scanner_notes": "52w range 72.96\u2013637.51"
+}

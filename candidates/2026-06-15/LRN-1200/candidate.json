@@ -1,0 +1,16 @@
+{
+  "ticker": "LRN",
+  "name": "Stride, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": -7.87,
+  "volume_multiple": 3.1,
+  "price": 90.022,
+  "prev_close": 97.71,
+  "market_cap": 3828171264,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T16:00:24.949625+00:00",
+  "scanner_notes": "52w range 60.61\u2013171.17"
+}

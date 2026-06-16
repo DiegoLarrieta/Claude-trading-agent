@@ -1,0 +1,16 @@
+{
+  "ticker": "LION",
+  "name": "Lionsgate Studios Corp",
+  "trigger": "pct_move+volume+52w",
+  "pct_move": 10.3,
+  "volume_multiple": 7.1,
+  "price": 15.85,
+  "prev_close": 14.37,
+  "market_cap": 4606542848,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-16T14:34:20.911093+00:00",
+  "scanner_notes": "52w range 5.545\u201315.85"
+}

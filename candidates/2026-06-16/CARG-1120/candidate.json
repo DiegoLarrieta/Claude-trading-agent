@@ -1,0 +1,16 @@
+{
+  "ticker": "CARG",
+  "name": "CarGurus, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 9.27,
+  "volume_multiple": 1.5,
+  "price": 30.53,
+  "prev_close": 27.94,
+  "market_cap": 2753412096,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 51,
+  "detected_at": "2026-06-16T15:20:03.499416+00:00",
+  "scanner_notes": "52w range 26.39\u201339.42"
+}

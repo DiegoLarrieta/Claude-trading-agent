@@ -1,0 +1,16 @@
+{
+  "ticker": "AFRM",
+  "name": "Affirm Holdings, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.16,
+  "volume_multiple": 1.6,
+  "price": 72.895,
+  "prev_close": 66.17,
+  "market_cap": 24412430336,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 73,
+  "detected_at": "2026-06-15T15:56:04.968372+00:00",
+  "scanner_notes": "52w range 42.095\u2013100.0"
+}

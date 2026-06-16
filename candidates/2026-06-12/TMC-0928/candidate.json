@@ -1,0 +1,16 @@
+{
+  "ticker": "TMC",
+  "name": "TMC the metals company Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.01,
+  "volume_multiple": 124.0,
+  "price": 5.49,
+  "prev_close": 5.13,
+  "market_cap": 3062994688,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 62,
+  "detected_at": "2026-06-12T14:19:01.914417+00:00",
+  "scanner_notes": "52w range 3.93\u201311.35"
+}

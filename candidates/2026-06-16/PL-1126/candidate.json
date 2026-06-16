@@ -1,0 +1,16 @@
+{
+  "ticker": "PL",
+  "name": "Planet Labs PBC",
+  "trigger": "pct_move",
+  "pct_move": -9.35,
+  "volume_multiple": 3.0,
+  "price": 27.7201,
+  "prev_close": 30.58,
+  "market_cap": 9879514112,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-16T15:26:34.183644+00:00",
+  "scanner_notes": "52w range 4.9\u201351.76"
+}

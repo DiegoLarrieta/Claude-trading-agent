@@ -1,0 +1,16 @@
+{
+  "ticker": "TWST",
+  "name": "Twist Bioscience Corporation",
+  "trigger": "pct_move",
+  "pct_move": 6.13,
+  "volume_multiple": 2.2,
+  "price": 85.7425,
+  "prev_close": 80.79,
+  "market_cap": 5339297792,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-16T15:22:13.555173+00:00",
+  "scanner_notes": "52w range 23.3\u201386.94"
+}

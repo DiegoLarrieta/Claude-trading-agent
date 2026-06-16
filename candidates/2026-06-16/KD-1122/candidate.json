@@ -1,0 +1,16 @@
+{
+  "ticker": "KD",
+  "name": "Kyndryl Holdings, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.27,
+  "volume_multiple": 1.8,
+  "price": 12.18,
+  "prev_close": 11.57,
+  "market_cap": 2745946880,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-16T15:22:13.942514+00:00",
+  "scanner_notes": "52w range 10.1\u201344.2"
+}

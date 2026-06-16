@@ -1,0 +1,16 @@
+{
+  "ticker": "COHU",
+  "name": "Cohu, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.62,
+  "volume_multiple": 1.6,
+  "price": 67.65,
+  "prev_close": 64.05,
+  "market_cap": 3191412480,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 44,
+  "detected_at": "2026-06-16T16:00:50.708568+00:00",
+  "scanner_notes": "52w range 17.71\u201369.63"
+}

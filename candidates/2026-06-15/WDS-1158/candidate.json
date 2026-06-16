@@ -1,0 +1,16 @@
+{
+  "ticker": "WDS",
+  "name": "Woodside Energy Group Limited",
+  "trigger": "pct_move",
+  "pct_move": -9.8,
+  "volume_multiple": 2.4,
+  "price": 20.81,
+  "prev_close": 23.07,
+  "market_cap": 39561891840,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-15T15:58:16.122651+00:00",
+  "scanner_notes": "52w range 14.27\u201325.19"
+}

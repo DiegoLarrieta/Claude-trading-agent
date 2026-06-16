@@ -1,0 +1,16 @@
+{
+  "ticker": "TSM",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 3.33,
+  "volume_multiple": 1.0,
+  "price": 439.9700012207031,
+  "prev_close": 425.8,
+  "market_cap": 2281892977830.755,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 31,
+  "detected_at": "2026-06-15T16:09:11.549234+00:00",
+  "scanner_notes": "52w range 206.1999969482422\u2013450.1600036621094"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "AVGO",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 2.88,
+  "volume_multiple": 1.0,
+  "price": 393.57501220703125,
+  "prev_close": 382.5514,
+  "market_cap": 1872464684503.7803,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 80,
+  "detected_at": "2026-06-15T16:09:11.404886+00:00",
+  "scanner_notes": "52w range 244.1699981689453\u2013495.0"
+}

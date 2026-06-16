@@ -1,0 +1,16 @@
+{
+  "ticker": "HSAI",
+  "name": "Hesai Group",
+  "trigger": "pct_move",
+  "pct_move": -7.01,
+  "volume_multiple": 1.4,
+  "price": 17.455,
+  "prev_close": 18.77,
+  "market_cap": 2742917120,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 58,
+  "detected_at": "2026-06-16T16:02:59.160569+00:00",
+  "scanner_notes": "52w range 14.69\u201330.85"
+}

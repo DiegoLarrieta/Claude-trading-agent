@@ -1,0 +1,16 @@
+{
+  "ticker": "LITE",
+  "name": "Lumentum Holdings Inc.",
+  "trigger": "pct_move",
+  "pct_move": -9.36,
+  "volume_multiple": 1.4,
+  "price": 867.62,
+  "prev_close": 957.24,
+  "market_cap": 67500834816,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 57,
+  "detected_at": "2026-06-16T15:26:34.058300+00:00",
+  "scanner_notes": "52w range 83.59\u20131085.68"
+}

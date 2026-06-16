@@ -1,0 +1,16 @@
+{
+  "ticker": "CRCL",
+  "name": "Circle Internet Group, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.86,
+  "volume_multiple": 1.6,
+  "price": 86.29,
+  "prev_close": 77.84,
+  "market_cap": 23064514560,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 57,
+  "detected_at": "2026-06-15T15:53:54.912072+00:00",
+  "scanner_notes": "52w range 49.9\u2013298.99"
+}

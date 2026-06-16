@@ -1,0 +1,16 @@
+{
+  "ticker": "IRDM",
+  "name": "Iridium Communications Inc",
+  "trigger": "pct_move+volume",
+  "pct_move": -6.19,
+  "volume_multiple": 120.0,
+  "price": 46.82,
+  "prev_close": 49.91,
+  "market_cap": 4950173184,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-12T14:16:42.885392+00:00",
+  "scanner_notes": "52w range 15.65\u201353.83"
+}

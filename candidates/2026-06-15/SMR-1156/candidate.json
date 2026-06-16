@@ -1,0 +1,16 @@
+{
+  "ticker": "SMR",
+  "name": "NuScale Power Corporation",
+  "trigger": "pct_move",
+  "pct_move": 10.57,
+  "volume_multiple": 1.7,
+  "price": 10.935,
+  "prev_close": 9.89,
+  "market_cap": 3784666880,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-15T15:56:04.845847+00:00",
+  "scanner_notes": "52w range 8.85\u201357.42"
+}

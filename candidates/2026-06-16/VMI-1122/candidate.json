@@ -1,0 +1,16 @@
+{
+  "ticker": "VMI",
+  "name": "Valmont Industries, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.22,
+  "volume_multiple": 2.0,
+  "price": 568.835,
+  "prev_close": 540.62,
+  "market_cap": 11043165184,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 35,
+  "detected_at": "2026-06-16T15:22:14.073470+00:00",
+  "scanner_notes": "52w range 316.56\u2013572.69"
+}

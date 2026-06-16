@@ -1,0 +1,16 @@
+{
+  "ticker": "INTC",
+  "name": "Intel Corporation",
+  "trigger": "pct_move",
+  "pct_move": -5.82,
+  "volume_multiple": 1.2,
+  "price": 120.42,
+  "prev_close": 127.86,
+  "market_cap": 605230923776,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 37,
+  "detected_at": "2026-06-16T16:05:10.669643+00:00",
+  "scanner_notes": "52w range 18.97\u2013132.75"
+}

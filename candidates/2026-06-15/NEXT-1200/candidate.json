@@ -1,0 +1,16 @@
+{
+  "ticker": "NEXT",
+  "name": "NextDecade Corporation",
+  "trigger": "pct_move",
+  "pct_move": -6.49,
+  "volume_multiple": 1.4,
+  "price": 7.855,
+  "prev_close": 8.4,
+  "market_cap": 2081520000,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 45,
+  "detected_at": "2026-06-15T16:00:25.369399+00:00",
+  "scanner_notes": "52w range 4.75\u201312.12"
+}

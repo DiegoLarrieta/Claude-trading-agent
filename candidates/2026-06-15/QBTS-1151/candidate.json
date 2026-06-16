@@ -1,0 +1,16 @@
+{
+  "ticker": "QBTS",
+  "name": "D-Wave Quantum Inc.",
+  "trigger": "pct_move",
+  "pct_move": 12.58,
+  "volume_multiple": 1.8,
+  "price": 26.31,
+  "prev_close": 23.37,
+  "market_cap": 9746412544,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 52,
+  "detected_at": "2026-06-15T15:51:45.755646+00:00",
+  "scanner_notes": "52w range 12.75\u201346.75"
+}

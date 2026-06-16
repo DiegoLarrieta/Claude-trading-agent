@@ -1,0 +1,16 @@
+{
+  "ticker": "WDC",
+  "name": "Western Digital Corporation",
+  "trigger": "pct_move+volume+52w",
+  "pct_move": 9.83,
+  "volume_multiple": 10.8,
+  "price": 717.74,
+  "prev_close": 653.53,
+  "market_cap": 247392157696,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 43,
+  "detected_at": "2026-06-16T13:43:08.486246+00:00",
+  "scanner_notes": "52w range 57.88\u2013718.74"
+}

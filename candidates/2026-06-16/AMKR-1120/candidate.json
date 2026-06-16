@@ -1,0 +1,16 @@
+{
+  "ticker": "AMKR",
+  "name": "Amkor Technology, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 7.62,
+  "volume_multiple": 4.6,
+  "price": 91.955,
+  "prev_close": 85.44,
+  "market_cap": 22793117696,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 41,
+  "detected_at": "2026-06-16T15:20:03.697634+00:00",
+  "scanner_notes": "52w range 19.79\u201396.6622"
+}
