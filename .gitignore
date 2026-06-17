@@ -18,3 +18,4 @@ tmp_*.py
 # inbox queue (live working state; the audit trail lives in candidates/<date>/ + portfolio.json)
 candidates/inbox/pending.jsonl
 candidates/inbox/processed.jsonl
+candidates/inbox/archive/
