@@ -1,0 +1,16 @@
+{
+  "ticker": "RDNT",
+  "name": "RadNet, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -4.59,
+  "volume_multiple": 2.0,
+  "price": 53.915,
+  "prev_close": 56.51,
+  "market_cap": 4239565056,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-17T16:10:04.898571+00:00",
+  "scanner_notes": "52w range 50.76\u201385.84"
+}

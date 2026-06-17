@@ -1,0 +1,16 @@
+{
+  "ticker": "DELL",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 3.25,
+  "volume_multiple": 0.7,
+  "price": 419.0,
+  "prev_close": 405.8,
+  "market_cap": 271557248229.0,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-infrastructure",
+  "days_to_earnings": 78,
+  "detected_at": "2026-06-17T16:14:26.439471+00:00",
+  "scanner_notes": "52w range 110.22000122070312\u2013469.4700012207031"
+}

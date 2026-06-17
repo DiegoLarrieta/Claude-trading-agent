@@ -1,0 +1,16 @@
+{
+  "ticker": "SEZL",
+  "name": "Sezzle Inc.",
+  "trigger": "pct_move",
+  "pct_move": 8.06,
+  "volume_multiple": 1.3,
+  "price": 155.82,
+  "prev_close": 144.2,
+  "market_cap": 5239762432,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-17T16:18:46.332667+00:00",
+  "scanner_notes": "52w range 49.5\u2013186.74"
+}

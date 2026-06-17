@@ -1,0 +1,16 @@
+{
+  "ticker": "T",
+  "name": "AT&T Inc.",
+  "trigger": "52w",
+  "pct_move": -3.61,
+  "volume_multiple": 1.3,
+  "price": 22.325,
+  "prev_close": 23.16,
+  "market_cap": 155121664000,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 35,
+  "detected_at": "2026-06-17T16:12:14.988489+00:00",
+  "scanner_notes": "52w range 22.32\u201329.79"
+}

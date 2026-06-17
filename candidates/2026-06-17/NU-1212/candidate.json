@@ -1,0 +1,16 @@
+{
+  "ticker": "NU",
+  "name": "Nu Holdings Ltd.",
+  "trigger": "pct_move",
+  "pct_move": 5.07,
+  "volume_multiple": 1.9,
+  "price": 13.365,
+  "prev_close": 12.72,
+  "market_cap": 64977166336,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 57,
+  "detected_at": "2026-06-17T16:12:15.229821+00:00",
+  "scanner_notes": "52w range 11.2\u201318.98"
+}

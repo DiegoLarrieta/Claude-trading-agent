@@ -1,0 +1,16 @@
+{
+  "ticker": "CXT",
+  "name": "Crane NXT, Co.",
+  "trigger": "pct_move",
+  "pct_move": 8.01,
+  "volume_multiple": 1.1,
+  "price": 46.315,
+  "prev_close": 42.88,
+  "market_cap": 2665074688,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-17T16:12:14.749725+00:00",
+  "scanner_notes": "52w range 35.71\u201369.0"
+}

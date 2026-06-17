@@ -1,0 +1,16 @@
+{
+  "ticker": "NTLA",
+  "name": "Intellia Therapeutics, Inc.",
+  "trigger": "pct_move+volume",
+  "pct_move": 9.69,
+  "volume_multiple": 3.8,
+  "price": 15.96,
+  "prev_close": 14.55,
+  "market_cap": 2229967360,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-17T14:59:50.203843+00:00",
+  "scanner_notes": "52w range 7.95\u201328.25"
+}

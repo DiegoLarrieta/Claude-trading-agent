@@ -1,0 +1,16 @@
+{
+  "ticker": "MBLY",
+  "name": "Mobileye Global Inc.",
+  "trigger": "pct_move",
+  "pct_move": -6.13,
+  "volume_multiple": 1.2,
+  "price": 9.03,
+  "prev_close": 9.62,
+  "market_cap": 7604940288,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:07:56.160150+00:00",
+  "scanner_notes": "52w range 6.47\u201320.18"
+}

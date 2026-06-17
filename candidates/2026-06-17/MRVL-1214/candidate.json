@@ -1,0 +1,16 @@
+{
+  "ticker": "MRVL",
+  "name": "Marvell Technology, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.77,
+  "volume_multiple": 1.2,
+  "price": 294.76,
+  "prev_close": 278.67,
+  "market_cap": 258078048256,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 71,
+  "detected_at": "2026-06-17T16:14:25.958462+00:00",
+  "scanner_notes": "52w range 61.44\u2013324.2"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "ASML",
+  "name": null,
+  "trigger": "pct_move+52w",
+  "pct_move": 6.18,
+  "volume_multiple": 1.6,
+  "price": 1929.3699951171875,
+  "prev_close": 1817.073,
+  "market_cap": 743613278439.1278,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 28,
+  "detected_at": "2026-06-17T16:14:26.313644+00:00",
+  "scanner_notes": "52w range 683.47998046875\u20131913.699951171875"
+}

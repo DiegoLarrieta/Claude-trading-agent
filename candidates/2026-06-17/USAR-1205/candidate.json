@@ -1,0 +1,16 @@
+{
+  "ticker": "USAR",
+  "name": "USA Rare Earth, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 10.26,
+  "volume_multiple": 1.3,
+  "price": 23.97,
+  "prev_close": 21.74,
+  "market_cap": 5864481792,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-17T16:05:45.449997+00:00",
+  "scanner_notes": "52w range 9.32\u201343.98"
+}

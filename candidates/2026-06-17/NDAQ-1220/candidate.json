@@ -1,0 +1,16 @@
+{
+  "ticker": "NDAQ",
+  "name": "Nasdaq, Inc.",
+  "trigger": "pct_move",
+  "pct_move": -4.07,
+  "volume_multiple": 1.8,
+  "price": 85.66,
+  "prev_close": 89.29,
+  "market_cap": 48444227584,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 36,
+  "detected_at": "2026-06-17T16:20:56.895318+00:00",
+  "scanner_notes": "52w range 77.09\u2013101.79"
+}

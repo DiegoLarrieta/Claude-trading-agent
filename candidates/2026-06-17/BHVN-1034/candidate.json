@@ -1,0 +1,16 @@
+{
+  "ticker": "BHVN",
+  "name": "Biohaven Ltd.",
+  "trigger": "pct_move",
+  "pct_move": 11.2,
+  "volume_multiple": 2.2,
+  "price": 13.455,
+  "prev_close": 12.1,
+  "market_cap": 2025798144,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T14:34:00.413287+00:00",
+  "scanner_notes": "52w range 7.48\u201318.566"
+}

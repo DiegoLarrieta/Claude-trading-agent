@@ -1,0 +1,16 @@
+{
+  "ticker": "AMC",
+  "name": "AMC Entertainment Holdings, Inc",
+  "trigger": "pct_move",
+  "pct_move": 8.02,
+  "volume_multiple": 2.7,
+  "price": 2.6898,
+  "prev_close": 2.49,
+  "market_cap": 2028571136,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:12:15.365560+00:00",
+  "scanner_notes": "52w range 0.93\u20133.6"
+}

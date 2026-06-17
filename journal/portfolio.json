@@ -1,25 +1,6 @@
 {
-  "cash_usd": 1537.62,
+  "cash_usd": 1345.24,
   "positions": [
-    {
-      "ticker": "F",
-      "side": "buy",
-      "shares": 1.0,
-      "fill_price": 14.23,
-      "stop": 14.23,
-      "horizon": "day",
-      "opened_at": "2026-06-11T14:20:06.618524+00:00",
-      "thesis": "PLUMBING DRILL \u2014 first order through the IBKR paper pipeline; not a thesis trade",
-      "owner": "plumbing-drill",
-      "firm_verdict_was": "N/A (drill)",
-      "candidate_folder": null,
-      "simulated": false,
-      "broker": "ibkr-paper",
-      "broker_order_id": 4,
-      "high_water": 14.805000305175781,
-      "prior_stop": 13.52,
-      "last_announced_stop": 14.23
-    },
     {
       "ticker": "VST",
       "side": "buy",
@@ -105,8 +86,55 @@
       "exit_reason": "discretionary_close",
       "pnl_usd": -2.27,
       "pnl_pct": -1.14
+    },
+    {
+      "ticker": "F",
+      "side": "buy",
+      "shares": 1.0,
+      "fill_price": 14.23,
+      "stop": 14.23,
+      "horizon": "day",
+      "opened_at": "2026-06-11T14:20:06.618524+00:00",
+      "thesis": "PLUMBING DRILL \u2014 first order through the IBKR paper pipeline; not a thesis trade",
+      "owner": "plumbing-drill",
+      "firm_verdict_was": "N/A (drill)",
+      "candidate_folder": null,
+      "simulated": false,
+      "broker": "ibkr-paper",
+      "broker_order_id": 4,
+      "high_water": 14.805000305175781,
+      "prior_stop": 13.52,
+      "last_announced_stop": 14.23,
+      "closed_at": "2026-06-17T17:56:12.438778+00:00",
+      "exit_price": 14.35,
+      "exit_reason": "discretionary_close",
+      "pnl_usd": 0.12,
+      "pnl_pct": 0.84,
+      "close_note": "Diego closed manually in IBKR (firm broker is buy-only); riskless drill scratched out"
     }
   ],
   "simulated": true,
-  "starting_capital_usd": 1700
+  "starting_capital_usd": 1700,
+  "discretionary_holdings": [
+    {
+      "ticker": "NVDA",
+      "side": "buy",
+      "shares": 1.0,
+      "fill_price": 205.73,
+      "commission_usd": 1.0,
+      "effective_cost_basis": 206.73,
+      "setup": "discretionary",
+      "tier": "core",
+      "horizon": "core",
+      "opened_at": "2026-06-15T16:00:00+00:00",
+      "thesis": "Diego discretionary buy on Monday \u2014 NOT a committee decision; tracked for the books.",
+      "owner": "diego-discretionary",
+      "firm_verdict_was": "N/A (discretionary, no committee)",
+      "simulated": false,
+      "account": "real-mirrored",
+      "note": "stop $191 is a PROVISIONAL placeholder (~7% below entry) so the watcher can guard it \u2014 pending Diego's chosen stop. Verify the $1 IB fee assumption (recorded fill 205.73 + $1 = 206.73 all-in).",
+      "stop": null,
+      "stop_policy": "no-stop core hold (Diego-managed); excluded from watcher stop-guard by design"
+    }
+  ]
 }

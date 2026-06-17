@@ -49,6 +49,14 @@ was earned. Retired lessons move to the bottom, never deleted.
    -$0.51 at a 41% win rate. This extends lesson #4 (selectivity is the
    edge) with a directional finding: the firm's mean-reversion instinct has
    the sign backwards, and a momentum-book proposal is now on the table.
+9. **(2026-06-17) Set stops at the level where the THESIS fails, not at the
+   level where the EVENT pain stops.** VST was held through FOMC with a
+   stop at $137 — the structural base-failure level — rather than tightened
+   to avoid event volatility. FOMC passed without touching the stop; the
+   position closed essentially flat and the thesis remains intact. A stop
+   sized to event-avoidance would have either been triggered by normal
+   intraday noise or placed so wide it was meaningless. Evidence: one clean
+   binary-event hold; hypothesis open, not yet a full verdict.
 
 ## Retired lessons
 

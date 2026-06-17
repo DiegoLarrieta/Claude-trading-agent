@@ -1,0 +1,16 @@
+{
+  "ticker": "SIMO",
+  "name": "Silicon Motion Technology Corpo",
+  "trigger": "pct_move",
+  "pct_move": 7.96,
+  "volume_multiple": 0.9,
+  "price": 305.19,
+  "prev_close": 282.68,
+  "market_cap": 10348333056,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:14:25.712701+00:00",
+  "scanner_notes": "52w range 68.79\u2013314.34"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "PLUG",
+  "name": "Plug Power, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.35,
+  "volume_multiple": 1.0,
+  "price": 2.855,
+  "prev_close": 2.71,
+  "market_cap": 3982922240,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-17T16:12:15.483923+00:00",
+  "scanner_notes": "52w range 1.03\u20134.58"
+}

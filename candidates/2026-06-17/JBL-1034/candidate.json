@@ -1,0 +1,16 @@
+{
+  "ticker": "JBL",
+  "name": "Jabil Inc.",
+  "trigger": "pct_move",
+  "pct_move": 9.59,
+  "volume_multiple": 2.6,
+  "price": 411.59,
+  "prev_close": 375.57,
+  "market_cap": 43423825920,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 0,
+  "detected_at": "2026-06-17T14:34:00.534758+00:00",
+  "scanner_notes": "52w range 189.6\u2013428.9322"
+}

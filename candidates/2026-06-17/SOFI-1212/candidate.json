@@ -1,0 +1,16 @@
+{
+  "ticker": "SOFI",
+  "name": "SoFi Technologies, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 4.69,
+  "volume_multiple": 1.8,
+  "price": 18.5398,
+  "prev_close": 17.71,
+  "market_cap": 23781767168,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 41,
+  "detected_at": "2026-06-17T16:12:15.110283+00:00",
+  "scanner_notes": "52w range 14.36\u201332.73"
+}

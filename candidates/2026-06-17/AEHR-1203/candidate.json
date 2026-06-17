@@ -1,0 +1,16 @@
+{
+  "ticker": "AEHR",
+  "name": "Aehr Test Systems",
+  "trigger": "pct_move",
+  "pct_move": 11.28,
+  "volume_multiple": 0.9,
+  "price": 116.66,
+  "prev_close": 104.83,
+  "market_cap": 3669336832,
+  "exchange": "NasdaqCM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:03:35.659234+00:00",
+  "scanner_notes": "52w range 10.89\u2013126.62"
+}
