@@ -1,0 +1,16 @@
+{
+  "ticker": "NWL",
+  "name": "Newell Brands Inc.",
+  "trigger": "pct_move",
+  "pct_move": 8.12,
+  "volume_multiple": 2.3,
+  "price": 5.125,
+  "prev_close": 4.74,
+  "market_cap": 2177754880,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 44,
+  "detected_at": "2026-06-17T16:07:55.556653+00:00",
+  "scanner_notes": "52w range 3.07\u20136.64"
+}

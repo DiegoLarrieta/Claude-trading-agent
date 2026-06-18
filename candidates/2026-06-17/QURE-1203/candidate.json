@@ -1,0 +1,16 @@
+{
+  "ticker": "QURE",
+  "name": "uniQure N.V.",
+  "trigger": "pct_move+volume",
+  "pct_move": 75.58,
+  "volume_multiple": 17.0,
+  "price": 47.39,
+  "prev_close": 26.99,
+  "market_cap": 2988768000,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 42,
+  "detected_at": "2026-06-17T16:03:34.491356+00:00",
+  "scanner_notes": "52w range 8.73\u201371.5"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "JOBY",
+  "name": "Joby Aviation, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 5.19,
+  "volume_multiple": 1.4,
+  "price": 9.825,
+  "prev_close": 9.34,
+  "market_cap": 9664290816,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 49,
+  "detected_at": "2026-06-17T16:31:46.859267+00:00",
+  "scanner_notes": "52w range 7.75\u201320.95"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "ACHR",
+  "name": "Archer Aviation Inc.",
+  "trigger": "pct_move",
+  "pct_move": 4.59,
+  "volume_multiple": 1.3,
+  "price": 5.6899,
+  "prev_close": 5.44,
+  "market_cap": 4340624896,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 54,
+  "detected_at": "2026-06-17T16:25:15.369870+00:00",
+  "scanner_notes": "52w range 4.8\u201314.62"
+}

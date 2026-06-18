@@ -1,0 +1,16 @@
+{
+  "ticker": "HOOD",
+  "name": "Robinhood Markets, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 8.05,
+  "volume_multiple": 2.1,
+  "price": 104.495,
+  "prev_close": 96.71,
+  "market_cap": 94098284544,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 42,
+  "detected_at": "2026-06-17T14:59:50.921350+00:00",
+  "scanner_notes": "52w range 63.515\u2013153.86"
+}

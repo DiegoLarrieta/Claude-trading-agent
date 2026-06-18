@@ -1,0 +1,16 @@
+{
+  "ticker": "APP",
+  "name": "Applovin Corporation",
+  "trigger": "pct_move",
+  "pct_move": -4.28,
+  "volume_multiple": 0.9,
+  "price": 493.17,
+  "prev_close": 515.2,
+  "market_cap": 165675302912,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 50,
+  "detected_at": "2026-06-17T16:18:46.569673+00:00",
+  "scanner_notes": "52w range 320.0\u2013745.61"
+}

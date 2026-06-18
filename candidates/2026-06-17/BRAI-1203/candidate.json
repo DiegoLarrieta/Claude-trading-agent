@@ -1,0 +1,16 @@
+{
+  "ticker": "BRAI",
+  "name": "Braiin Limited",
+  "trigger": "pct_move+volume",
+  "pct_move": 36.77,
+  "volume_multiple": 12.0,
+  "price": 10.2442,
+  "prev_close": 7.49,
+  "market_cap": 2111208960,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:03:34.616171+00:00",
+  "scanner_notes": "52w range 4.186667\u201332.996666"
+}

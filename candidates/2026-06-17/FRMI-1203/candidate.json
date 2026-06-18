@@ -1,0 +1,16 @@
+{
+  "ticker": "FRMI",
+  "name": "Fermi Inc.",
+  "trigger": "pct_move",
+  "pct_move": 11.38,
+  "volume_multiple": 2.4,
+  "price": 8.776,
+  "prev_close": 7.88,
+  "market_cap": 5599819264,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 55,
+  "detected_at": "2026-06-17T16:03:35.538623+00:00",
+  "scanner_notes": "52w range 4.47\u201336.99"
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "CME",
+  "name": "CME Group Inc.",
+  "trigger": "pct_move",
+  "pct_move": -4.68,
+  "volume_multiple": 2.0,
+  "price": 249.365,
+  "prev_close": 261.6,
+  "market_cap": 90101252096,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 35,
+  "detected_at": "2026-06-17T16:10:04.772599+00:00",
+  "scanner_notes": "52w range 244.56\u2013329.16"
+}

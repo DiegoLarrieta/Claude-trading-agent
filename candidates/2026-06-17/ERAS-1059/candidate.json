@@ -1,0 +1,16 @@
+{
+  "ticker": "ERAS",
+  "name": "Erasca, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 8.53,
+  "volume_multiple": 0.6,
+  "price": 14.52,
+  "prev_close": 13.38,
+  "market_cap": 4515495936,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T14:59:50.799563+00:00",
+  "scanner_notes": "52w range 1.21\u201324.28"
+}

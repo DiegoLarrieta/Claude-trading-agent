@@ -1,0 +1,16 @@
+{
+  "ticker": "SMTC",
+  "name": "Semtech Corporation",
+  "trigger": "pct_move",
+  "pct_move": -5.2,
+  "volume_multiple": 0.9,
+  "price": 153.18,
+  "prev_close": 161.59,
+  "market_cap": 14268895232,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 68,
+  "detected_at": "2026-06-17T16:10:04.338350+00:00",
+  "scanner_notes": "52w range 40.24\u2013177.35"
+}

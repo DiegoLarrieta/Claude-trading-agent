@@ -1,0 +1,16 @@
+{
+  "ticker": "GEV",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 4.21,
+  "volume_multiple": 1.1,
+  "price": 1025.885009765625,
+  "prev_close": 984.45,
+  "market_cap": 275675814694.7937,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-energy",
+  "days_to_earnings": 35,
+  "detected_at": "2026-06-17T16:14:26.080632+00:00",
+  "scanner_notes": "52w range 479.0400085449219\u20131181.949951171875"
+}

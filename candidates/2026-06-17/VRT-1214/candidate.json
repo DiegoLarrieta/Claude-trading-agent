@@ -1,0 +1,16 @@
+{
+  "ticker": "VRT",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 6.14,
+  "volume_multiple": 0.7,
+  "price": 319.20001220703125,
+  "prev_close": 300.73,
+  "market_cap": 122607538756.02832,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-infrastructure",
+  "days_to_earnings": 42,
+  "detected_at": "2026-06-17T16:14:26.569674+00:00",
+  "scanner_notes": "52w range 110.05999755859375\u2013379.93499755859375"
+}

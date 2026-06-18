@@ -1,0 +1,16 @@
+{
+  "ticker": "AMD",
+  "name": null,
+  "trigger": "pct_move",
+  "pct_move": 2.52,
+  "volume_multiple": 0.7,
+  "price": 523.6649780273438,
+  "prev_close": 510.77,
+  "market_cap": 853888447793.3076,
+  "exchange": null,
+  "watchlist": true,
+  "theme": "ai-chips",
+  "days_to_earnings": 48,
+  "detected_at": "2026-06-17T16:27:25.491186+00:00",
+  "scanner_notes": "52w range 125.7699966430664\u2013558.3699951171875"
+}

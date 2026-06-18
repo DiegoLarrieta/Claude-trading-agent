@@ -1,0 +1,16 @@
+{
+  "ticker": "WOLF",
+  "name": "Wolfspeed, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 13.78,
+  "volume_multiple": 1.5,
+  "price": 51.2,
+  "prev_close": 45.0,
+  "market_cap": 2660971520,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:03:34.734918+00:00",
+  "scanner_notes": "52w range 8.05\u201380.82"
+}

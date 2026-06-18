@@ -1,0 +1,16 @@
+{
+  "ticker": "QNT",
+  "name": "Quantinuum Inc.",
+  "trigger": "pct_move",
+  "pct_move": 17.12,
+  "volume_multiple": 0.6,
+  "price": 64.92,
+  "prev_close": 55.43,
+  "market_cap": 2036079104,
+  "exchange": "NasdaqGM",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:05:45.085292+00:00",
+  "scanner_notes": "52w range 50.1\u201371.35"
+}

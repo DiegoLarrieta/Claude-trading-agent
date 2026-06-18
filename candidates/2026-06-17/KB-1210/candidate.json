@@ -1,0 +1,16 @@
+{
+  "ticker": "KB",
+  "name": "KB Financial Group Inc",
+  "trigger": "pct_move+volume",
+  "pct_move": -4.87,
+  "volume_multiple": 3.6,
+  "price": 108.615,
+  "prev_close": 114.17,
+  "market_cap": 38524407808,
+  "exchange": "NYSE",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": null,
+  "detected_at": "2026-06-17T16:10:04.648550+00:00",
+  "scanner_notes": "52w range 76.31\u2013119.71"
+}

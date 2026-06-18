@@ -1,0 +1,16 @@
+{
+  "ticker": "NAVN",
+  "name": "Navan, Inc.",
+  "trigger": "pct_move",
+  "pct_move": 9.33,
+  "volume_multiple": 3.0,
+  "price": 20.805,
+  "prev_close": 19.03,
+  "market_cap": 5291361792,
+  "exchange": "NasdaqGS",
+  "watchlist": false,
+  "theme": null,
+  "days_to_earnings": 56,
+  "detected_at": "2026-06-17T14:59:50.318871+00:00",
+  "scanner_notes": "52w range 8.105\u201324.5"
+}
